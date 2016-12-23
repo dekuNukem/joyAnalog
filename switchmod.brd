@@ -162,27 +162,27 @@
 <text x="9.525" y="19.304" size="1.016" layer="25">PC6</text>
 <text x="6.604" y="14.224" size="1.016" layer="25">GND</text>
 <text x="9.906" y="14.224" size="1.016" layer="25">3V3</text>
-<text x="32.893" y="13.97" size="1.016" layer="25">GND</text>
-<text x="30.734" y="13.97" size="1.016" layer="25">5V</text>
-<text x="30.226" y="16.51" size="1.016" layer="25">PA9</text>
-<text x="33.401" y="16.51" size="1.016" layer="25">PA8</text>
-<text x="32.639" y="19.05" size="1.016" layer="25">PA10</text>
-<text x="29.083" y="19.05" size="1.016" layer="25">PA15</text>
-<text x="32.639" y="21.59" size="1.016" layer="25">PC10</text>
-<text x="29.21" y="21.59" size="1.016" layer="25">PC11</text>
-<text x="32.639" y="24.13" size="1.016" layer="25">PC12</text>
-<text x="29.718" y="24.13" size="1.016" layer="25">PD2</text>
-<text x="33.147" y="26.67" size="1.016" layer="25">PB3</text>
-<text x="29.972" y="26.67" size="1.016" layer="25">PB4</text>
-<text x="33.274" y="29.083" size="1.016" layer="25">PB5</text>
-<text x="30.099" y="29.972" size="1.016" layer="25">PB6</text>
-<text x="33.274" y="31.75" size="0.8128" layer="25">PB7</text>
+<text x="32.512" y="13.97" size="1.016" layer="25">GND</text>
+<text x="30.226" y="13.97" size="1.016" layer="25">5V</text>
+<text x="29.21" y="16.51" size="1.016" layer="25">PA9</text>
+<text x="33.02" y="16.51" size="1.016" layer="25">PA8</text>
+<text x="32.258" y="19.05" size="1.016" layer="25">PA10</text>
+<text x="28.448" y="19.05" size="1.016" layer="25">PA15</text>
+<text x="32.131" y="21.59" size="1.016" layer="25">PC10</text>
+<text x="28.448" y="21.59" size="1.016" layer="25">PC11</text>
+<text x="32.131" y="24.13" size="1.016" layer="25">PC12</text>
+<text x="28.956" y="24.13" size="1.016" layer="25">PD2</text>
+<text x="32.893" y="26.67" size="1.016" layer="25">PB3</text>
+<text x="29.845" y="26.67" size="1.016" layer="25">PB4</text>
+<text x="33.02" y="29.083" size="1.016" layer="25">PB5</text>
+<text x="29.972" y="29.972" size="1.016" layer="25">PB6</text>
+<text x="33.528" y="31.75" size="0.8128" layer="25">PB7</text>
 <text x="29.21" y="31.75" size="0.8128" layer="25">BOOT0</text>
-<text x="33.274" y="34.29" size="1.016" layer="25">PB8</text>
-<text x="30.226" y="34.29" size="1.016" layer="25">PB9</text>
-<text x="35.306" y="35.941" size="0.8128" layer="25" rot="R90">VBAT</text>
-<text x="33.782" y="35.941" size="0.8128" layer="25" rot="R90">PC13</text>
-<text x="35.7378" y="41.4274" size="1.016" layer="25">RST</text>
+<text x="33.02" y="34.29" size="1.016" layer="25">PB8</text>
+<text x="29.972" y="34.29" size="1.016" layer="25">PB9</text>
+<text x="35.56" y="35.941" size="0.8128" layer="25" rot="R90">VBAT</text>
+<text x="34.163" y="35.941" size="0.8128" layer="25" rot="R90">PC13</text>
+<text x="35.306" y="41.402" size="1.016" layer="25">RST</text>
 <text x="6.604" y="21.844" size="1.016" layer="25">PB0</text>
 <text x="9.779" y="21.844" size="1.016" layer="25">PB1</text>
 <text x="6.604" y="24.384" size="1.016" layer="25">PC4</text>
@@ -1063,7 +1063,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="26.162" y="31.496" size="0.4064" layer="27"/>
 </element>
 <element name="C6" library="backplane" package="0805" value="" x="26.035" y="20.574" smashed="yes" rot="R270">
-<attribute name="NAME" x="26.8605" y="21.336" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="25.4" y="18.2245" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="24.638" y="21.59" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="C7" library="backplane" package="0805" value="" x="13.1318" y="21.844" smashed="yes" rot="R225">
