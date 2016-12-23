@@ -1,3 +1,5 @@
+![Alt text](http://i.imgur.com/KSGWttO.jpg)
+
 ### A STM32 dev board with 10 high speed 12-bit DAC channels.
 
 I intend to use it for automating game console controller inputs, but it can be used as a general purpose dev board as well. 
