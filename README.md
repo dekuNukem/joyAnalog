@@ -1,5 +1,3 @@
-![Alt text](http://i.imgur.com/KSGWttO.jpg)
-
 ### A STM32 dev board with 10 high speed 12-bit DAC channels.
 
 I intend to use it for automating game console controller inputs, but it can be used as a general purpose dev board as well. 
@@ -12,3 +10,5 @@ I intend to use it for automating game console controller inputs, but it can be 
 This is still in progress. I need to get the PCB made, assemble it, and write the firmware. More to come in the coming weeks.
 
 The "switchmod" name is pretty much a place holder, will probably change it if a better one pops into my head.
+
+![Alt text](http://i.imgur.com/KSGWttO.jpg)
