@@ -12,4 +12,4 @@ This is still in progress. I need to get the PCB made, assemble it, and write th
 
 The "switchmod" name is pretty much a place holder, will probably change it if a better one pops into my head.
 
-![Alt text](http://i.imgur.com/KSGWttO.jpg)
+![Alt text](http://i.imgur.com/Ym2ThLj.png)
