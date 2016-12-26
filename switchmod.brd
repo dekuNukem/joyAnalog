@@ -199,7 +199,7 @@
 <text x="9.144" y="36.83" size="0.8128" layer="25">PC3</text>
 <text x="1.397" y="41.402" size="1.016" layer="25">PC0</text>
 <text x="4.318" y="41.402" size="1.016" layer="25">PC1</text>
-<text x="19.05" y="13.0302" size="0.8128" layer="25">cs</text>
+<text x="16.129" y="13.2842" size="0.8128" layer="25">cs</text>
 <text x="14.6812" y="15.8496" size="0.7112" layer="25">MOSI</text>
 <text x="13.7922" y="19.1516" size="0.7112" layer="25">MISO</text>
 <text x="12.8778" y="17.5768" size="0.7112" layer="25">SCK</text>
@@ -1151,7 +1151,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="33.304" y1="4.682" x2="34.454" y2="4.682" width="0.3048" layer="1"/>
 <wire x1="34.454" y1="4.682" x2="34.504" y2="4.732" width="0.254" layer="1"/>
 <via x="26.9748" y="13.843" extent="1-16" drill="0.6"/>
-<via x="23.0886" y="10.0838" extent="1-16" drill="0.5"/>
+<via x="21.6916" y="10.0838" extent="1-16" drill="0.5"/>
 <via x="8.5852" y="13.589" extent="1-16" drill="0.6"/>
 <contactref element="C10" pad="2"/>
 <contactref element="C9" pad="2"/>
@@ -1197,7 +1197,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="32.0912" y1="38.724" x2="32.1056" y2="38.7096" width="0.254" layer="1"/>
 <wire x1="8.5852" y1="13.589" x2="9.15" y2="13.0242" width="0.254" layer="1"/>
 <wire x1="9.15" y1="13.0242" x2="9.15" y2="11.665" width="0.254" layer="1"/>
-<wire x1="21.6378" y1="12.3698" x2="21.714" y2="12.446" width="0.254" layer="1"/>
 <wire x1="15.128" y1="23.928" x2="16.4858" y2="23.928" width="0.254" layer="1"/>
 <wire x1="16.4858" y1="23.928" x2="16.6878" y2="24.13" width="0.254" layer="1"/>
 <wire x1="16.6878" y1="24.13" x2="16.6878" y2="24.8412" width="0.254" layer="1"/>
@@ -1226,12 +1225,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="12.647803125" y1="21.207603125" x2="12.749403125" y2="21.207603125" width="0.254" layer="1"/>
 <wire x1="11.9126" y1="20.574" x2="12.1158" y2="20.574" width="0.254" layer="1"/>
 <wire x1="12.1158" y1="20.574" x2="12.749403125" y2="21.207603125" width="0.254" layer="1"/>
-<wire x1="21.714" y1="7.874" x2="21.714" y2="8.7092" width="0.4064" layer="1"/>
-<wire x1="21.714" y1="8.7092" x2="23.0886" y2="10.0838" width="0.4064" layer="1"/>
-<wire x1="21.6378" y1="12.3698" x2="21.6378" y2="11.5346" width="0.4064" layer="1"/>
-<wire x1="21.6378" y1="11.5346" x2="23.0886" y2="10.0838" width="0.4064" layer="1"/>
 <wire x1="18.0594" y1="6.4008" x2="18.0594" y2="7.7326" width="0.254" layer="1"/>
 <wire x1="18.0594" y1="7.7326" x2="18.045" y2="7.747" width="0.254" layer="1"/>
+<wire x1="21.6916" y1="10.0838" x2="21.6916" y2="12.446" width="0.4064" layer="1"/>
+<wire x1="21.6916" y1="12.446" x2="21.714" y2="12.446" width="0.4064" layer="1"/>
+<wire x1="21.6916" y1="10.0838" x2="21.6916" y2="7.874" width="0.4064" layer="1"/>
+<wire x1="21.6916" y1="7.874" x2="21.714" y2="7.874" width="0.4064" layer="1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC2" pad="2"/>
