@@ -203,10 +203,10 @@
 <text x="14.6812" y="15.8496" size="0.7112" layer="25">MOSI</text>
 <text x="13.7922" y="19.1516" size="0.7112" layer="25">MISO</text>
 <text x="12.8778" y="17.5768" size="0.7112" layer="25">SCK</text>
-<text x="36.5252" y="11.303" size="0.8128" layer="25">DIO</text>
-<text x="33.9852" y="6.6802" size="0.8128" layer="25">CLK</text>
-<text x="39.0906" y="11.303" size="0.8128" layer="25">3V3</text>
-<text x="38.8366" y="4.8514" size="0.8128" layer="25">GND</text>
+<text x="37.1602" y="11.049" size="0.8128" layer="25">DIO</text>
+<text x="34.3662" y="6.4262" size="0.8128" layer="25">CLK</text>
+<text x="39.7256" y="11.049" size="0.8128" layer="25">3V3</text>
+<text x="42.0624" y="5.8166" size="0.8128" layer="25" rot="R180">GND</text>
 <text x="39.624" y="41.529" size="1.016" layer="25">3V3</text>
 </plain>
 <libraries>
