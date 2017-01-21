@@ -8,4 +8,12 @@ I intend to use it for automating game console controller inputs, but it can als
 * USB for power and communication.
 * Board size 4.3 x 4.3 cm, or 1.69 x 1.69 inch.
 
-![Alt text](http://i.imgur.com/DzWH3ci.png)
+![Alt text](http://i.imgur.com/0n4vfXo.png)
+
+![Alt text](http://i.imgur.com/py0JN0N.jpg)
+
+## Test code
+
+![Alt text](http://i.imgur.com/T9A3ygh.png)
+
+I wrote a simple library for MAX5723/MAX5724/MAX5725, and a test program is included that puts a counter value to DAC channel 0 and 1. 
