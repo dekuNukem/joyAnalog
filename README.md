@@ -16,4 +16,6 @@ I intend to use it for automating game console controller inputs, but it can als
 
 ![Alt text](http://i.imgur.com/T9A3ygh.png)
 
-I wrote a simple library for MAX5723/MAX5724/MAX5725, and a test program is included that puts a counter value to DAC channel 0 and 1. 
+I wrote a simple library for MAX5723/MAX5724/MAX5725 and a test program is included that puts a counter value to DAC channel 0 and 1.
+
+More to come as I continue to add to the code.
