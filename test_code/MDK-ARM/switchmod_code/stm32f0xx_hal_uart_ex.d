@@ -25,6 +25,8 @@ switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm3
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h
+switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h
+switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
 switchmod_code\stm32f0xx_hal_uart_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h

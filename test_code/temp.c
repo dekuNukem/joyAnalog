@@ -166,3 +166,54 @@ void print_3b(uint8_t buf[3])
 #define MAX5723 0
 #define MAX5724 1
 #define MAX5725 2
+
+int fputc(int ch, FILE *f)
+{
+    HAL_UART_Transmit(&huart1, (unsigned char *)&ch, 1, 100);
+    return ch;
+}
+while (1)
+  {
+    HAL_UART_Receive_IT(&huart1, debug_byte_buf, 1);
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+    if(linear_buf_line_available(&debug_lb))
+    {
+      printf("debug_lb: %s\n", debug_lb.buf);
+      test();
+      linear_buf_reset(&debug_lb);
+    }
+  }
+
+  while(1)
+  {
+    usb_data = my_usb_readline();
+    if(usb_data != NULL)
+    {
+      printf("I received: %s\n", usb_data);
+    }
+  }
+
+uint8_t debug_byte_buf[1];
+linear_buf debug_lb;
+extern UART_HandleTypeDef huart1;
+#define debug_uart_ptr (&huart1)
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->Instance==USART1)
+  {
+      linear_buf_add(&debug_lb, debug_byte_buf[0]);
+      HAL_UART_Receive_IT(&huart1, debug_byte_buf, 1);
+  }
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->Instance==USART1)
+  {
+      HAL_UART_Receive_IT(&huart1, debug_byte_buf, 1);
+      linear_buf_reset(&debug_lb);
+  }
+}
+      HAL_GPIO_TogglePin(DEBUG_LED_GPIO_Port, DEBUG_LED_Pin);
