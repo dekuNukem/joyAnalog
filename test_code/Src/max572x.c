@@ -9,18 +9,12 @@
 // if SPI_PHASE_1EDGE, DPHA = 0
 // if SPI_PHASE_2EDGE, DPHA = 1
 
-void print_3b(uint8_t buf[3])
-{
-  printf("0x%x 0x%x 0x%x\n", buf[0], buf[1], buf[2]);
-}
-
-void max572x_SW_RESET()
+void max572x_SW_RESET(void)
 {
   uint8_t max572x_cmd_SW_RESET[3] = {0x35, 0x96, 0x30};
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, max572x_cmd_SW_RESET, 3, 100);
   spi_cs_high();
-  // printf("max572x_SW_RESET\n");
 }
 
 /*
@@ -33,7 +27,6 @@ void max572x_POWER(uint8_t dac_multi_sel, uint8_t power_mode)
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max572x_POWER: "); print_3b(spi_sb);
 }
 
 /*
@@ -56,7 +49,6 @@ void max572x_CONFIG(uint8_t dac_multi_sel, uint8_t wdog, uint8_t gate_en, uint8_
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max572x_CONFIG: "); print_3b(spi_sb);
 }
 
 /*
@@ -77,7 +69,6 @@ void max572x_WDOG(uint16_t wd_timeout, uint8_t wd_mask, uint8_t wd_safety)
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max572x_WDOG: "); print_3b(spi_sb);
 }
 
 /*
@@ -93,49 +84,25 @@ void max572x_REF(uint8_t ref_power, uint8_t ref_mode)
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max572x_REF: "); print_3b(spi_sb);
 }
 
-void max5723_CODEn(uint8_t dac_sel, uint8_t data)
+void pack_dac_data(uint16_t value, uint8_t* dh, uint8_t* dl)
+{
+  value &= 0x3ff;
+    *dh |= value >> 2;
+    value &= 0x3;
+    *dl |= (value << 6);
+}
+
+void max572x_CODEn(uint8_t dac_sel, uint16_t dac_value)
 {
   uint8_t spi_sb[3] = {0x80, 0, 0};
   dac_sel &= 0xf;
   spi_sb[0] |= dac_sel;
-  spi_sb[1] = data;
+  pack_dac_data(dac_value, &spi_sb[1], &spi_sb[2]);
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max5723_CODEn: "); print_3b(spi_sb);
-}
-
-void max5724_CODEn(uint8_t dac_sel, uint16_t data)
-{
-  uint8_t spi_sb[3] = {0x80, 0, 0};
-  dac_sel &= 0xf;
-  spi_sb[0] |= dac_sel;
-  data &= 0x3ff;
-  spi_sb[1] |= data >> 2;
-  data &= 0x3;
-  spi_sb[2] |= (data << 6);
-  spi_cs_low();
-  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
-  spi_cs_high();
-  // printf("max5724_CODEn: "); print_3b(spi_sb);
-}
-
-void max5725_CODEn(uint8_t dac_sel, uint16_t data)
-{
-  uint8_t spi_sb[3] = {0x80, 0, 0};
-  dac_sel &= 0xf;
-  spi_sb[0] |= dac_sel;
-  data &= 0xfff;
-  spi_sb[1] |= data >> 4;
-  data &= 0xf;
-  spi_sb[2] |= (data << 4);
-  spi_cs_low();
-  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
-  spi_cs_high();
-  // printf("max5725_CODEn: "); print_3b(spi_sb);
 }
 
 void max572x_LOADn(uint8_t dac_sel)
@@ -146,24 +113,74 @@ void max572x_LOADn(uint8_t dac_sel)
   spi_cs_low();
   HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
   spi_cs_high();
-  // printf("max572x_LOADn: "); print_3b(spi_sb);
+}
+
+void max572x_CODEn_LOAD_ALL(uint8_t dac_sel, uint16_t dac_value)
+{
+  uint8_t spi_sb[3] = {0xa0, 0, 0};
+  dac_sel &= 0xf;
+  spi_sb[0] |= dac_sel;
+  pack_dac_data(dac_value, &spi_sb[1], &spi_sb[2]);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+}
+
+void max572x_CODEn_LOADn(uint8_t dac_sel, uint16_t dac_value)
+{
+  uint8_t spi_sb[3] = {0xb0, 0, 0};
+  dac_sel &= 0xf;
+  spi_sb[0] |= dac_sel;
+  pack_dac_data(dac_value, &spi_sb[1], &spi_sb[2]);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+}
+
+void max572x_CODE_ALL(uint16_t dac_value)
+{
+  uint8_t spi_sb[3] = {0xc0, 0, 0};
+  pack_dac_data(dac_value, &spi_sb[1], &spi_sb[2]);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+}
+
+void max572x_LOAD_ALL(void)
+{
+  uint8_t spi_sb[3] = {0xc1, 0, 0};
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+}
+
+void max572x_CODE_ALL_LOAD_ALL(uint16_t dac_value)
+{
+  uint8_t spi_sb[3] = {0xc2, 0, 0};
+  pack_dac_data(dac_value, &spi_sb[1], &spi_sb[2]);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+}
+
+void dac_init(void)
+{
+  max572x_SW_RESET();
+  max572x_CONFIG(0xff, max572x_CONFIG_WDOG_DISABLE, 1, 0, 0);
+  max572x_WDOG(1000, 1, max572x_WDOG_SAFETY_LOW);
+  max572x_REF(1, max572x_REF_EXT);
+  max572x_POWER(0xff, max572x_POWER_HIZ);
 }
 
 void test(void)
 {
-  max572x_SW_RESET();
-  max572x_CONFIG(0x3, max572x_CONFIG_WDOG_DISABLE, 1, 1, 0);
-  max572x_WDOG(0xff, 1, max572x_WDOG_SAFETY_LOW);
-  max572x_REF(1, max572x_REF_2V5);
-  max572x_POWER(0xff, max572x_POWER_HIZ);
   max572x_POWER(0x3, max572x_POWER_NORMAL);
-
   printf("run started\n");
   uint16_t count = 0;
   while(1)
   {
-    max5724_CODEn(0, ~count);
-    max5724_CODEn(1, count);
+    max572x_CODEn_LOADn(0, count);
+    max572x_CODEn_LOADn(1, ~count);
     count++;
   }
 }

@@ -106,3 +106,63 @@ void pack_dac_val(uint8_t part, uint16_t value, uint8_t* dh, uint8_t* dl)
     *dl |= (value << 4);
   }
 }
+
+
+void max5723_CODEn(uint8_t dac_sel, uint8_t data)
+{
+  uint8_t spi_sb[3] = {0x80, 0, 0};
+  dac_sel &= 0xf;
+  spi_sb[0] |= dac_sel;
+  spi_sb[1] = data;
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+  // printf("max5723_CODEn: "); print_3b(spi_sb);
+}
+
+void max5724_CODEn(uint8_t dac_sel, uint16_t data)
+{
+  uint8_t spi_sb[3] = {0x80, 0, 0};
+  dac_sel &= 0xf;
+  spi_sb[0] |= dac_sel;
+  data &= 0x3ff;
+  spi_sb[1] |= data >> 2;
+  data &= 0x3;
+  spi_sb[2] |= (data << 6);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+  // printf("max5724_CODEn: "); print_3b(spi_sb);
+}
+
+void max5725_CODEn(uint8_t dac_sel, uint16_t data)
+{
+  uint8_t spi_sb[3] = {0x80, 0, 0};
+  dac_sel &= 0xf;
+  spi_sb[0] |= dac_sel;
+  data &= 0xfff;
+  spi_sb[1] |= data >> 4;
+  data &= 0xf;
+  spi_sb[2] |= (data << 4);
+  spi_cs_low();
+  HAL_SPI_Transmit(max572x_spi_ptr, spi_sb, 3, 100);
+  spi_cs_high();
+  // printf("max5725_CODEn: "); print_3b(spi_sb);
+}
+
+// printf("max572x_SW_RESET\n");
+// printf("max572x_POWER: "); print_3b(spi_sb);
+// printf("max572x_CONFIG: "); print_3b(spi_sb);
+// printf("max572x_WDOG: "); print_3b(spi_sb);
+// printf("max572x_REF: "); print_3b(spi_sb);
+// printf("max572x_CODEn: "); print_3b(spi_sb);
+// printf("max572x_LOADn: "); print_3b(spi_sb);
+
+void print_3b(uint8_t buf[3])
+{
+  printf("0x%x 0x%x 0x%x\n", buf[0], buf[1], buf[2]);
+}
+
+#define MAX5723 0
+#define MAX5724 1
+#define MAX5725 2

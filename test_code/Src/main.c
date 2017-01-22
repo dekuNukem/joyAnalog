@@ -99,6 +99,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   spi_cs_high();
   printf("------------------started------------------\n");
+  dac_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */

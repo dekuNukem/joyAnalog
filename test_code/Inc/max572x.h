@@ -33,11 +33,22 @@
 #define max572x_REF_2V0 0x2
 #define max572x_REF_4V0 0x3
 
-#define MAX5723 0
-#define MAX5724 1
-#define MAX5725 2
-
+void max572x_SW_RESET(void);
+void max572x_POWER(uint8_t dac_multi_sel, uint8_t power_mode);
+void max572x_CONFIG(uint8_t dac_multi_sel, uint8_t wdog, uint8_t gate_en, uint8_t ldac_en, uint8_t clear_en);
+void max572x_WDOG(uint16_t wd_timeout, uint8_t wd_mask, uint8_t wd_safety);
+void max572x_REF(uint8_t ref_power, uint8_t ref_mode);
+void max572x_CODEn(uint8_t dac_sel, uint16_t dac_value);
+void max572x_LOADn(uint8_t dac_sel);
+void max572x_CODEn_LOAD_ALL(uint8_t dac_sel, uint16_t dac_value);
+void max572x_CODEn_LOADn(uint8_t dac_sel, uint16_t dac_value);
+void max572x_CODE_ALL(uint16_t dac_value);
+void max572x_LOAD_ALL(void);
+void max572x_CODE_ALL_LOAD_ALL(uint16_t dac_value);
+void dac_init(void);
 void test(void);
+
+
 
 #ifdef __cplusplus
 }
