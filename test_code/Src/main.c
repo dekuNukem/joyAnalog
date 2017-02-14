@@ -71,14 +71,19 @@ void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
 static void MX_SPI2_Init(void);
-static void MX_DAC_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
 /* USER CODE END PFP */
-
+static void MX_DAC_Init(void);
 /* USER CODE BEGIN 0 */
+
+void stm_dac_init(void)
+{
+	MX_DAC_Init();
+}
+
 int fputc(int ch, FILE *f)
 {
   my_usb_putchar((uint8_t)ch);
@@ -105,12 +110,13 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   MX_USB_DEVICE_Init();
-  MX_DAC_Init();
 
   /* USER CODE BEGIN 2 */
+  
+  // built in dac starts in high-z mode
+  HAL_DAC_DeInit(stm32_dac_ptr);
   spi_cs_high();
   printf("------------------started------------------\n");
-  dac_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,7 +130,7 @@ int main(void)
     if(usb_data != NULL)
     {
       printf("usb_lb: %s\n", usb_data);
-      test();
+      stm_dac_test();
     }
   }
   /* USER CODE END 3 */

@@ -2,10 +2,10 @@ switchmod_code\max572x.o: ..\Src\max572x.c
 switchmod_code\max572x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 switchmod_code\max572x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 switchmod_code\max572x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+switchmod_code\max572x.o: ../Inc/main.h
 switchmod_code\max572x.o: ../Inc/helpers.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
 switchmod_code\max572x.o: ../Inc/stm32f0xx_hal_conf.h
-switchmod_code\max572x.o: ../Inc/main.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h
 switchmod_code\max572x.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h

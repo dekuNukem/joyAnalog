@@ -1,3 +1,34 @@
+HAL_DAC_DeInit(stm32_dac_ptr);
+
+// max dac
+void test(void)
+{
+  max572x_POWER(0x3, max572x_POWER_NORMAL);
+  printf("run started\n");
+  uint16_t count = 0;
+  while(1)
+  {
+    max572x_CODEn_LOADn(0, count);
+    max572x_CODEn_LOADn(1, ~count);
+    count++;
+  }
+}
+
+// bulit in dac
+void test(void)
+{
+  printf("run started\n");
+  uint16_t count = 0;
+  while(1)
+  {
+    // HAL_DAC_SetValue(stm32_dac_ptr, DAC_CHANNEL_1, DAC_ALIGN_8B_R, count);
+    // HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_8B_R, count, 255 - count);
+    HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, count, 65535 - count);
+    count++;
+  }
+}
+
+
 if(linear_buf_line_available(&debug_lb))
 		{
 		  printf("debug_lb: %s\n", debug_lb.buf);

@@ -62,7 +62,7 @@
 #define DEBUG_LED_Pin GPIO_PIN_9
 #define DEBUG_LED_GPIO_Port GPIOC
 /* USER CODE BEGIN Private defines */
-
+void stm_dac_init(void);
 /* USER CODE END Private defines */
 
 /**

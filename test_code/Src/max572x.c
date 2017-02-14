@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "main.h"
 #include "helpers.h"
 #include "shared.h"
 #include "max572x.h"
@@ -163,7 +164,7 @@ void max572x_CODE_ALL_LOAD_ALL(uint16_t dac_value)
   spi_cs_high();
 }
 
-void dac_init(void)
+void max_init(void)
 {
   max572x_SW_RESET();
   max572x_CONFIG(0xff, max572x_CONFIG_WDOG_DISABLE, 1, 0, 0);
@@ -172,8 +173,9 @@ void dac_init(void)
   max572x_POWER(0xff, max572x_POWER_HIZ);
 }
 
-void test(void)
+void max_test(void)
 {
+  max_init();
   max572x_POWER(0x3, max572x_POWER_NORMAL);
   printf("run started\n");
   uint16_t count = 0;
@@ -181,6 +183,20 @@ void test(void)
   {
     max572x_CODEn_LOADn(0, count);
     max572x_CODEn_LOADn(1, ~count);
+    count++;
+  }
+}
+
+void stm_dac_test(void)
+{
+  stm_dac_init();
+  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_1);
+  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_2);
+  printf("run started\n");
+  uint16_t count = 0;
+  while(1)
+  {
+    HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, count, 65535 - count);
     count++;
   }
 }

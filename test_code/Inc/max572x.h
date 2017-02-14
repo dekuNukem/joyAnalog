@@ -45,10 +45,9 @@ void max572x_CODEn_LOADn(uint8_t dac_sel, uint16_t dac_value);
 void max572x_CODE_ALL(uint16_t dac_value);
 void max572x_LOAD_ALL(void);
 void max572x_CODE_ALL_LOAD_ALL(uint16_t dac_value);
-void dac_init(void);
-void test(void);
-
-
+void max_init(void);
+void max_test(void);
+void stm_dac_test(void);
 
 #ifdef __cplusplus
 }
