@@ -29,6 +29,8 @@
 "switchmod_code\stm32f0xx_hal_pwr.o"
 "switchmod_code\stm32f0xx_hal_pcd.o"
 "switchmod_code\stm32f0xx_hal_pcd_ex.o"
+"switchmod_code\stm32f0xx_hal_dac.o"
+"switchmod_code\stm32f0xx_hal_dac_ex.o"
 "switchmod_code\usbd_ioreq.o"
 "switchmod_code\usbd_core.o"
 "switchmod_code\usbd_ctlreq.o"

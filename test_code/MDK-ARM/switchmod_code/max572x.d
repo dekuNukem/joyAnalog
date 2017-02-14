@@ -24,6 +24,8 @@ switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h
+switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h
+switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h
 switchmod_code\max572x.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h
