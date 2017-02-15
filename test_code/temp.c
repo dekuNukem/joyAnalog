@@ -1,3 +1,21 @@
+  while (1)
+  {
+  /* USER CODE END WHILE */
+
+  /* USER CODE BEGIN 3 */
+    usb_data = my_usb_readline();
+    if(usb_data != NULL)
+    {
+      // printf("usb_lb: %s\n", usb_data);
+      // stm_dac_test();
+      serial_test_flag = (serial_test_flag + 1) % 2;
+      printf("serial_test: %d\n", serial_test_flag);
+    }
+    if(serial_test_flag)
+      my_usb_putchar('k');
+  }
+
+
 HAL_DAC_DeInit(stm32_dac_ptr);
 
 // max dac

@@ -121,6 +121,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t serial_test_flag = 0;
   while (1)
   {
   /* USER CODE END WHILE */
@@ -129,8 +130,8 @@ int main(void)
     usb_data = my_usb_readline();
     if(usb_data != NULL)
     {
-      printf("usb_lb: %s\n", usb_data);
-      stm_dac_test();
+      printf("%s\n", usb_data);
+      // printf("OK\n");
     }
   }
   /* USER CODE END 3 */
