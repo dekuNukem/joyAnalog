@@ -149,7 +149,7 @@
 <text x="2.7432" y="2.9972" size="0.8128" layer="25" distance="10" rot="R270">C13</text>
 <text x="2.7686" y="4.81" size="0.8128" layer="25" rot="R270">VB</text>
 <text x="0.8288" y="37.3126" size="0.8128" layer="25">3V3</text>
-<text x="3.4958" y="37.3126" size="0.8128" layer="25">CLK</text>
+<text x="3.2418" y="37.3126" size="0.8128" layer="25">CLK</text>
 <text x="5.9088" y="37.3126" size="0.8128" layer="25">DIO</text>
 <text x="8.3218" y="37.3126" size="0.8128" layer="25">GND</text>
 <text x="10.6426" y="5.334" size="0.8128" layer="25" distance="10" rot="R270">PC13</text>
@@ -158,20 +158,20 @@
 <text x="2.7432" y="6.6802" size="0.8128" layer="25" distance="10" rot="R270">B9</text>
 <text x="2.7432" y="8.5852" size="0.8128" layer="25" distance="10" rot="R270">B8</text>
 <text x="2.7432" y="10.9982" size="0.8128" layer="25" distance="10" rot="R270">BT0</text>
-<text x="2.7432" y="12.6492" size="0.8128" layer="25" distance="10" rot="R270">B7</text>
+<text x="2.7432" y="12.7762" size="0.8128" layer="25" distance="10" rot="R270">B7</text>
 <text x="2.7432" y="14.6812" size="0.8128" layer="25" distance="10" rot="R270">B6</text>
 <text x="2.7432" y="16.7132" size="0.8128" layer="25" distance="10" rot="R270">B5</text>
-<text x="2.7432" y="18.6182" size="0.8128" layer="25" distance="10" rot="R270">B4</text>
+<text x="2.7432" y="18.7452" size="0.8128" layer="25" distance="10" rot="R270">B4</text>
 <text x="2.7432" y="20.6502" size="0.8128" layer="25" distance="10" rot="R270">B3</text>
 <text x="2.7432" y="22.9362" size="0.8128" layer="25" distance="10" rot="R270">A15</text>
 <text x="2.7432" y="25.0952" size="0.8128" layer="25" distance="10" rot="R270">A10</text>
-<text x="2.7432" y="26.6192" size="0.8128" layer="25" distance="10" rot="R270">A9</text>
+<text x="2.7432" y="26.7462" size="0.8128" layer="25" distance="10" rot="R270">A9</text>
 <text x="2.7432" y="28.6512" size="0.8128" layer="25" distance="10" rot="R270">A8</text>
 <text x="2.7432" y="30.9372" size="0.8128" layer="25" distance="10" rot="R270">B15</text>
 <text x="2.7432" y="33.0962" size="0.8128" layer="25" distance="10" rot="R270">B14</text>
-<text x="2.7432" y="34.3662" size="0.8128" layer="25" distance="10" rot="R270">G</text>
+<text x="2.7432" y="34.4932" size="0.8128" layer="25" distance="10" rot="R270">G</text>
 <text x="2.7432" y="37.0332" size="0.8128" layer="25" distance="10" rot="R270">3V3</text>
-<text x="23.3934" y="1.54" size="0.8128" layer="25" rot="R90">G</text>
+<text x="23.3934" y="1.667" size="0.8128" layer="25" rot="R90">G</text>
 <text x="23.3934" y="3.064" size="0.8128" layer="25" rot="R90">RST</text>
 <text x="23.3934" y="5.477" size="0.8128" layer="25" rot="R90">A0</text>
 <text x="23.3934" y="7.509" size="0.8128" layer="25" rot="R90">A1</text>
@@ -182,7 +182,7 @@
 <text x="23.3934" y="17.542" size="0.8128" layer="25" rot="R90">A6</text>
 <text x="23.3934" y="19.447" size="0.8128" layer="25" rot="R90">A7</text>
 <text x="23.3934" y="21.479" size="0.8128" layer="25" rot="R90">B0</text>
-<text x="23.3934" y="23.384" size="0.8128" layer="25" rot="R90">B1</text>
+<text x="23.3934" y="23.511" size="0.8128" layer="25" rot="R90">B1</text>
 <text x="23.3934" y="25.416" size="0.8128" layer="25" rot="R90">B2</text>
 <text x="23.3934" y="27.067" size="0.8128" layer="25" rot="R90">B10</text>
 <text x="23.3934" y="29.226" size="0.8128" layer="25" rot="R90">B11</text>
@@ -1182,8 +1182,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="23.4696" y1="27.0764" x2="24.8666" y2="27.0764" width="0.2032" layer="1"/>
 <wire x1="24.8666" y1="27.0764" x2="25.4508" y2="26.4922" width="0.2032" layer="1"/>
 <wire x1="17.9882" y1="15.759" x2="17.2626" y2="15.759" width="0.2032" layer="1"/>
-<wire x1="19.7924" y1="35.5393" x2="19.7772" y2="35.6108" width="0" layer="19" extent="1-1"/>
 <wire x1="21.5904" y1="24.8372" x2="21.5904" y2="23.1831875" width="0.2032" layer="1"/>
+<wire x1="19.7924" y1="35.5393" x2="19.7772" y2="35.6108" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="S1" pad="1"/>

@@ -7146,6 +7146,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND21" library="backplane" deviceset="GND" device=""/>
 <part name="+3V12" library="backplane" deviceset="+3V3" device=""/>
 <part name="R10" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
+<part name="GND22" library="backplane" deviceset="GND" device=""/>
+<part name="S2" library="Adafruit Feather M0 Adalogger" deviceset="SWITCH-MOMENTARY-2" device="TURTLE"/>
 </parts>
 <sheets>
 <sheet>
@@ -7233,6 +7235,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND21" gate="1" x="27.94" y="-101.6"/>
 <instance part="+3V12" gate="G$1" x="-190.5" y="-2.54"/>
 <instance part="R10" gate="G$1" x="-180.34" y="-5.08" rot="R180"/>
+<instance part="GND22" gate="1" x="-180.34" y="-177.8"/>
+<instance part="S2" gate="G$1" x="-175.26" y="-175.26"/>
 </instances>
 <busses>
 </busses>
@@ -7359,6 +7363,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="JP2" gate="A" pin="21"/>
 <wire x1="27.94" y1="-99.06" x2="58.42" y2="-99.06" width="0.1524" layer="91"/>
 <pinref part="GND21" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="S2" gate="G$1" pin="1"/>
+<pinref part="GND22" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -7755,6 +7763,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-93.98" y1="-142.24" x2="-93.98" y2="-111.76" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="A" pin="4"/>
 <wire x1="-93.98" y1="-111.76" x2="-101.6" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-175.26" x2="-170.18" y2="-175.26" width="0.1524" layer="91"/>
+<junction x="-127" y="-175.26"/>
+<pinref part="S2" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$31" class="0">
