@@ -146,16 +146,52 @@
 <wire x1="26" y1="0" x2="26" y2="42" width="0" layer="20"/>
 <wire x1="26" y1="42" x2="0" y2="42" width="0" layer="20"/>
 <wire x1="0" y1="42" x2="0" y2="0" width="0" layer="20"/>
-<text x="2.7432" y="2.6162" size="0.8128" layer="25" distance="10" rot="R270">PC
-13</text>
+<text x="2.7432" y="2.9972" size="0.8128" layer="25" distance="10" rot="R270">C13</text>
 <text x="2.7686" y="4.81" size="0.8128" layer="25" rot="R270">VB</text>
-<text x="0.8288" y="37.1856" size="0.8128" layer="25">3V3</text>
-<text x="3.2418" y="37.1856" size="0.8128" layer="25">CLK</text>
-<text x="5.9088" y="37.1856" size="0.8128" layer="25">DIO</text>
-<text x="8.1948" y="37.1856" size="0.8128" layer="25">GND</text>
-<text x="10.287" y="1.1176" size="0.8128" layer="25" distance="10">PC13</text>
+<text x="0.8288" y="37.3126" size="0.8128" layer="25">3V3</text>
+<text x="3.4958" y="37.3126" size="0.8128" layer="25">CLK</text>
+<text x="5.9088" y="37.3126" size="0.8128" layer="25">DIO</text>
+<text x="8.3218" y="37.3126" size="0.8128" layer="25">GND</text>
+<text x="10.6426" y="5.334" size="0.8128" layer="25" distance="10" rot="R270">PC13</text>
 <text x="10.4394" y="32.766" size="0.8128" layer="25" distance="10" rot="R90">PA8</text>
-<text x="6.858" y="28.7274" size="0.8128" layer="25" distance="10" rot="R180">PWR</text>
+<text x="4.5466" y="23.876" size="0.8128" layer="25" distance="10" rot="R270">PWR</text>
+<text x="2.7432" y="6.6802" size="0.8128" layer="25" distance="10" rot="R270">B9</text>
+<text x="2.7432" y="8.5852" size="0.8128" layer="25" distance="10" rot="R270">B8</text>
+<text x="2.7432" y="10.9982" size="0.8128" layer="25" distance="10" rot="R270">BT0</text>
+<text x="2.7432" y="12.6492" size="0.8128" layer="25" distance="10" rot="R270">B7</text>
+<text x="2.7432" y="14.6812" size="0.8128" layer="25" distance="10" rot="R270">B6</text>
+<text x="2.7432" y="16.7132" size="0.8128" layer="25" distance="10" rot="R270">B5</text>
+<text x="2.7432" y="18.6182" size="0.8128" layer="25" distance="10" rot="R270">B4</text>
+<text x="2.7432" y="20.6502" size="0.8128" layer="25" distance="10" rot="R270">B3</text>
+<text x="2.7432" y="22.9362" size="0.8128" layer="25" distance="10" rot="R270">A15</text>
+<text x="2.7432" y="25.0952" size="0.8128" layer="25" distance="10" rot="R270">A10</text>
+<text x="2.7432" y="26.6192" size="0.8128" layer="25" distance="10" rot="R270">A9</text>
+<text x="2.7432" y="28.6512" size="0.8128" layer="25" distance="10" rot="R270">A8</text>
+<text x="2.7432" y="30.9372" size="0.8128" layer="25" distance="10" rot="R270">B15</text>
+<text x="2.7432" y="33.0962" size="0.8128" layer="25" distance="10" rot="R270">B14</text>
+<text x="2.7432" y="34.3662" size="0.8128" layer="25" distance="10" rot="R270">G</text>
+<text x="2.7432" y="37.0332" size="0.8128" layer="25" distance="10" rot="R270">3V3</text>
+<text x="23.3934" y="1.54" size="0.8128" layer="25" rot="R90">G</text>
+<text x="23.3934" y="3.064" size="0.8128" layer="25" rot="R90">RST</text>
+<text x="23.3934" y="5.477" size="0.8128" layer="25" rot="R90">A0</text>
+<text x="23.3934" y="7.509" size="0.8128" layer="25" rot="R90">A1</text>
+<text x="23.3934" y="9.541" size="0.8128" layer="25" rot="R90">A2</text>
+<text x="23.3934" y="11.446" size="0.8128" layer="25" rot="R90">A3</text>
+<text x="23.3934" y="13.478" size="0.8128" layer="25" rot="R90">A4</text>
+<text x="23.3934" y="15.51" size="0.8128" layer="25" rot="R90">A5</text>
+<text x="23.3934" y="17.542" size="0.8128" layer="25" rot="R90">A6</text>
+<text x="23.3934" y="19.447" size="0.8128" layer="25" rot="R90">A7</text>
+<text x="23.3934" y="21.479" size="0.8128" layer="25" rot="R90">B0</text>
+<text x="23.3934" y="23.384" size="0.8128" layer="25" rot="R90">B1</text>
+<text x="23.3934" y="25.416" size="0.8128" layer="25" rot="R90">B2</text>
+<text x="23.3934" y="27.067" size="0.8128" layer="25" rot="R90">B10</text>
+<text x="23.3934" y="29.226" size="0.8128" layer="25" rot="R90">B11</text>
+<text x="23.3934" y="31.131" size="0.8128" layer="25" rot="R90">B12</text>
+<text x="23.3934" y="33.29" size="0.8128" layer="25" rot="R90">B13</text>
+<text x="23.3934" y="35.322" size="0.8128" layer="25" rot="R90">3V3</text>
+<text x="12.335" y="0.6096" size="0.8128" layer="25">dekuNukem</text>
+<text x="12.3444" y="26.305" size="0.8128" layer="25" rot="R90">NintenDAC mini</text>
+<text x="15.891" y="1.8796" size="0.8128" layer="25">2017</text>
 </plain>
 <libraries>
 <library name="backplane">
@@ -885,7 +921,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </autorouter>
 <elements>
 <element name="C1" library="backplane" package="0805" value="" x="17.8214" y="5.9182" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.3802" y="4.1275" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="17.4338" y="3.4925" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="19.2184" y="4.9022" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="C11" library="backplane" package="0805" value="" x="5.715" y="6.858" smashed="yes" rot="R270">
@@ -897,11 +933,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="9.5504" y="7.874" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="C2" library="backplane" package="C1210" value="" x="23.1554" y="39.4716" smashed="yes" rot="R180">
-<attribute name="NAME" x="21.6408" y="36.7444" size="0.8128" layer="25"/>
+<attribute name="NAME" x="20.7518" y="36.9984" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="24.5524" y="42.3926" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C3" library="backplane" package="0805" value="" x="17.8214" y="9.2202" smashed="yes" rot="R270">
-<attribute name="NAME" x="17.1864" y="10.9601" size="0.8128" layer="25"/>
+<attribute name="NAME" x="17.1864" y="10.8331" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="16.4244" y="10.2362" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="C6" library="backplane" package="0805" value="" x="8.525" y="15.4178" smashed="yes" rot="R90">
@@ -923,7 +959,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="9.6614" y="4.1148" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R7" library="SparkFun-Passives" package="0805" value="" x="6.7724" y="24.892" smashed="yes" rot="R270">
-<attribute name="NAME" x="7.7122" y="23.3553" size="0.8128" layer="25"/>
+<attribute name="NAME" x="7.2517" y="21.9362" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="5.3754" y="25.908" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="R8" library="SparkFun-Passives" package="0805" value="" x="20.717" y="9.017" smashed="yes">
@@ -931,15 +967,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="19.701" y="7.62" size="0.4064" layer="27"/>
 </element>
 <element name="R9" library="SparkFun-Passives" package="0805" value="" x="5.715" y="3.159" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.4676" y="1.5113" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="5.8326" y="1.3843" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="7.112" y="2.143" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="S1" library="Adafruit Feather M0 Adalogger" package="KMR2" value="SWITCH-MOMENTARY-2TURTLE" x="20.778" y="4.46" smashed="yes" rot="R90"/>
 <element name="X1" library="backplane" package="USB-MICROB" value="USB-MICROB" x="15.8148" y="40.2234" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="CONN-09505" x="15.8148" y="40.2234" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="Y1" library="backplane" package="HC49US" value="" x="14.2794" y="7.5842" smashed="yes" rot="R270">
-<attribute name="VALUE" x="10.3424" y="12.6642" size="1.27" layer="27" ratio="10" rot="R270"/>
+<element name="Y1" library="backplane" package="HC49US" value="" x="14.2794" y="7.9652" smashed="yes" rot="R270">
+<attribute name="VALUE" x="10.3424" y="13.0452" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="Y2" library="backplane" package="TC26HEZ" value="" x="8.3904" y="11.0414" smashed="yes" rot="R180">
 <attribute name="VALUE" x="5.7234" y="9.0094" size="1.27" layer="27" ratio="10" rot="R270"/>
@@ -964,7 +1000,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="18.1002" y="28.6044" size="0.8128" layer="25" rot="R270"/>
 </element>
 <element name="R2" library="SparkFun-Passives" package="0805" value="" x="21.0472" y="22.4536" smashed="yes" rot="R45">
-<attribute name="NAME" x="18.660925" y="21.208390625" size="0.8128" layer="25" rot="R315"/>
+<attribute name="NAME" x="18.660925" y="21.081390625" size="0.8128" layer="25" rot="R315"/>
 <attribute name="VALUE" x="21.31660625" y="20.74735" size="0.4064" layer="27" rot="R45"/>
 </element>
 <element name="R3" library="SparkFun-Passives" package="0805" value="" x="17.923" y="25.1714" smashed="yes" rot="R270">
@@ -975,14 +1011,14 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="PROD_ID" value="SWCH-08247" x="6.747" y="32.5882" size="0.8128" layer="27" rot="R90" display="off"/>
 </element>
 <element name="U1" library="Adafruit Feather M0 Adalogger" package="SOT23-5" value="" x="20.7424" y="34.2392" smashed="yes">
-<attribute name="NAME" x="17.996" y="31.6484" size="0.8128" layer="25" ratio="18"/>
+<attribute name="NAME" x="18.7706" y="33.617" size="0.8128" layer="25" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="22.7204" y="33.6042" size="0.4064" layer="27" ratio="10"/>
 </element>
 <element name="D2" library="microbuilder" package="SOD-123" value="MBR120" x="16.7546" y="32.766" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.0848" y="28.575" size="0.8128" layer="25" ratio="18" rot="R90"/>
+<attribute name="NAME" x="17.399" y="29.7848" size="0.8128" layer="25" ratio="18" rot="R180"/>
 </element>
 <element name="R4" library="SparkFun-Passives" package="0805" value="" x="14.1384" y="32.8422" smashed="yes" rot="R45">
-<attribute name="NAME" x="12.863465625" y="33.1919" size="0.8128" layer="25" rot="R45"/>
+<attribute name="NAME" x="14.133465625" y="34.4619" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="14.40780625" y="31.13595" size="0.4064" layer="27" rot="R45"/>
 </element>
 <element name="TP1" library="SparkFun-Passives" package="PAD.03X.05" value="TEST-POINT3X5" x="14.8242" y="30.861"/>
@@ -1133,7 +1169,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="JP1" pad="4"/>
 <contactref element="U1" pad="5"/>
 <wire x1="19.7772" y1="35.4076" x2="19.7772" y2="35.6108" width="0.4064" layer="1"/>
-<wire x1="21.5904" y1="24.8372" x2="21.5904" y2="23.1831875" width="0.2032" layer="1"/>
 <wire x1="21.5904" y1="23.1831875" x2="21.68359375" y2="23.08999375" width="0.2032" layer="1"/>
 <wire x1="21.617" y1="9.017" x2="21.971" y2="8.663" width="0.2032" layer="1"/>
 <wire x1="21.971" y1="8.663" x2="21.971" y2="6.5532" width="0.2032" layer="1"/>
@@ -1148,6 +1183,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="24.8666" y1="27.0764" x2="25.4508" y2="26.4922" width="0.2032" layer="1"/>
 <wire x1="17.9882" y1="15.759" x2="17.2626" y2="15.759" width="0.2032" layer="1"/>
 <wire x1="19.7924" y1="35.5393" x2="19.7772" y2="35.6108" width="0" layer="19" extent="1-1"/>
+<wire x1="21.5904" y1="24.8372" x2="21.5904" y2="23.1831875" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="S1" pad="1"/>
@@ -1169,19 +1205,21 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="Y1" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="IC1" pad="5"/>
-<wire x1="14.2794" y1="5.0442" x2="17.7954" y2="5.0442" width="0.2032" layer="1"/>
 <wire x1="17.7954" y1="5.0442" x2="17.8214" y2="5.0182" width="0.2032" layer="1"/>
-<wire x1="14.2794" y1="5.0442" x2="12.2594" y2="7.0642" width="0.2032" layer="1" curve="-90"/>
-<wire x1="12.2594" y1="7.0642" x2="12.2594" y2="15.5762" width="0.2032" layer="1"/>
+<wire x1="14.2794" y1="5.4252" x2="12.2594" y2="7.4452" width="0.2032" layer="1" curve="-90"/>
+<wire x1="12.2594" y1="7.4452" x2="12.2594" y2="15.5762" width="0.2032" layer="1"/>
+<wire x1="14.2794" y1="5.4252" x2="17.4144" y2="5.4252" width="0.2032" layer="1"/>
+<wire x1="17.4144" y1="5.4252" x2="17.8214" y2="5.0182" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="Y1" pad="1"/>
 <contactref element="C3" pad="1"/>
 <contactref element="IC1" pad="6"/>
-<wire x1="14.2794" y1="10.1242" x2="17.8174" y2="10.1242" width="0.2032" layer="1"/>
 <wire x1="17.8174" y1="10.1242" x2="17.8214" y2="10.1202" width="0.2032" layer="1"/>
-<wire x1="14.2794" y1="10.1242" x2="12.7594" y2="11.6442" width="0.2032" layer="1" curve="-90"/>
-<wire x1="12.7594" y1="11.6442" x2="12.7594" y2="15.5762" width="0.2032" layer="1"/>
+<wire x1="14.2794" y1="10.5052" x2="12.7594" y2="12.0252" width="0.2032" layer="1" curve="-90"/>
+<wire x1="12.7594" y1="12.0252" x2="12.7594" y2="15.5762" width="0.2032" layer="1"/>
+<wire x1="14.2794" y1="10.5052" x2="17.4364" y2="10.5052" width="0.2032" layer="1"/>
+<wire x1="17.4364" y1="10.5052" x2="17.8214" y2="10.1202" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$27">
 <contactref element="PWR" pad="C"/>
@@ -1366,8 +1404,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="20.265" y1="24.8626" x2="20.265" y2="26.9452" width="0.2032" layer="1"/>
 <wire x1="21.336" y1="28.0162" x2="24.2334" y2="28.0162" width="0.2032" layer="1"/>
 <wire x1="24.2334" y1="28.0162" x2="24.2934" y2="28.0762" width="0.2032" layer="1"/>
-<wire x1="20.410803125" y1="21.817203125" x2="20.346796875" y2="21.817203125" width="0.2032" layer="1"/>
 <wire x1="20.346796875" y1="21.817203125" x2="19.7184" y2="22.4456" width="0.2032" layer="1"/>
+<wire x1="20.410803125" y1="21.817203125" x2="20.346796875" y2="21.817203125" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$19">
 <contactref element="IC3" pad="5"/>
@@ -1611,10 +1649,4 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signals>
 </board>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
