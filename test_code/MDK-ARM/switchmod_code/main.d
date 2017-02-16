@@ -43,3 +43,4 @@ switchmod_code\main.o: ../Inc/helpers.h
 switchmod_code\main.o: ../Inc/shared.h
 switchmod_code\main.o: ../Inc/max572x.h
 switchmod_code\main.o: ../Inc/my_usb.h
+switchmod_code\main.o: ../Inc/cmd_parser.h

@@ -39,7 +39,9 @@ char* my_usb_readline(void)
       for (int i = 0; i < usb_recv_buf.curr_index; ++i)
         if(usb_recv_buf.buf[i] == '\n' || usb_recv_buf.buf[i] == '\r')
           usb_recv_buf.buf[i] = 0;
+      memset(usb_line_buf, 0, LB_SIZE);
       strcpy(usb_line_buf, usb_recv_buf.buf);
+      usb_line_buf[strlen(usb_line_buf)] = '\n';
       ret = usb_line_buf;
       linear_buf_reset(&usb_recv_buf);
     }

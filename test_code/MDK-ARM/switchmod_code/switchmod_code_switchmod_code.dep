@@ -69,7 +69,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58410E72)
 I (../Inc/stm32f0xx_it.h)(0x58A308CE)
-F (../Src/main.c)(0x58A44FFD)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\main.o --omf_browse switchmod_code\main.crf --depend switchmod_code\main.d)
+F (../Src/main.c)(0x58A5C120)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\main.o --omf_browse switchmod_code\main.crf --depend switchmod_code\main.d)
 I (../Inc/main.h)(0x58A308CF)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58A308CF)
@@ -112,6 +112,7 @@ I (../Inc/helpers.h)(0x58846CA8)
 I (../Inc/shared.h)(0x58A44E5C)
 I (../Inc/max572x.h)(0x58A30853)
 I (../Inc/my_usb.h)(0x5884A83E)
+I (../Inc/cmd_parser.h)(0x58A5C093)
 F (../Src/stm32f0xx_hal_msp.c)(0x58A308CE)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\stm32f0xx_hal_msp.o --omf_browse switchmod_code\stm32f0xx_hal_msp.crf --depend switchmod_code\stm32f0xx_hal_msp.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58A308CF)
@@ -401,7 +402,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58410E77)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58410E77)
 I (../Inc/usbd_desc.h)(0x58A308CD)
 F (..\Inc\my_usb.h)(0x5884A83E)()
-F (..\Src\my_usb.c)(0x5884A816)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\my_usb.o --omf_browse switchmod_code\my_usb.crf --depend switchmod_code\my_usb.d)
+F (..\Src\my_usb.c)(0x58A5C697)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\my_usb.o --omf_browse switchmod_code\my_usb.crf --depend switchmod_code\my_usb.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
@@ -446,6 +447,46 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58410E77)
 I (../Inc/usbd_conf.h)(0x58A308CD)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58410E77)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58410E77)
+F (..\Src\cmd_parser.c)(0x58A5D4C9)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\cmd_parser.o --omf_browse switchmod_code\cmd_parser.crf --depend switchmod_code\cmd_parser.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
+I (../Inc/main.h)(0x58A308CF)
+I (../Inc/helpers.h)(0x58846CA8)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
+I (../Inc/stm32f0xx_hal_conf.h)(0x58A308CF)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58410E72)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58410E39)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h)(0x58410E38)
+I (../Drivers/CMSIS/Include/core_cm0.h)(0x58410E71)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB1D70)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x58410E71)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58410E71)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58410E71)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58410E39)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58410E72)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58410E72)
+I (../Inc/shared.h)(0x58A44E5C)
+I (../Inc/cmd_parser.h)(0x58A5C093)
+F (..\Inc\cmd_parser.h)(0x58A5C093)()
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c)(0x58410E73)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I C:\Users\Allen\Desktop\NintenDAC\test_code\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o switchmod_code\stm32f0xx_hal_rcc_ex.o --omf_browse switchmod_code\stm32f0xx_hal_rcc_ex.crf --depend switchmod_code\stm32f0xx_hal_rcc_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58A308CF)

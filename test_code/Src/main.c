@@ -53,7 +53,7 @@
 #include "shared.h"
 #include "max572x.h"
 #include "my_usb.h"
-
+#include "cmd_parser.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -79,7 +79,7 @@ static void MX_SPI2_Init(void);
 static void MX_DAC_Init(void);
 /* USER CODE BEGIN 0 */
 
-void stm_dac_init(void)
+void stm32_dac_init(void)
 {
 	MX_DAC_Init();
 }
@@ -121,7 +121,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t serial_test_flag = 0;
   while (1)
   {
   /* USER CODE END WHILE */
@@ -130,8 +129,7 @@ int main(void)
     usb_data = my_usb_readline();
     if(usb_data != NULL)
     {
-      printf("%s\n", usb_data);
-      // printf("OK\n");
+      parse_cmd(usb_data);      
     }
   }
   /* USER CODE END 3 */

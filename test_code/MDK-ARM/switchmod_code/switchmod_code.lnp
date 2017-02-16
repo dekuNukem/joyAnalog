@@ -11,6 +11,7 @@
 "switchmod_code\usbd_cdc_if.o"
 "switchmod_code\usbd_desc.o"
 "switchmod_code\my_usb.o"
+"switchmod_code\cmd_parser.o"
 "switchmod_code\stm32f0xx_hal_rcc_ex.o"
 "switchmod_code\stm32f0xx_hal_i2c_ex.o"
 "switchmod_code\stm32f0xx_hal_spi.o"

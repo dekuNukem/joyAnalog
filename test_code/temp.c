@@ -1,3 +1,30 @@
+  if(strncmp(cmd, "test\n", 5) == 0)
+    printf("im alive!\n");
+  for (int i = 0; i < strlen(cmd); ++i)
+    printf("%c %d\n", cmd[i], cmd[i]);
+void parse_cmd(char* cmd)
+{
+  if(cmd == NULL)
+    return;
+
+  if(strncmp(cmd, "test\n", 5) == 0)
+    puts("test OK");
+  else if(strncmp(cmd, "bh\n", 3) == 0)
+  {
+    puts("bh OK");
+    HAL_GPIO_WritePin(DEBUG_LED_GPIO_Port, DEBUG_LED_Pin, GPIO_PIN_RESET);
+  }
+  else if(strncmp(cmd, "br\n", 3) == 0)
+  {
+    puts("br OK");
+    HAL_GPIO_WritePin(DEBUG_LED_GPIO_Port, DEBUG_LED_Pin, GPIO_PIN_SET);
+  }
+  else
+    puts("ERROR");
+}
+
+  
+      
   while (1)
   {
   /* USER CODE END WHILE */
