@@ -30,5 +30,3 @@ void parse_cmd(char* cmd)
   else
     puts("ERROR");
 }
-
-  
