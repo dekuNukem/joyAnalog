@@ -51,6 +51,10 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define STM32_DAC_X_Pin GPIO_PIN_4
+#define STM32_DAC_X_GPIO_Port GPIOA
+#define STM32_DAC_Y_Pin GPIO_PIN_5
+#define STM32_DAC_Y_GPIO_Port GPIOA
 #define DAC_LDAC_Pin GPIO_PIN_2
 #define DAC_LDAC_GPIO_Port GPIOB
 #define DAC_CLR_Pin GPIO_PIN_10

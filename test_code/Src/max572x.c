@@ -190,8 +190,6 @@ void max_test(void)
 void stm_dac_test(void)
 {
   stm32_dac_init();
-  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_1);
-  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_2);
   printf("run started\n");
   uint16_t count = 0;
   while(1)

@@ -1,3 +1,74 @@
+  printf("%d, %d\n", x_12b, y_12b);
+
+  else if(strncmp(cmd, "sd", 2) == 0)
+  {
+    HAL_DAC_DeInit(stm32_dac_ptr);
+
+    GPIO_InitTypeDef GPIO_InitStruct;
+    GPIO_InitStruct.Pin = STM32_DAC_X_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+    HAL_GPIO_Init(STM32_DAC_X_GPIO_Port, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = STM32_DAC_Y_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+    HAL_GPIO_Init(STM32_DAC_Y_GPIO_Port, &GPIO_InitStruct);
+
+    puts("sd OK");
+  }
+void button_ctrl(int32_t action)
+{
+  for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
+  {
+    if(gpio_port_queue[i] != NULL)
+    {
+      printf("acting on %d...\n", i);
+      if(action == ACTION_HOLD)
+        HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], GPIO_PIN_RESET);
+      else
+        HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], GPIO_PIN_SET);
+    }
+  }
+}
+
+int32_t endswith(char* source, char* query)
+{
+  return strncmp(source, query, 4) == 0 && strlen(source) == strlen(query);
+}
+
+    for (int i = 0; i < ARG_QUEUE_SIZE; ++i)
+      printf("%d: %d\n", i, gpio_pin_queue[i]);
+void release_all_buttons(void)
+{
+  puts("bra ok");
+}
+
+
+  char* my_usb_readline(void)
+{
+  char* ret = NULL;
+  if(usb_recv_buf.curr_index > 0)
+  {
+    if(usb_recv_buf.buf[usb_recv_buf.curr_index - 1] == '\n')
+    {
+      for (int i = 0; i < usb_recv_buf.curr_index; ++i)
+        if(usb_recv_buf.buf[i] == '\n' || usb_recv_buf.buf[i] == '\r')
+          usb_recv_buf.buf[i] = 0;
+      memset(usb_line_buf, 0, LB_SIZE);
+      strcpy(usb_line_buf, usb_recv_buf.buf);
+      ret = usb_line_buf;
+      linear_buf_reset(&usb_recv_buf);
+    }
+    else if(HAL_GetTick() - usb_recv_buf.last_recv > 250)
+      linear_buf_reset(&usb_recv_buf);
+  }
+  return ret;
+}
+
+
+
+
   if(strncmp(cmd, "test\n", 5) == 0)
     printf("im alive!\n");
   for (int i = 0; i < strlen(cmd); ++i)
@@ -23,8 +94,9 @@ void parse_cmd(char* cmd)
     puts("ERROR");
 }
 
-  
-      
+        usb_line_buf[strlen(usb_line_buf)] = '\n';
+
+
   while (1)
   {
   /* USER CODE END WHILE */

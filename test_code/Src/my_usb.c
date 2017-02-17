@@ -41,11 +41,10 @@ char* my_usb_readline(void)
           usb_recv_buf.buf[i] = 0;
       memset(usb_line_buf, 0, LB_SIZE);
       strcpy(usb_line_buf, usb_recv_buf.buf);
-      usb_line_buf[strlen(usb_line_buf)] = '\n';
       ret = usb_line_buf;
       linear_buf_reset(&usb_recv_buf);
     }
-    else if(HAL_GetTick() - usb_recv_buf.last_recv > 250)
+    else if(HAL_GetTick() - usb_recv_buf.last_recv > 500)
       linear_buf_reset(&usb_recv_buf);
   }
   return ret;

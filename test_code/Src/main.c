@@ -74,14 +74,18 @@ static void MX_SPI2_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
+static void MX_DAC_Init(void);
 
 /* USER CODE END PFP */
-static void MX_DAC_Init(void);
+
 /* USER CODE BEGIN 0 */
 
 void stm32_dac_init(void)
 {
 	MX_DAC_Init();
+  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_1);
+  HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_2);
+  printf("STM32 built-in DAC initialized\n");
 }
 
 int fputc(int ch, FILE *f)
