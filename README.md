@@ -1,4 +1,4 @@
-### A STM32 development board with 10 high-speed 12-bit DAC channels.
+### STM32 development boards with up to 10 high-speed 12-bit DAC channels.
 
 I intend to use it for automating game console controller inputs, but it can also be used as a general purpose dev board. 
 
@@ -6,7 +6,7 @@ I intend to use it for automating game console controller inputs, but it can als
 * MAX5723/MAX5724/MAX5725 8-channel high-speed SPI DAC + 2-channel built-in DAC.
 * 36 GPIOs(or 40 using internal oscillators), BOOT0, RESET, VBAT, and SWD on headers.
 * USB for power and communication.
-* Board size 4.3 x 4.3 cm, or 1.69 x 1.69 inch.
+* Board size 4.2 x 4.2 cm, or 1.65 x 1.65 inch.
 
 ![Alt text](http://i.imgur.com/0n4vfXo.png)
 
