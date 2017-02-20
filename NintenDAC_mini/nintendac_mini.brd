@@ -149,7 +149,7 @@
 <text x="2.7432" y="2.9972" size="0.8128" layer="25" distance="10" rot="R270">C13</text>
 <text x="2.7686" y="4.81" size="0.8128" layer="25" rot="R270">VB</text>
 <text x="0.8288" y="37.3126" size="0.8128" layer="25">3V3</text>
-<text x="3.2418" y="37.3126" size="0.8128" layer="25">CLK</text>
+<text x="3.3688" y="37.3126" size="0.8128" layer="25">CLK</text>
 <text x="5.9088" y="37.3126" size="0.8128" layer="25">DIO</text>
 <text x="8.3218" y="37.3126" size="0.8128" layer="25">GND</text>
 <text x="10.6426" y="5.334" size="0.8128" layer="25" distance="10" rot="R270">PC13</text>

@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
 
 ==============================================================================
 
@@ -1800,26 +1800,26 @@ Image Symbol Table
     _printf_core                             0x08003247   Thumb Code    30  printfb.o(i._printf_core)
     i.blink                                  0x08003264   Section        0  main.o(i.blink)
     i.button_ctrl                            0x08003290   Section        0  cmd_parser.o(i.button_ctrl)
-    i.fill_lookup                            0x080032c8   Section        0  cmd_parser.o(i.fill_lookup)
-    i.fputc                                  0x08003490   Section        0  main.o(i.fputc)
-    i.goto_next_arg                          0x0800349e   Section        0  cmd_parser.o(i.goto_next_arg)
-    i.idwg_kick                              0x080034d8   Section        0  helpers.o(i.idwg_kick)
-    i.linear_buf_add                         0x08003500   Section        0  helpers.o(i.linear_buf_add)
-    i.linear_buf_add_str                     0x08003526   Section        0  helpers.o(i.linear_buf_add_str)
-    i.linear_buf_init                        0x08003554   Section        0  helpers.o(i.linear_buf_init)
-    i.linear_buf_reset                       0x08003568   Section        0  helpers.o(i.linear_buf_reset)
-    i.main                                   0x08003584   Section        0  main.o(i.main)
-    i.my_usb_init                            0x08003634   Section        0  my_usb.o(i.my_usb_init)
-    i.my_usb_putchar                         0x0800364c   Section        0  my_usb.o(i.my_usb_putchar)
-    i.my_usb_readline                        0x0800366c   Section        0  my_usb.o(i.my_usb_readline)
-    i.parse_cmd                              0x080036d8   Section        0  cmd_parser.o(i.parse_cmd)
-    i.process_multiarg                       0x080038c8   Section        0  cmd_parser.o(i.process_multiarg)
-    i.puts                                   0x08003908   Section        0  puts.o(i.puts)
-    i.stm32_dac_init                         0x08003928   Section        0  main.o(i.stm32_dac_init)
-    .constdata                               0x0800397c   Section       16  system_stm32f0xx.o(.constdata)
-    .constdata                               0x0800398c   Section      129  ctype_o.o(.constdata)
-    .constdata                               0x08003a10   Section        4  ctype_o.o(.constdata)
-    table                                    0x08003a10   Data           4  ctype_o.o(.constdata)
+    i.fill_lookup                            0x080032bc   Section        0  cmd_parser.o(i.fill_lookup)
+    i.fputc                                  0x08003484   Section        0  main.o(i.fputc)
+    i.goto_next_arg                          0x08003492   Section        0  cmd_parser.o(i.goto_next_arg)
+    i.idwg_kick                              0x080034cc   Section        0  helpers.o(i.idwg_kick)
+    i.linear_buf_add                         0x080034f4   Section        0  helpers.o(i.linear_buf_add)
+    i.linear_buf_add_str                     0x0800351a   Section        0  helpers.o(i.linear_buf_add_str)
+    i.linear_buf_init                        0x08003548   Section        0  helpers.o(i.linear_buf_init)
+    i.linear_buf_reset                       0x0800355c   Section        0  helpers.o(i.linear_buf_reset)
+    i.main                                   0x08003578   Section        0  main.o(i.main)
+    i.my_usb_init                            0x08003628   Section        0  my_usb.o(i.my_usb_init)
+    i.my_usb_putchar                         0x08003640   Section        0  my_usb.o(i.my_usb_putchar)
+    i.my_usb_readline                        0x08003660   Section        0  my_usb.o(i.my_usb_readline)
+    i.parse_cmd                              0x080036cc   Section        0  cmd_parser.o(i.parse_cmd)
+    i.process_multiarg                       0x080038bc   Section        0  cmd_parser.o(i.process_multiarg)
+    i.puts                                   0x080038fc   Section        0  puts.o(i.puts)
+    i.stm32_dac_init                         0x0800391c   Section        0  main.o(i.stm32_dac_init)
+    .constdata                               0x08003970   Section       16  system_stm32f0xx.o(.constdata)
+    .constdata                               0x08003980   Section      129  ctype_o.o(.constdata)
+    .constdata                               0x08003a04   Section        4  ctype_o.o(.constdata)
+    table                                    0x08003a04   Data           4  ctype_o.o(.constdata)
     .data                                    0x20000000   Section        4  system_stm32f0xx.o(.data)
     .data                                    0x20000004   Section        4  main.o(.data)
     .data                                    0x20000008   Section       16  usbd_cdc_if.o(.data)
@@ -2064,27 +2064,27 @@ Image Symbol Table
     __scatterload_null                       0x08003237   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08003239   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     blink                                    0x08003265   Thumb Code    40  main.o(i.blink)
-    button_ctrl                              0x08003291   Thumb Code    50  cmd_parser.o(i.button_ctrl)
-    fill_lookup                              0x080032c9   Thumb Code   352  cmd_parser.o(i.fill_lookup)
-    fputc                                    0x08003491   Thumb Code    14  main.o(i.fputc)
-    goto_next_arg                            0x0800349f   Thumb Code    56  cmd_parser.o(i.goto_next_arg)
-    idwg_kick                                0x080034d9   Thumb Code    32  helpers.o(i.idwg_kick)
-    linear_buf_add                           0x08003501   Thumb Code    38  helpers.o(i.linear_buf_add)
-    linear_buf_add_str                       0x08003527   Thumb Code    46  helpers.o(i.linear_buf_add_str)
-    linear_buf_init                          0x08003555   Thumb Code    20  helpers.o(i.linear_buf_init)
-    linear_buf_reset                         0x08003569   Thumb Code    28  helpers.o(i.linear_buf_reset)
-    main                                     0x08003585   Thumb Code   104  main.o(i.main)
-    my_usb_init                              0x08003635   Thumb Code    16  my_usb.o(i.my_usb_init)
-    my_usb_putchar                           0x0800364d   Thumb Code    28  my_usb.o(i.my_usb_putchar)
-    my_usb_readline                          0x0800366d   Thumb Code    98  my_usb.o(i.my_usb_readline)
-    parse_cmd                                0x080036d9   Thumb Code   350  cmd_parser.o(i.parse_cmd)
-    process_multiarg                         0x080038c9   Thumb Code    60  cmd_parser.o(i.process_multiarg)
-    puts                                     0x08003909   Thumb Code    28  puts.o(i.puts)
-    stm32_dac_init                           0x08003929   Thumb Code    76  main.o(i.stm32_dac_init)
-    AHBPrescTable                            0x0800397c   Data          16  system_stm32f0xx.o(.constdata)
-    __ctype_table                            0x0800398c   Data         129  ctype_o.o(.constdata)
-    Region$$Table$$Base                      0x08003a14   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003a34   Number         0  anon$$obj.o(Region$$Table)
+    button_ctrl                              0x08003291   Thumb Code    38  cmd_parser.o(i.button_ctrl)
+    fill_lookup                              0x080032bd   Thumb Code   352  cmd_parser.o(i.fill_lookup)
+    fputc                                    0x08003485   Thumb Code    14  main.o(i.fputc)
+    goto_next_arg                            0x08003493   Thumb Code    56  cmd_parser.o(i.goto_next_arg)
+    idwg_kick                                0x080034cd   Thumb Code    32  helpers.o(i.idwg_kick)
+    linear_buf_add                           0x080034f5   Thumb Code    38  helpers.o(i.linear_buf_add)
+    linear_buf_add_str                       0x0800351b   Thumb Code    46  helpers.o(i.linear_buf_add_str)
+    linear_buf_init                          0x08003549   Thumb Code    20  helpers.o(i.linear_buf_init)
+    linear_buf_reset                         0x0800355d   Thumb Code    28  helpers.o(i.linear_buf_reset)
+    main                                     0x08003579   Thumb Code   104  main.o(i.main)
+    my_usb_init                              0x08003629   Thumb Code    16  my_usb.o(i.my_usb_init)
+    my_usb_putchar                           0x08003641   Thumb Code    28  my_usb.o(i.my_usb_putchar)
+    my_usb_readline                          0x08003661   Thumb Code    98  my_usb.o(i.my_usb_readline)
+    parse_cmd                                0x080036cd   Thumb Code   350  cmd_parser.o(i.parse_cmd)
+    process_multiarg                         0x080038bd   Thumb Code    60  cmd_parser.o(i.process_multiarg)
+    puts                                     0x080038fd   Thumb Code    28  puts.o(i.puts)
+    stm32_dac_init                           0x0800391d   Thumb Code    76  main.o(i.stm32_dac_init)
+    AHBPrescTable                            0x08003970   Data          16  system_stm32f0xx.o(.constdata)
+    __ctype_table                            0x08003980   Data         129  ctype_o.o(.constdata)
+    Region$$Table$$Base                      0x08003a08   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003a28   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f0xx.o(.data)
     next_iwdg_kick                           0x20000004   Data           4  main.o(.data)
     USBD_Interface_fops_FS                   0x20000008   Data          16  usbd_cdc_if.o(.data)
@@ -2121,9 +2121,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003bac, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00003af4])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003ba0, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00003ae8])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00003a34, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00003a28, Max: 0x00010000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2317,29 +2317,29 @@ Memory Map of the image
     0x08003238   0x0000000e   Code   RO         3930    i.__scatterload_zeroinit  mc_p.l(handlers.o)
     0x08003246   0x0000001e   Code   RO         3585    i._printf_core      mc_p.l(printfb.o)
     0x08003264   0x0000002c   Code   RO          209    i.blink             main.o
-    0x08003290   0x00000038   Code   RO          915    i.button_ctrl       cmd_parser.o
-    0x080032c8   0x000001c8   Code   RO          916    i.fill_lookup       cmd_parser.o
-    0x08003490   0x0000000e   Code   RO          210    i.fputc             main.o
-    0x0800349e   0x00000038   Code   RO          917    i.goto_next_arg     cmd_parser.o
-    0x080034d6   0x00000002   PAD
-    0x080034d8   0x00000028   Code   RO          344    i.idwg_kick         helpers.o
-    0x08003500   0x00000026   Code   RO          345    i.linear_buf_add    helpers.o
-    0x08003526   0x0000002e   Code   RO          346    i.linear_buf_add_str  helpers.o
-    0x08003554   0x00000014   Code   RO          348    i.linear_buf_init   helpers.o
-    0x08003568   0x0000001c   Code   RO          350    i.linear_buf_reset  helpers.o
-    0x08003584   0x000000b0   Code   RO          211    i.main              main.o
-    0x08003634   0x00000018   Code   RO          875    i.my_usb_init       my_usb.o
-    0x0800364c   0x00000020   Code   RO          876    i.my_usb_putchar    my_usb.o
-    0x0800366c   0x0000006c   Code   RO          877    i.my_usb_readline   my_usb.o
-    0x080036d8   0x000001f0   Code   RO          918    i.parse_cmd         cmd_parser.o
-    0x080038c8   0x00000040   Code   RO          919    i.process_multiarg  cmd_parser.o
-    0x08003908   0x00000020   Code   RO         3559    i.puts              mc_p.l(puts.o)
-    0x08003928   0x00000054   Code   RO          212    i.stm32_dac_init    main.o
-    0x0800397c   0x00000010   Data   RO           14    .constdata          system_stm32f0xx.o
-    0x0800398c   0x00000081   Data   RO         3895    .constdata          mc_p.l(ctype_o.o)
-    0x08003a0d   0x00000003   PAD
-    0x08003a10   0x00000004   Data   RO         3896    .constdata          mc_p.l(ctype_o.o)
-    0x08003a14   0x00000020   Data   RO         3926    Region$$Table       anon$$obj.o
+    0x08003290   0x0000002c   Code   RO          915    i.button_ctrl       cmd_parser.o
+    0x080032bc   0x000001c8   Code   RO          916    i.fill_lookup       cmd_parser.o
+    0x08003484   0x0000000e   Code   RO          210    i.fputc             main.o
+    0x08003492   0x00000038   Code   RO          917    i.goto_next_arg     cmd_parser.o
+    0x080034ca   0x00000002   PAD
+    0x080034cc   0x00000028   Code   RO          344    i.idwg_kick         helpers.o
+    0x080034f4   0x00000026   Code   RO          345    i.linear_buf_add    helpers.o
+    0x0800351a   0x0000002e   Code   RO          346    i.linear_buf_add_str  helpers.o
+    0x08003548   0x00000014   Code   RO          348    i.linear_buf_init   helpers.o
+    0x0800355c   0x0000001c   Code   RO          350    i.linear_buf_reset  helpers.o
+    0x08003578   0x000000b0   Code   RO          211    i.main              main.o
+    0x08003628   0x00000018   Code   RO          875    i.my_usb_init       my_usb.o
+    0x08003640   0x00000020   Code   RO          876    i.my_usb_putchar    my_usb.o
+    0x08003660   0x0000006c   Code   RO          877    i.my_usb_readline   my_usb.o
+    0x080036cc   0x000001f0   Code   RO          918    i.parse_cmd         cmd_parser.o
+    0x080038bc   0x00000040   Code   RO          919    i.process_multiarg  cmd_parser.o
+    0x080038fc   0x00000020   Code   RO         3559    i.puts              mc_p.l(puts.o)
+    0x0800391c   0x00000054   Code   RO          212    i.stm32_dac_init    main.o
+    0x08003970   0x00000010   Data   RO           14    .constdata          system_stm32f0xx.o
+    0x08003980   0x00000081   Data   RO         3895    .constdata          mc_p.l(ctype_o.o)
+    0x08003a01   0x00000003   PAD
+    0x08003a04   0x00000004   Data   RO         3896    .constdata          mc_p.l(ctype_o.o)
+    0x08003a08   0x00000020   Data   RO         3926    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001330, Max: 0x00004000, ABSOLUTE, COMPRESSED[0x000000c0])
@@ -2380,37 +2380,37 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1128        260          0          0        192       4508   cmd_parser.o
-       172          8          0          0          0       3233   helpers.o
-       690        112          0          4        136       9901   main.o
-       164         22          0          8        520       2311   my_usb.o
-        28          8        192          0       1024        628   startup_stm32f072xb.o
-       116         18          0          4          0       3591   stm32f0xx_hal.o
-       178         28          0          0          0      10503   stm32f0xx_hal_cortex.o
-        94          0          0          0          0       2275   stm32f0xx_hal_dac.o
-       162          4          0          0          0       2705   stm32f0xx_hal_dac_ex.o
+      1116        260          0          0        192       4472   cmd_parser.o
+       172          8          0          0          0       3277   helpers.o
+       690        112          0          4        136       9957   main.o
+       164         22          0          8        520       2339   my_usb.o
+        28          8        192          0       1024        636   startup_stm32f072xb.o
+       116         18          0          4          0       3623   stm32f0xx_hal.o
+       178         28          0          0          0      10559   stm32f0xx_hal_cortex.o
+        94          0          0          0          0       2303   stm32f0xx_hal_dac.o
+       162          4          0          0          0       2737   stm32f0xx_hal_dac_ex.o
         26          0          0          0          0         72   stm32f0xx_hal_dma.o
-       592         56          0          0          0       3663   stm32f0xx_hal_gpio.o
-       116         20          0          0          0       1707   stm32f0xx_hal_iwdg.o
-       232         36          0          0          0       2562   stm32f0xx_hal_msp.o
-      3476        148          0          0          0      13683   stm32f0xx_hal_pcd.o
-        58          0          0          0          0       1234   stm32f0xx_hal_pcd_ex.o
-      1472         90          0          0          0       4606   stm32f0xx_hal_rcc.o
-       288         14          0          0          0       1508   stm32f0xx_hal_rcc_ex.o
-       184          0          0          0          0       1211   stm32f0xx_hal_spi.o
-        36          6          0          0          0       2524   stm32f0xx_it.o
-        92         16         16          4          0     463971   system_stm32f0xx.o
-        52         16          0          0        548        684   usb_device.o
-       654         20          0        275          0      12618   usbd_cdc.o
-       200         36          0         16        512       3352   usbd_cdc_if.o
-       762         40          0          0       1088      14445   usbd_conf.o
-       652          0          0          0          0       9196   usbd_core.o
-       994         34          0          1          0       7768   usbd_ctlreq.o
-       212        116          0         50        512       4875   usbd_desc.o
-       140          0          0          0          0       4316   usbd_ioreq.o
+       592         56          0          0          0       3691   stm32f0xx_hal_gpio.o
+       116         20          0          0          0       1727   stm32f0xx_hal_iwdg.o
+       232         36          0          0          0       2598   stm32f0xx_hal_msp.o
+      3476        148          0          0          0      13763   stm32f0xx_hal_pcd.o
+        58          0          0          0          0       1250   stm32f0xx_hal_pcd_ex.o
+      1472         90          0          0          0       4630   stm32f0xx_hal_rcc.o
+       288         14          0          0          0       1520   stm32f0xx_hal_rcc_ex.o
+       184          0          0          0          0       1219   stm32f0xx_hal_spi.o
+        36          6          0          0          0       2552   stm32f0xx_it.o
+        92         16         16          4          0     464043   system_stm32f0xx.o
+        52         16          0          0        548        696   usb_device.o
+       654         20          0        275          0      12730   usbd_cdc.o
+       200         36          0         16        512       3392   usbd_cdc_if.o
+       762         40          0          0       1088      14597   usbd_conf.o
+       652          0          0          0          0       9280   usbd_core.o
+       994         34          0          1          0       7824   usbd_ctlreq.o
+       212        116          0         50        512       4923   usbd_desc.o
+       140          0          0          0          0       4356   usbd_ioreq.o
 
     ----------------------------------------------------------------------
-     12990       1108        240        368       4536     593650   Object Totals
+     12978       1108        240        368       4536     594766   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         20          0          0          6          4          0   (incl. Padding)
 
@@ -2475,15 +2475,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14524       1164        376        376       4536     588122   Grand Totals
-     14524       1164        376        192       4536     588122   ELF Image Totals (compressed)
-     14524       1164        376        192          0          0   ROM Totals
+     14512       1164        376        376       4536     589238   Grand Totals
+     14512       1164        376        192       4536     589238   ELF Image Totals (compressed)
+     14512       1164        376        192          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14900 (  14.55kB)
+    Total RO  Size (Code + RO Data)                14888 (  14.54kB)
     Total RW  Size (RW Data + ZI Data)              4912 (   4.80kB)
-    Total ROM Size (Code + RO Data + RW Data)      15092 (  14.74kB)
+    Total ROM Size (Code + RO Data + RW Data)      15080 (  14.73kB)
 
 ==============================================================================
 

@@ -5,8 +5,6 @@
 #include "helpers.h"
 #include "shared.h"
 #include "cmd_parser.h"
-#define ACTION_HOLD 0
-#define ACTION_RELEASE 1
 #define ARG_QUEUE_SIZE 32
 uint16_t gpio_pin_queue[ARG_QUEUE_SIZE];
 GPIO_TypeDef* gpio_port_queue[ARG_QUEUE_SIZE];
@@ -199,12 +197,7 @@ void button_ctrl(int32_t action)
   for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
   {
     if(gpio_port_queue[i] != NULL)
-    {
-      if(action == ACTION_HOLD)
-        HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], GPIO_PIN_RESET);
-      else
-        HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], GPIO_PIN_SET);
-    }
+      HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], action);
   }
 }
 
@@ -220,7 +213,7 @@ void parse_cmd(char* cmd)
       puts("bh ERROR");
       return;
     }
-    button_ctrl(ACTION_HOLD);
+    button_ctrl(GPIO_PIN_RESET);
     puts("bh OK");
   }
   // button release, multiple args allowed
@@ -231,7 +224,7 @@ void parse_cmd(char* cmd)
       puts("br ERROR");
       return;
     }
-    button_ctrl(ACTION_RELEASE);
+    button_ctrl(GPIO_PIN_SET);
     puts("br OK");
   }
   // button release all
