@@ -81,3 +81,14 @@ void idwg_kick(void)
     next_iwdg_kick = HAL_GetTick() + 500;
   }
 }
+
+void enter_standby(void)
+{
+  __HAL_RCC_PWR_CLK_ENABLE();
+  HAL_Delay(10);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN6);
+  __HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
+  __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB);
+  HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN6);
+  HAL_PWR_EnterSTANDBYMode();
+}

@@ -165,8 +165,8 @@
                                                                               /*  and HAL_GetTick() usage under interrupt context          */
 #define  USE_RTOS                     0     
 #define  PREFETCH_ENABLE              1              
-#define  INSTRUCTION_CACHE_ENABLE     0
-#define  DATA_CACHE_ENABLE            0
+#define  INSTRUCTION_CACHE_ENABLE     1
+#define  DATA_CACHE_ENABLE            1
 /* ########################## Assert Selection ############################## */
 /**
   * @brief Uncomment the line below to expanse the "assert_param" macro in the 
