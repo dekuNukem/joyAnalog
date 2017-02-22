@@ -8317,144 +8317,6 @@ I2C</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Connectors">
-<description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
-This library contains electrically-functional connectors. 
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="PAD.02X.02">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.02" Square&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.02" x 0.02"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
-</package>
-<package name="PAD.03X.03">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="PAD.03X.05">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.05" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.05" x 0.05"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="PAD.03X.04">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="TP_15TH">
-<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area:0.015"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
-<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
-</package>
-</packages>
-<symbols>
-<symbol name="TEST-POINT">
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95" font="vector">&gt;Name</text>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" font="vector">&gt;Value</text>
-<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TEST-POINT" prefix="TP">
-<description>&lt;h3&gt;SparkFun Test Points&lt;/h3&gt;
-&lt;p&gt;Bare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13284”&gt;SparkFun LSM9DS1 Breakout&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13714”&gt;SparkFun PSOC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13879"&gt;SparkFun Load Cell Amplifier&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="2" package="PAD.02X.02">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3" package="PAD.03X.03">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3X5" package="PAD.03X.05">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="3X4" package="PAD.03X.04">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="TP_15TH_THRU" package="TP_15TH">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8546,7 +8408,8 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="GND9" library="backplane" deviceset="GND" device=""/>
 <part name="GND23" library="backplane" deviceset="GND" device=""/>
 <part name="+3V19" library="backplane" deviceset="+3V3" device=""/>
-<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5"/>
+<part name="R13" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
+<part name="GND1" library="backplane" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8643,7 +8506,8 @@ Used as a test point connection for pogo pins or other debugging tools.
 <instance part="GND9" gate="1" x="-30.48" y="27.94"/>
 <instance part="GND23" gate="1" x="-53.34" y="30.48"/>
 <instance part="+3V19" gate="G$1" x="-30.48" y="55.88"/>
-<instance part="TP1" gate="G$1" x="93.98" y="-127"/>
+<instance part="R13" gate="G$1" x="109.22" y="-43.18" rot="R90"/>
+<instance part="GND1" gate="1" x="109.22" y="-50.8"/>
 </instances>
 <busses>
 </busses>
@@ -8792,6 +8656,10 @@ Used as a test point connection for pogo pins or other debugging tools.
 <pinref part="IC1" gate="G$1" pin="A0"/>
 <wire x1="-50.8" y1="35.56" x2="-53.34" y2="35.56" width="0.1524" layer="91"/>
 <junction x="-53.34" y="35.56"/>
+</segment>
+<segment>
+<pinref part="R13" gate="G$1" pin="1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -9443,18 +9311,16 @@ Used as a test point connection for pogo pins or other debugging tools.
 <net name="N$58" class="0">
 <segment>
 <pinref part="U1" gate="PORTB_L" pin="PB5"/>
-<wire x1="71.12" y1="-134.62" x2="43.18" y2="-134.62" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-134.62" x2="43.18" y2="-88.9" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="13"/>
-<wire x1="43.18" y1="-88.9" x2="58.42" y2="-88.9" width="0.1524" layer="91"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
-<wire x1="96.52" y1="-38.1" x2="114.3" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-38.1" x2="109.22" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="-38.1" x2="114.3" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-38.1" x2="121.92" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="-134.62" x2="114.3" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-134.62" x2="114.3" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="71.12" y="-134.62"/>
 <junction x="114.3" y="-38.1"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<junction x="109.22" y="-38.1"/>
 </segment>
 </net>
 <net name="N$59" class="0">
@@ -9570,9 +9436,11 @@ Used as a test point connection for pogo pins or other debugging tools.
 </net>
 <net name="N$69" class="0">
 <segment>
-<pinref part="TP1" gate="G$1" pin="1"/>
 <pinref part="U1" gate="PORTB_L" pin="PB2"/>
-<wire x1="93.98" y1="-127" x2="71.12" y2="-127" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-127" x2="35.56" y2="-127" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="-127" x2="35.56" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="13"/>
+<wire x1="35.56" y1="-88.9" x2="58.42" y2="-88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
