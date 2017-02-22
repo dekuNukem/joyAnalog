@@ -7163,6 +7163,167 @@ by exp-lbrs.ulp</description>
 <text x="1.978" y="0" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
 <text x="1.978" y="-0.635" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="DIL8">
+<description>&lt;B&gt;Dual In Line&lt;/B&gt;&lt;p&gt;
+package type P</description>
+<wire x1="-5.08" y1="-0.635" x2="-5.08" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-0.635" x2="-5.08" y2="0.635" width="0.1524" layer="21" curve="180"/>
+<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90" first="yes"/>
+<pad name="2" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<text x="-5.2578" y="-2.54" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="7.239" y="-2.54" size="1.778" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+</package>
+<package name="SO-14">
+<description>&lt;B&gt;Small Outline Narrow Plastic Gull Wing&lt;/B&gt;&lt;p&gt;
+150-mil body, package type SL</description>
+<wire x1="-4.895" y1="3.9" x2="4.895" y2="3.9" width="0.1998" layer="39"/>
+<wire x1="4.895" y1="-3.9" x2="-4.895" y2="-3.9" width="0.1998" layer="39"/>
+<wire x1="-4.895" y1="-3.9" x2="-4.895" y2="3.9" width="0.1998" layer="39"/>
+<wire x1="4.305" y1="-1.9" x2="-4.305" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-4.305" y1="-1.9" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-4.305" y1="-1.4" x2="-4.305" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="4.305" y1="-1.4" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="4.305" y1="1.9" x2="4.305" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="4.305" y1="-1.4" x2="4.305" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="4.895" y1="3.9" x2="4.895" y2="-3.9" width="0.1998" layer="39"/>
+<wire x1="-4.305" y1="1.9" x2="4.305" y2="1.9" width="0.2032" layer="51"/>
+<rectangle x1="-4.0551" y1="-3.1001" x2="-3.5649" y2="-2" layer="51"/>
+<rectangle x1="-2.7851" y1="-3.1001" x2="-2.2949" y2="-2" layer="51"/>
+<rectangle x1="-1.5151" y1="-3.1001" x2="-1.0249" y2="-2" layer="51"/>
+<rectangle x1="-0.2451" y1="-3.1001" x2="0.2451" y2="-2" layer="51"/>
+<rectangle x1="-0.2451" y1="2" x2="0.2451" y2="3.1001" layer="51"/>
+<rectangle x1="-1.5151" y1="2" x2="-1.0249" y2="3.1001" layer="51"/>
+<rectangle x1="-2.7851" y1="2" x2="-2.2949" y2="3.1001" layer="51"/>
+<rectangle x1="-4.0551" y1="2" x2="-3.5649" y2="3.1001" layer="51"/>
+<rectangle x1="1.0249" y1="-3.1001" x2="1.5151" y2="-2" layer="51"/>
+<rectangle x1="2.2949" y1="-3.1001" x2="2.7851" y2="-2" layer="51"/>
+<rectangle x1="3.5649" y1="-3.1001" x2="4.0551" y2="-2" layer="51"/>
+<rectangle x1="3.5649" y1="2" x2="4.0551" y2="3.1001" layer="51"/>
+<rectangle x1="2.2949" y1="2" x2="2.7851" y2="3.1001" layer="51"/>
+<rectangle x1="1.0249" y1="2" x2="1.5151" y2="3.1001" layer="51"/>
+<smd name="1" x="-3.81" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="2" x="-2.54" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="-1.27" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="0" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.27" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="2.54" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="3.81" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="3.81" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="9" x="2.54" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="10" x="1.27" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="11" x="0" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="12" x="-1.27" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="13" x="-2.54" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="14" x="-3.81" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-4.572" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.842" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-3.81" y="0.365" size="0.3048" layer="48">JEDEC MS-012 AB</text>
+<text x="-3.81" y="-0.635" size="0.4064" layer="48">IPC SO14</text>
+</package>
+<package name="SO-08M">
+<description>&lt;B&gt;Small Outline Medium Plastic Gull Wing&lt;/B&gt;&lt;p&gt;
+207-mil body, package type SM</description>
+<wire x1="2.4" y1="2.43" x2="2.4" y2="-1.93" width="0.2032" layer="21"/>
+<wire x1="2.4" y1="-1.93" x2="2.4" y2="-2.43" width="0.2032" layer="21"/>
+<wire x1="2.4" y1="-2.43" x2="-2.4" y2="-2.43" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-2.43" x2="-2.4" y2="-1.93" width="0.2032" layer="21"/>
+<wire x1="-2.4" y1="-1.93" x2="-2.4" y2="2.43" width="0.2032" layer="21"/>
+<wire x1="-2.4" y1="2.43" x2="2.4" y2="2.43" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.93" x2="-2.4" y2="-1.93" width="0.2032" layer="21"/>
+<rectangle x1="-2.1501" y1="-4.05" x2="-1.6599" y2="-2.5301" layer="21"/>
+<rectangle x1="-0.8801" y1="-4.05" x2="-0.3899" y2="-2.5301" layer="21"/>
+<rectangle x1="0.3899" y1="-4.05" x2="0.8801" y2="-2.5301" layer="21"/>
+<rectangle x1="1.6599" y1="-4.05" x2="2.1501" y2="-2.5301" layer="21"/>
+<rectangle x1="1.6599" y1="2.5301" x2="2.1501" y2="4.05" layer="21"/>
+<rectangle x1="0.3899" y1="2.5301" x2="0.8801" y2="4.05" layer="21"/>
+<rectangle x1="-0.8801" y1="2.5301" x2="-0.3899" y2="4.05" layer="21"/>
+<rectangle x1="-2.1501" y1="2.5301" x2="-1.6599" y2="4.05" layer="21"/>
+<smd name="1" x="-1.905" y="-3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="2" x="-0.635" y="-3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="3.33" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="3.33" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-1.905" y="-1.27" size="0.3048" layer="48">SO8 Medium</text>
+<text x="-1.905" y="-0.635" size="0.3048" layer="48">Microchip</text>
+</package>
+<package name="SO-08">
+<description>&lt;B&gt;Small Outline Narrow Plastic Gull Wing&lt;/B&gt;&lt;p&gt;
+150-mil body, package type SN</description>
+<wire x1="-2.9" y1="3.9" x2="2.9" y2="3.9" width="0.1998" layer="39"/>
+<wire x1="2.9" y1="3.9" x2="2.9" y2="-3.9" width="0.1998" layer="39"/>
+<wire x1="2.9" y1="-3.9" x2="-2.9" y2="-3.9" width="0.1998" layer="39"/>
+<wire x1="-2.9" y1="-3.9" x2="-2.9" y2="3.9" width="0.1998" layer="39"/>
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<rectangle x1="-2.1501" y1="-3.1001" x2="-1.6599" y2="-2" layer="51"/>
+<rectangle x1="-0.8801" y1="-3.1001" x2="-0.3899" y2="-2" layer="51"/>
+<rectangle x1="0.3899" y1="-3.1001" x2="0.8801" y2="-2" layer="51"/>
+<rectangle x1="1.6599" y1="-3.1001" x2="2.1501" y2="-2" layer="51"/>
+<rectangle x1="1.6599" y1="2" x2="2.1501" y2="3.1001" layer="51"/>
+<rectangle x1="0.3899" y1="2" x2="0.8801" y2="3.1001" layer="51"/>
+<rectangle x1="-0.8801" y1="2" x2="-0.3899" y2="3.1001" layer="51"/>
+<rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
+<rectangle x1="-1" y1="-1" x2="1" y2="1" layer="35"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-1.905" y="-0.635" size="0.4064" layer="48">IPC SO8</text>
+<text x="-1.905" y="0.365" size="0.3048" layer="48">JEDEC MS-012 AA</text>
+</package>
+<package name="TSSOP8">
+<description>&lt;b&gt;Thin Shrink Small Outline Package&lt;/b&gt;&lt;p&gt;
+package type ST</description>
+<circle x="-0.65" y="-1.625" radius="0.325" width="0" layer="21"/>
+<wire x1="1.4" y1="-2.15" x2="1.4" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="2.15" x2="-1.4" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="2.15" x2="-1.4" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="-2.15" x2="1.4" y2="-2.15" width="0.2032" layer="21"/>
+<rectangle x1="-1.1" y1="-3.2" x2="-0.85" y2="-2.2" layer="51"/>
+<rectangle x1="-0.45" y1="-3.2" x2="-0.2" y2="-2.2" layer="51"/>
+<rectangle x1="0.2" y1="-3.2" x2="0.45" y2="-2.2" layer="51"/>
+<rectangle x1="0.85" y1="-3.2" x2="1.1" y2="-2.2" layer="51"/>
+<rectangle x1="0.85" y1="2.2" x2="1.1" y2="3.2" layer="51"/>
+<rectangle x1="0.2" y1="2.2" x2="0.45" y2="3.2" layer="51"/>
+<rectangle x1="-0.45" y1="2.2" x2="-0.2" y2="3.2" layer="51"/>
+<rectangle x1="-1.1" y1="2.2" x2="-0.85" y2="3.2" layer="51"/>
+<smd name="1" x="-0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="2" x="-0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="3" x="0.325" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="4" x="0.975" y="-2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="5" x="0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="6" x="0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="7" x="-0.325" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<smd name="8" x="-0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
+<text x="-1.625" y="-2.925" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="2.925" y="-3.25" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="DIODE-SCHOTTKY">
@@ -7190,6 +7351,61 @@ by exp-lbrs.ulp</description>
 <pin name="P4" x="10.16" y="-2.54" length="short" rot="R180"/>
 <text x="-7.62" y="6.096" size="1.27" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-7.62" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="24AA">
+<wire x1="-10.16" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="0" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="8.89" x2="4.826" y2="8.89" width="0.1524" layer="94"/>
+<wire x1="4.826" y1="8.89" x2="4.826" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.826" y1="0" x2="4.826" y2="-6.604" width="0.1524" layer="94"/>
+<wire x1="4.826" y1="-6.604" x2="-1.016" y2="-6.604" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-6.604" x2="-2.54" y2="-6.604" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-6.604" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.54" y2="3.556" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="3.556" x2="-2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="8.89" width="0.1524" layer="94"/>
+<wire x1="-4.826" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-4.826" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-4.826" y1="-5.08" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="0" x2="-8.636" y2="0" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-2.54" x2="-8.636" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-8.636" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-8.636" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="0" x2="10.922" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.588" y1="0" x2="4.826" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="8.636" x2="-1.016" y2="3.556" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="1.016" x2="-1.016" y2="-6.604" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-8.636" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-4.572" y1="5.08" x2="-2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="3.556" x2="-1.016" y2="3.556" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="7.62" x2="-2.54" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-1.016" y2="1.016" width="0.1524" layer="94"/>
+<pin name="A0" x="-12.7" y="-5.08" length="short" direction="in"/>
+<pin name="A1" x="-12.7" y="-2.54" length="short" direction="in"/>
+<pin name="A2" x="-12.7" y="0" length="short" direction="in"/>
+<pin name="GND" x="7.62" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="SCL" x="-12.7" y="7.62" length="short" direction="in"/>
+<pin name="SDA" x="15.24" y="0" length="short" rot="R180"/>
+<pin name="VCC" x="7.62" y="12.7" visible="pad" length="short" direction="pwr" rot="R270"/>
+<pin name="WP" x="-12.7" y="5.08" length="short" direction="in"/>
+<text x="3.81" y="-4.826" size="1.778" layer="94" rot="R90">Array</text>
+<text x="6.604" y="7.62" size="1.778" layer="95">VCC</text>
+<text x="6.858" y="-6.858" size="1.778" layer="95">GND</text>
+<text x="-10.16" y="11.43" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="1.524" y="-4.826" size="1.778" layer="94" rot="R90">EEPROM</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -7462,6 +7678,781 @@ by exp-lbrs.ulp</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="24*" prefix="IC">
+<description>Serial &lt;B&gt;EEPROM&lt;/B&gt;&lt;p&gt;
+I2C</description>
+<gates>
+<gate name="G$1" symbol="24AA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="P" package="DIL8">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="OC_NEWARK" value="" constant="no"/>
+</technology>
+<technology name="AA01">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA01-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331266" constant="no"/>
+<attribute name="OC_NEWARK" value="35M0692" constant="no"/>
+</technology>
+<technology name="AA02">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA02-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331271" constant="no"/>
+<attribute name="OC_NEWARK" value="95M2072" constant="no"/>
+</technology>
+<technology name="AA04">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA04-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331275" constant="no"/>
+<attribute name="OC_NEWARK" value="35M0696" constant="no"/>
+</technology>
+<technology name="AA08">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA08-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331281" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6825" constant="no"/>
+</technology>
+<technology name="AA128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA128-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6840" constant="no"/>
+</technology>
+<technology name="AA16">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA16-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331287" constant="no"/>
+<attribute name="OC_NEWARK" value="35M0705" constant="no"/>
+</technology>
+<technology name="AA256">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA256-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331294" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6872" constant="no"/>
+</technology>
+<technology name="AA32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA32A-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331297" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6885" constant="no"/>
+</technology>
+<technology name="AA64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA64-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331303" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6909" constant="no"/>
+</technology>
+<technology name="C01A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="M24C01-WBN6P" constant="no"/>
+<attribute name="OC_FARNELL" value="9882782" constant="no"/>
+<attribute name="OC_NEWARK" value="24M5067" constant="no"/>
+</technology>
+<technology name="C02A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24C02C-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1755843" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4062" constant="no"/>
+</technology>
+<technology name="C04A">
+<attribute name="MF" value="RAMTRON INTERNATIONAL CORP" constant="no"/>
+<attribute name="MPN" value="FM24C04A-P" constant="no"/>
+<attribute name="OC_FARNELL" value="1094258" constant="no"/>
+<attribute name="OC_NEWARK" value="97H6447" constant="no"/>
+</technology>
+<technology name="C08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C08B-PU" constant="no"/>
+<attribute name="OC_FARNELL" value="1362644" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3317" constant="no"/>
+</technology>
+<technology name="C16B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C16B-PU" constant="no"/>
+<attribute name="OC_FARNELL" value="1362650" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3323" constant="no"/>
+</technology>
+<technology name="C32A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C32C-PU" constant="no"/>
+<attribute name="OC_FARNELL" value="1362652" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3325" constant="no"/>
+</technology>
+<technology name="C64">
+<attribute name="MF" value="RAMTRON INTERNATIONAL CORP" constant="no"/>
+<attribute name="MPN" value="FM24C64-P" constant="no"/>
+<attribute name="OC_FARNELL" value="1362657" constant="no"/>
+<attribute name="OC_NEWARK" value="97H6452" constant="no"/>
+</technology>
+<technology name="CL04B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="LC01">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24LC01BH-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1200025" constant="no"/>
+<attribute name="OC_NEWARK" value="77M3542" constant="no"/>
+</technology>
+<technology name="LC024">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24LC024-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1331317" constant="no"/>
+<attribute name="OC_NEWARK" value="35M0731" constant="no"/>
+</technology>
+<technology name="LC025">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC025-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7098" constant="no"/>
+</technology>
+<technology name="LC04">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC04B-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1196811" constant="no"/>
+<attribute name="OC_NEWARK" value="62K0576" constant="no"/>
+</technology>
+<technology name="LC08B">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC08B/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1084245" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4073" constant="no"/>
+</technology>
+<technology name="LC128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC128-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="9757929" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2007" constant="no"/>
+</technology>
+<technology name="LC16B">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC16B/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1200026" constant="no"/>
+<attribute name="OC_NEWARK" value="69K7671" constant="no"/>
+</technology>
+<technology name="LC256">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC256-E/P" constant="no"/>
+<attribute name="OC_FARNELL" value="9757970" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7169" constant="no"/>
+</technology>
+<technology name="LC32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC32A/P" constant="no"/>
+<attribute name="OC_FARNELL" value="1084246" constant="no"/>
+<attribute name="OC_NEWARK" value="75K1884" constant="no"/>
+</technology>
+<technology name="LC64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC64-I/P" constant="no"/>
+<attribute name="OC_FARNELL" value="9758054" constant="no"/>
+<attribute name="OC_NEWARK" value="62K0584" constant="no"/>
+</technology>
+<technology name="LCS52">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LCS52-I/PG" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="89H3098" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SL" package="SO-14">
+<connects>
+<connect gate="G$1" pin="A0" pad="2"/>
+<connect gate="G$1" pin="A1" pad="3"/>
+<connect gate="G$1" pin="A2" pad="5"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="SCL" pad="10"/>
+<connect gate="G$1" pin="SDA" pad="9"/>
+<connect gate="G$1" pin="VCC" pad="13"/>
+<connect gate="G$1" pin="WP" pad="12"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="OC_NEWARK" value="" constant="no"/>
+</technology>
+<technology name="AA04">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="AA08">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="AA16">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="C01A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="C02A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="C04A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="C08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="C16B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="CL04A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="LC08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="LC16B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SM" package="SO-08M">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="OC_NEWARK" value="" constant="no"/>
+</technology>
+<technology name="AA01">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA01-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331268" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6793" constant="no"/>
+</technology>
+<technology name="AA02">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA02-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331272" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6803" constant="no"/>
+</technology>
+<technology name="AA04">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA04-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331276" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6814" constant="no"/>
+</technology>
+<technology name="AA08">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA08-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331282" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6826" constant="no"/>
+</technology>
+<technology name="AA128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA128-I/MS" constant="no"/>
+<attribute name="OC_FARNELL" value="1331285" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6839" constant="no"/>
+</technology>
+<technology name="AA16">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA16-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331289" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4056" constant="no"/>
+</technology>
+<technology name="AA32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA32A-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1617659" constant="no"/>
+<attribute name="OC_NEWARK" value="83C5815" constant="no"/>
+</technology>
+<technology name="C01A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24C01C/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1362638" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4061" constant="no"/>
+</technology>
+<technology name="C02A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24C02C/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1084339" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4065" constant="no"/>
+</technology>
+<technology name="C04A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="M24C04-WMN6P" constant="no"/>
+<attribute name="OC_FARNELL" value="9882812" constant="no"/>
+<attribute name="OC_NEWARK" value="83K1376" constant="no"/>
+</technology>
+<technology name="C08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C08BN-SH-B" constant="no"/>
+<attribute name="OC_FARNELL" value="1362645" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3318" constant="no"/>
+</technology>
+<technology name="C32A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="IS24C32A-2GLI" constant="no"/>
+<attribute name="OC_FARNELL" value="1718129" constant="no"/>
+<attribute name="OC_NEWARK" value="43M4588" constant="no"/>
+</technology>
+<technology name="C64">
+<attribute name="MF" value="RAMTRON INTERNATIONAL CORP" constant="no"/>
+<attribute name="MPN" value="FM24C64-S" constant="no"/>
+<attribute name="OC_FARNELL" value="9882685" constant="no"/>
+<attribute name="OC_NEWARK" value="98H0189" constant="no"/>
+</technology>
+<technology name="CL04B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="FM24CL04-S" constant="no"/>
+<attribute name="OC_FARNELL" value="1607928" constant="no"/>
+<attribute name="OC_NEWARK" value="97H6443" constant="no"/>
+</technology>
+<technology name="LC08B">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC08BT-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1818714" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7127" constant="no"/>
+</technology>
+<technology name="LC128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC128-I/SM" constant="no"/>
+<attribute name="OC_FARNELL" value="9757937" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7134" constant="no"/>
+</technology>
+<technology name="LC16B">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC16B/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9757945" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2012" constant="no"/>
+</technology>
+<technology name="LC32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC32A/SM" constant="no"/>
+<attribute name="OC_FARNELL" value="1212670" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4080" constant="no"/>
+</technology>
+<technology name="LC64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC64T-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9758070" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2021" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SN" package="SO-08">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="OC_NEWARK" value="" constant="no"/>
+</technology>
+<technology name="AA01">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA01/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331268" constant="no"/>
+<attribute name="OC_NEWARK" value="89C9792" constant="no"/>
+</technology>
+<technology name="AA02">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA02/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331272" constant="no"/>
+<attribute name="OC_NEWARK" value="89C9793" constant="no"/>
+</technology>
+<technology name="AA04">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA04/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331276" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6818" constant="no"/>
+</technology>
+<technology name="AA08">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA08-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1579568" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6826" constant="no"/>
+</technology>
+<technology name="AA128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA128-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6842" constant="no"/>
+</technology>
+<technology name="AA16">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA16-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331289" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4056" constant="no"/>
+</technology>
+<technology name="AA256">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24AA256T-I/SM" constant="no"/>
+<attribute name="OC_FARNELL" value="1579570" constant="no"/>
+<attribute name="OC_NEWARK" value="08N6838" constant="no"/>
+</technology>
+<technology name="AA32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA32A-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1617659" constant="no"/>
+<attribute name="OC_NEWARK" value="83C5815" constant="no"/>
+</technology>
+<technology name="AA64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA64-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1331304" constant="no"/>
+<attribute name="OC_NEWARK" value="85C2288" constant="no"/>
+</technology>
+<technology name="C08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C08BN-SH-B" constant="no"/>
+<attribute name="OC_FARNELL" value="1362645" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3318" constant="no"/>
+</technology>
+<technology name="C16B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="AT24C16BN-SH-B" constant="no"/>
+<attribute name="OC_FARNELL" value="1362651" constant="no"/>
+<attribute name="OC_NEWARK" value="50M3324" constant="no"/>
+</technology>
+<technology name="C32A">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="IS24C32A-2GLI" constant="no"/>
+<attribute name="OC_FARNELL" value="1224413" constant="no"/>
+<attribute name="OC_NEWARK" value="43M4588" constant="no"/>
+</technology>
+<technology name="CL04B">
+<attribute name="MF" value="RAMTRON INTERNATIONAL CORP" constant="no"/>
+<attribute name="MPN" value="FM24CL04-G" constant="no"/>
+<attribute name="OC_FARNELL" value="1607928" constant="no"/>
+<attribute name="OC_NEWARK" value="10J0444" constant="no"/>
+</technology>
+<technology name="LC024">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC024/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1659744" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7092" constant="no"/>
+</technology>
+<technology name="LC025">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC025/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7103" constant="no"/>
+</technology>
+<technology name="LC08B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24LC08B/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1212669" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2005" constant="no"/>
+</technology>
+<technology name="LC128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC128-I/SNG" constant="no"/>
+<attribute name="OC_FARNELL" value="9757937" constant="no"/>
+<attribute name="OC_NEWARK" value="30H1511" constant="no"/>
+</technology>
+<technology name="LC16B">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC16B/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9757945" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2012" constant="no"/>
+</technology>
+<technology name="LC256">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC256-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9757996" constant="no"/>
+<attribute name="OC_NEWARK" value="27C9144" constant="no"/>
+</technology>
+<technology name="LC32A">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC32A/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9758003" constant="no"/>
+<attribute name="OC_NEWARK" value="33C2976" constant="no"/>
+</technology>
+<technology name="LC64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC64-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="9758070" constant="no"/>
+<attribute name="OC_NEWARK" value="12C2020" constant="no"/>
+</technology>
+<technology name="LCS52">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LCS52-I/SN" constant="no"/>
+<attribute name="OC_FARNELL" value="1816066" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7032" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="ST" package="TSSOP8">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="2"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="6"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="7"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="OC_NEWARK" value="" constant="no"/>
+</technology>
+<technology name="AA128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24AA128-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C6843" constant="no"/>
+</technology>
+<technology name="AA64">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="25AA640A-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="1818513" constant="no"/>
+<attribute name="OC_NEWARK" value="27M1300" constant="no"/>
+</technology>
+<technology name="C64">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="CAT24C64YI-GT3" constant="no"/>
+<attribute name="OC_FARNELL" value="1718133" constant="no"/>
+<attribute name="OC_NEWARK" value="08R5418" constant="no"/>
+</technology>
+<technology name="LC024">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="24LC024H-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="1659745" constant="no"/>
+<attribute name="OC_NEWARK" value="77M3584" constant="no"/>
+</technology>
+<technology name="LC025">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC025-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7100" constant="no"/>
+</technology>
+<technology name="LC128">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC128-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="1296573" constant="no"/>
+<attribute name="OC_NEWARK" value="62K0578" constant="no"/>
+</technology>
+<technology name="LC64">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LC64X-I/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="1296582" constant="no"/>
+<attribute name="OC_NEWARK" value="96K4081" constant="no"/>
+</technology>
+<technology name="LCS52">
+<attribute name="MF" value="MICROCHIP" constant="no"/>
+<attribute name="MPN" value="24LCS52T/ST" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="92C7040" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-Connectors">
+<description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
+This library contains electrically-functional connectors. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="PAD.02X.02">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.02" Square&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.02" x 0.02"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
+</package>
+<package name="PAD.03X.03">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.05">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.05" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.05" x 0.05"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.04">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="TP_15TH">
+<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area:0.015"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
+<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TEST-POINT">
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" font="vector">&gt;Value</text>
+<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TEST-POINT" prefix="TP">
+<description>&lt;h3&gt;SparkFun Test Points&lt;/h3&gt;
+&lt;p&gt;Bare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13284”&gt;SparkFun LSM9DS1 Breakout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13714”&gt;SparkFun PSOC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13879"&gt;SparkFun Load Cell Amplifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2" package="PAD.02X.02">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3" package="PAD.03X.03">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X5" package="PAD.03X.05">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X4" package="PAD.03X.04">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TP_15TH_THRU" package="TP_15TH">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -7478,7 +8469,6 @@ by exp-lbrs.ulp</description>
 <part name="C1" library="backplane" deviceset="CAP" device="0805"/>
 <part name="C2" library="backplane" deviceset="C-US" device="C1210"/>
 <part name="Y1" library="backplane" deviceset="CRYSTAL" device="HC49US"/>
-<part name="GND1" library="backplane" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
 <part name="X1" library="backplane" deviceset="USB" device="-MICROB"/>
 <part name="GND2" library="backplane" deviceset="GND" device=""/>
@@ -7548,6 +8538,15 @@ by exp-lbrs.ulp</description>
 <part name="D2" library="nintendac_mini" deviceset="DIODE-SCHOTTKY" device="SOD-123"/>
 <part name="U2" library="nintendac_mini" deviceset="VREG_SOT23-5" device=""/>
 <part name="GND6" library="backplane" deviceset="GND" device=""/>
+<part name="IC1" library="nintendac_mini" deviceset="24*" device="ST" technology="LC64"/>
+<part name="R11" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
+<part name="+3V17" library="backplane" deviceset="+3V3" device=""/>
+<part name="+3V18" library="backplane" deviceset="+3V3" device=""/>
+<part name="GND9" library="backplane" deviceset="GND" device=""/>
+<part name="GND23" library="backplane" deviceset="GND" device=""/>
+<part name="+3V19" library="backplane" deviceset="+3V3" device=""/>
+<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5"/>
 </parts>
 <sheets>
 <sheet>
@@ -7558,7 +8557,6 @@ by exp-lbrs.ulp</description>
 <instance part="C1" gate="G$1" x="190.5" y="-83.82"/>
 <instance part="C2" gate="G$1" x="175.26" y="-40.64"/>
 <instance part="Y1" gate="G$1" x="165.1" y="-81.28" rot="R90"/>
-<instance part="GND1" gate="1" x="-7.62" y="43.18"/>
 <instance part="R1" gate="G$1" x="-91.44" y="0" rot="R90"/>
 <instance part="X1" gate="G$1" x="99.06" y="-40.64"/>
 <instance part="GND2" gate="1" x="172.72" y="-109.22"/>
@@ -7637,6 +8635,15 @@ by exp-lbrs.ulp</description>
 <instance part="D2" gate="G$1" x="124.46" y="-38.1"/>
 <instance part="U2" gate="G$1" x="152.4" y="-40.64"/>
 <instance part="GND6" gate="1" x="142.24" y="-45.72"/>
+<instance part="IC1" gate="G$1" x="-38.1" y="40.64"/>
+<instance part="R11" gate="G$1" x="-55.88" y="53.34" rot="R90"/>
+<instance part="R12" gate="G$1" x="-17.78" y="45.72" rot="R90"/>
+<instance part="+3V17" gate="G$1" x="-17.78" y="53.34"/>
+<instance part="+3V18" gate="G$1" x="-55.88" y="60.96"/>
+<instance part="GND9" gate="1" x="-30.48" y="27.94"/>
+<instance part="GND23" gate="1" x="-53.34" y="30.48"/>
+<instance part="+3V19" gate="G$1" x="-30.48" y="55.88"/>
+<instance part="TP1" gate="G$1" x="93.98" y="-127"/>
 </instances>
 <busses>
 </busses>
@@ -7764,6 +8771,28 @@ by exp-lbrs.ulp</description>
 <pinref part="U2" gate="G$1" pin="GND"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND23" gate="1" pin="GND"/>
+<pinref part="IC1" gate="G$1" pin="WP"/>
+<wire x1="-53.34" y1="33.02" x2="-53.34" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="35.56" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="38.1" x2="-53.34" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="40.64" x2="-53.34" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="45.72" x2="-50.8" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="A2"/>
+<wire x1="-50.8" y1="40.64" x2="-53.34" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-53.34" y="40.64"/>
+<pinref part="IC1" gate="G$1" pin="A1"/>
+<wire x1="-50.8" y1="38.1" x2="-53.34" y2="38.1" width="0.1524" layer="91"/>
+<junction x="-53.34" y="38.1"/>
+<pinref part="IC1" gate="G$1" pin="A0"/>
+<wire x1="-50.8" y1="35.56" x2="-53.34" y2="35.56" width="0.1524" layer="91"/>
+<junction x="-53.34" y="35.56"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -7874,6 +8903,18 @@ by exp-lbrs.ulp</description>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="-190.5" y1="-5.08" x2="-185.42" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="+3V17" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="+3V18" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<pinref part="+3V19" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -8012,23 +9053,17 @@ by exp-lbrs.ulp</description>
 <net name="N$20" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="IRQ"/>
-<wire x1="-50.8" y1="-15.24" x2="-60.96" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="PORTB_H" pin="PB11"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="-60.96" y1="-15.24" x2="-109.22" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-5.08" x2="-60.96" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="-60.96" y="-15.24"/>
 </segment>
 </net>
 <net name="N$21" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="CLR"/>
 <wire x1="-109.22" y1="-12.7" x2="-76.2" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="U1" gate="PORTB_H" pin="PB10"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="-76.2" y1="-12.7" x2="-50.8" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="-5.08" x2="-76.2" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="-76.2" y="-12.7"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -8098,11 +9133,6 @@ by exp-lbrs.ulp</description>
 </segment>
 </net>
 <net name="LDAC" class="0">
-<segment>
-<pinref part="U1" gate="PORTB_L" pin="PB2"/>
-<wire x1="71.12" y1="-127" x2="91.44" y2="-127" width="0.1524" layer="91"/>
-<label x="86.36" y="-127" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-83.82" y1="-5.08" x2="-83.82" y2="-10.16" width="0.1524" layer="91"/>
@@ -8514,6 +9544,35 @@ by exp-lbrs.ulp</description>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="66.04" y1="-73.66" x2="121.92" y2="-73.66" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="-73.66" x2="121.92" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SCL"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="-50.8" y1="48.26" x2="-55.88" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U1" gate="PORTB_H" pin="PB10"/>
+<wire x1="-55.88" y1="48.26" x2="-55.88" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="-12.7" x2="-50.8" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-55.88" y="48.26"/>
+</segment>
+</net>
+<net name="N$68" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SDA"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="-22.86" y1="40.64" x2="-17.78" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U1" gate="PORTB_H" pin="PB11"/>
+<wire x1="-17.78" y1="40.64" x2="-17.78" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-15.24" x2="-50.8" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="-17.78" y="40.64"/>
+</segment>
+</net>
+<net name="N$69" class="0">
+<segment>
+<pinref part="TP1" gate="G$1" pin="1"/>
+<pinref part="U1" gate="PORTB_L" pin="PB2"/>
+<wire x1="93.98" y1="-127" x2="71.12" y2="-127" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
