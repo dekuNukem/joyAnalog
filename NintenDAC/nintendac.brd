@@ -1142,7 +1142,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="3.683" y="3.937" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="3.175" y="3.429" size="0.4064" layer="27" rot="R90"/>
 </element>
-<element name="S2" library="Adafruit Feather M0 Adalogger" package="KMR2" value="SWITCH-MOMENTARY-2TURTLE" x="22.987" y="12.446"/>
+<element name="S2" library="Adafruit Feather M0 Adalogger" package="KMR2" value="SWITCH-MOMENTARY-2TURTLE" x="22.225" y="12.446"/>
 <element name="D1" library="nintendac_mini" package="SOD-123" value="" x="22.4282" y="5.6896" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.2532" y="6.0706" size="0.8128" layer="25" ratio="18" rot="R180"/>
 <attribute name="VALUE" x="23.6982" y="7.4676" size="0.4064" layer="27" ratio="10" rot="R180"/>
@@ -1263,11 +1263,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="29.5101" y1="8.7376" x2="27.2542" y2="8.7376" width="0.3556" layer="1"/>
 <wire x1="18.4912" y1="7.2136" x2="20.1422" y2="8.8646" width="0.3556" layer="1"/>
 <wire x1="20.1422" y1="8.8646" x2="20.8758" y2="8.8646" width="0.3556" layer="1"/>
-<via x="23.6982" y="12.4206" extent="1-16" drill="0.508"/>
-<wire x1="23.6982" y1="12.4206" x2="23.7236" y2="12.446" width="0.3556" layer="1"/>
-<wire x1="23.7236" y1="12.446" x2="25.387" y2="12.446" width="0.3556" layer="1"/>
 <wire x1="7.887" y1="38.481" x2="7.9886" y2="38.5826" width="0.254" layer="1"/>
 <wire x1="7.9886" y1="38.5826" x2="9.398" y2="38.5826" width="0.254" layer="1"/>
+<via x="22.8092" y="12.4206" extent="1-16" drill="0.508"/>
+<wire x1="22.8092" y1="12.4206" x2="24.625" y2="12.4206" width="0.254" layer="1"/>
+<wire x1="24.625" y1="12.4206" x2="24.625" y2="12.446" width="0.254" layer="1"/>
 </signal>
 <signal name="+3V3">
 <polygon width="0.254" layer="1" isolate="0.3302">
@@ -1671,7 +1671,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="18.5674" y1="16.8148" x2="17.9832" y2="16.2306" width="0.254" layer="1"/>
 <wire x1="17.9832" y1="16.2306" x2="17.9832" y2="13.4366" width="0.254" layer="1"/>
 <wire x1="17.9832" y1="13.4366" x2="18.9738" y2="12.446" width="0.254" layer="1"/>
-<wire x1="18.9738" y1="12.446" x2="20.587" y2="12.446" width="0.254" layer="1"/>
+<wire x1="18.9738" y1="12.446" x2="19.825" y2="12.446" width="0.254" layer="1"/>
 </signal>
 <signal name="N$31">
 <contactref element="U1" pad="41"/>
