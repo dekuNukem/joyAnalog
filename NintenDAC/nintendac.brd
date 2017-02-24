@@ -1087,7 +1087,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="U$2" library="adafruit" package="1X10-BIG" value="PINHD-1X10" x="13.208" y="1.27" smashed="yes"/>
 <element name="U1" library="backplane" package="TQFP64" value="STM32F10XRXT6" x="20.066" y="25.781" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.2598" y="26.4922" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="22.7076" y="21.3614" size="0.8128" layer="25"/>
 </element>
 <element name="JP4" library="pinhead" package="2X02" value="" x="37.973" y="7.62" smashed="yes" rot="R270">
 <attribute name="VALUE" x="33.528" y="10.16" size="1.27" layer="27" rot="R270"/>
