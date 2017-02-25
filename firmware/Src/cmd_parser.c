@@ -147,8 +147,7 @@ int32_t arg_to_button_index(char* cmd)
     return ARG_PARSE_ERROR_INVALID_CMD;
 
   if((board_type == BOARD_TYPE_NDAC_MINI_JOYCON_LEFT && result >= 0 && result <= 11) ||
-    (board_type == BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT && result >= 12 && result <= 23) ||
-    (board_type == BOARD_TYPE_NDAC_PRO_CTRLER && result >= 0 && result <= 23))
+    (board_type == BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT && result >= 12 && result <= 23))
     return result;
   return ARG_PARSE_ERROR_NOT_AVAILABLE;
 }
@@ -183,10 +182,8 @@ int32_t process_multiarg(char* args)
 void button_ctrl(int32_t action)
 {
   for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
-  {
     if(gpio_port_queue[i] != NULL)
       HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], action);
-  }
 }
 
 void parse_cmd(char* cmd)
@@ -198,10 +195,6 @@ void parse_cmd(char* cmd)
   {
     switch(board_type)
     {
-      case BOARD_TYPE_NDAC_PRO_CTRLER:
-      puts("BOARD_TYPE_NDAC_PRO_CTRLER");
-      break;
-
       case BOARD_TYPE_NDAC_MINI_JOYCON_LEFT:
       puts("BOARD_TYPE_NDAC_MINI_JOYCON_LEFT");
       break;
@@ -226,13 +219,13 @@ void parse_cmd(char* cmd)
       puts("bh OK");
       break;
       case ARG_PARSE_ERROR_INVALID_CMD:
-      puts("bh ERROR INVALID CMD");
+      puts("bh ERROR: invalid cmd");
       break;
       case ARG_PARSE_ERROR_NOT_AVAILABLE:
-      puts("bh ERROR BUTTON NOT AVAILABLE");
+      puts("bh ERROR: button not available");
       break;
       default:
-      puts("bh ERROR unknown");
+      puts("bh ERROR: unknown");
     }
   }
   // button release, multiple args allowed
@@ -246,21 +239,21 @@ void parse_cmd(char* cmd)
       puts("br OK");
       break;
       case ARG_PARSE_ERROR_INVALID_CMD:
-      puts("br ERROR INVALID CMD");
+      puts("br ERROR: invalid command");
       break;
       case ARG_PARSE_ERROR_NOT_AVAILABLE:
-      puts("br ERROR BUTTON NOT AVAILABLE");
+      puts("br ERROR: button not available");
       break;
       default:
-      puts("br ERROR unknown");
+      puts("br ERROR: unknown");
     }
   }
   // button release all
-  else if(strcmp(cmd, "br") == 0)
+  else if(strcmp(cmd, "bra") == 0)
   {
     puts("bra OK");
   }
-  // stick hold, sh x y, x and y from 0 to 255
+  // stick hold, sh x y, x and y between 0 and 255 inclusive
   else if(strncmp(cmd, "sh ", 3) == 0)
   {
     char* x_ptr = goto_next_arg(cmd);
@@ -271,7 +264,7 @@ void parse_cmd(char* cmd)
     uint32_t y_12b = (uint32_t)((float)y_8b * 8.76);
     if(x_ptr == NULL || y_ptr == NULL || x_8b > 255 || y_8b > 255)
     {
-      puts("sh ERROR");
+      puts("sh ERROR: invalid arguments");
       return;
     }
     if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
