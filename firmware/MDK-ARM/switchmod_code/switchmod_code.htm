@@ -3,7 +3,7 @@
 <title>Static Call Graph - [switchmod_code\switchmod_code.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image switchmod_code\switchmod_code.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Fri Feb 24 22:13:51 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat Feb 25 16:46:28 2017
 <BR><P>
 <H3>Maximum Stack Usage =        228 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -271,11 +271,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 </UL>
 
-<P><STRONG><a name="[c3]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
+<P><STRONG><a name="[c0]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fill_lookup
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_to_button_index
 </UL>
 
 <P><STRONG><a name="[44]"></a>atoi</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, atoi.o(.text))
@@ -401,8 +401,8 @@ Global Symbols
 <P><STRONG><a name="[5b]"></a>Error_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_Init
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_Init
 </UL>
 
 <P><STRONG><a name="[d7]"></a>HAL_DACEx_DualSetValue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DACEx_DualSetValue))
@@ -464,7 +464,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
 </UL>
 
 <P><STRONG><a name="[60]"></a>HAL_GPIO_DeInit</STRONG> (Thumb, 202 bytes, Stack size 20 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_DeInit))
@@ -481,14 +481,14 @@ Global Symbols
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[c0]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
-<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
+<P><STRONG><a name="[c2]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
+<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
 </UL>
 
 <P><STRONG><a name="[8d]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_WritePin))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
 </UL>
 
 <P><STRONG><a name="[54]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f0xx_hal.o(i.HAL_GetTick))
@@ -558,9 +558,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_MspInit
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_MspInit
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 </UL>
 
@@ -633,11 +633,11 @@ Global Symbols
 <P><STRONG><a name="[72]"></a>HAL_PCD_IRQHandler</STRONG> (Thumb, 238 bytes, Stack size 16 bytes, stm32f0xx_hal_pcd.o(i.HAL_PCD_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = HAL_PCD_IRQHandler &rArr; HAL_PCD_ResumeCallback &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_SuspendCallback
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_SetAddress
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_SuspendCallback
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_SOFCallback
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_ResumeCallback
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_ResetCallback
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_SetAddress
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PCD_EP_ISR_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_IRQHandler
@@ -654,8 +654,8 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>HAL_PCD_MspInit</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, usbd_conf.o(i.HAL_PCD_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_PCD_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_Init
 </UL>
@@ -687,8 +687,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[75]"></a>HAL_PCD_SetAddress</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, stm32f0xx_hal_pcd.o(i.HAL_PCD_SetAddress))
-<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_SetUSBAddress
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_IRQHandler
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_SetUSBAddress
 </UL>
 
 <P><STRONG><a name="[81]"></a>HAL_PCD_SetupStageCallback</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, usbd_conf.o(i.HAL_PCD_SetupStageCallback))
@@ -849,8 +849,8 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_ResumeCallback
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_ResumeCallback
 </UL>
 
 <P><STRONG><a name="[3c]"></a>SystemInit</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, system_stm32f0xx.o(i.SystemInit))
@@ -1068,9 +1068,9 @@ Global Symbols
 <P><STRONG><a name="[aa]"></a>USBD_LL_Init</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, usbd_conf.o(i.USBD_LL_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_LL_Init &rArr; HAL_PCD_Init &rArr; HAL_PCD_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCDEx_PMAConfig
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_Init
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCDEx_PMAConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_Init
 </UL>
@@ -1286,29 +1286,29 @@ Global Symbols
 
 <P><STRONG><a name="[f0]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[bf]"></a>blink</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, main.o(i.blink))
+<P><STRONG><a name="[bf]"></a>arg_to_button_index</STRONG> (Thumb, 508 bytes, Stack size 8 bytes, cmd_parser.o(i.arg_to_button_index))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = arg_to_button_index &rArr; strncmp
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+</UL>
+
+<P><STRONG><a name="[c1]"></a>blink</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, main.o(i.blink))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = blink &rArr; HAL_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c1]"></a>button_ctrl</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, cmd_parser.o(i.button_ctrl))
+<P><STRONG><a name="[c3]"></a>button_ctrl</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, cmd_parser.o(i.button_ctrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = button_ctrl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-</UL>
-
-<P><STRONG><a name="[c2]"></a>fill_lookup</STRONG> (Thumb, 560 bytes, Stack size 32 bytes, cmd_parser.o(i.fill_lookup))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = fill_lookup &rArr; strncmp
-</UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
 </UL>
 
 <P><STRONG><a name="[3e]"></a>fputc</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(i.fputc))
@@ -1383,7 +1383,7 @@ Global Symbols
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IWDG_Init
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
@@ -1418,7 +1418,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d0]"></a>parse_cmd</STRONG> (Thumb, 398 bytes, Stack size 48 bytes, cmd_parser.o(i.parse_cmd))
+<P><STRONG><a name="[d0]"></a>parse_cmd</STRONG> (Thumb, 430 bytes, Stack size 48 bytes, cmd_parser.o(i.parse_cmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = parse_cmd &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DACEx_DualSetValue
@@ -1431,8 +1431,8 @@ Global Symbols
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_DeInit
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
@@ -1440,11 +1440,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d4]"></a>process_multiarg</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cmd_parser.o(i.process_multiarg))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = process_multiarg &rArr; fill_lookup &rArr; strncmp
+<P><STRONG><a name="[d4]"></a>process_multiarg</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, cmd_parser.o(i.process_multiarg))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = process_multiarg &rArr; arg_to_button_index &rArr; strncmp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fill_lookup
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_to_button_index
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>

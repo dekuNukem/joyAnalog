@@ -115,7 +115,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  board_type = BOARD_TYPE_NDAC_PRO_CTRLER;
+  board_type = BOARD_TYPE_NDAC_MINI_JOYCON_LEFT;
   my_usb_init();
   next_iwdg_kick = HAL_GetTick() + 500;
   /* USER CODE END 1 */

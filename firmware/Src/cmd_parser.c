@@ -5,291 +5,74 @@
 #include "helpers.h"
 #include "shared.h"
 #include "cmd_parser.h"
-#define ERROR_INVALID_CMD 1
-#define ERROR_NOT_AVAILABLE 2
-#define ARG_QUEUE_SIZE 32
+
+#define ARG_PARSE_SUCCESS 0
+#define ARG_PARSE_ERROR_INVALID_CMD 126
+#define ARG_PARSE_ERROR_NOT_AVAILABLE 127
+#define ARG_QUEUE_SIZE 16
 
 uint16_t gpio_pin_queue[ARG_QUEUE_SIZE];
 GPIO_TypeDef* gpio_port_queue[ARG_QUEUE_SIZE];
 
-int32_t fill_lookup(char* cmd, int32_t index)
+uint16_t gpio_pin_map[24] = 
 {
-  if(index >= ARG_QUEUE_SIZE)
-    return ERROR_INVALID_CMD;
+  // left joycon
+  DEBUG_LED_Pin,  // 0 dpad up
+  DEBUG_LED_Pin,  // 1 dpad down
+  DEBUG_LED_Pin,  // 2 dpad left
+  DEBUG_LED_Pin,  // 3 dpad right
+  DEBUG_LED_Pin,  // 4 L
+  DEBUG_LED_Pin,  // 5 ZL
+  DEBUG_LED_Pin,  // 6 minus
+  DEBUG_LED_Pin,  // 7 capture
+  DEBUG_LED_Pin,  // 8 LSL
+  DEBUG_LED_Pin,  // 9 LSR
+  DEBUG_LED_Pin,  // 10 LSYNC
+  DEBUG_LED_Pin,  // 11 LSB
+  // right joycon
+  DEBUG_LED_Pin,  // 12 A
+  DEBUG_LED_Pin,  // 13 B
+  DEBUG_LED_Pin,  // 14 X
+  DEBUG_LED_Pin,  // 15 Y
+  DEBUG_LED_Pin,  // 16 R
+  DEBUG_LED_Pin,  // 17 ZR
+  DEBUG_LED_Pin,  // 18 plus
+  DEBUG_LED_Pin,  // 19 home
+  DEBUG_LED_Pin,  // 20 RSL
+  DEBUG_LED_Pin,  // 21 RSR
+  DEBUG_LED_Pin,  // 22 RSYNC
+  DEBUG_LED_Pin,  // 23 RSB
+};
 
-  if(board_type == BOARD_TYPE_NDAC_MINI_JOYCON_LEFT)
-  {
-    if(strncmp(cmd, "du", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dd", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "syncl", 5) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "cap", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "zl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "-", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "sbl", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "ls", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "lsl", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "lsr", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else
-      return ERROR_INVALID_CMD;
-  }
-
-  else if(board_type == BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT)
-  {
-    if(strncmp(cmd, "a", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-
-    else if(strncmp(cmd, "b", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "x", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "y", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "rs", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "zr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "rsl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "rsr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "sbr", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "syncr", 5) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "+", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "h", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else
-      return ERROR_INVALID_CMD;
-  }
-  else if(board_type == BOARD_TYPE_NDAC_PRO_CTRLER)
-  {
-    if(strncmp(cmd, "du", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dd", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "dr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "syncl", 5) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "cap", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "zl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "-", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "sbl", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "ls", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "lsl", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "lsr", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "a", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-
-    else if(strncmp(cmd, "b", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "x", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "y", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "rs", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "zr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "rsl", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "rsr", 2) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "sbr", 3) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "syncr", 5) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else if(strncmp(cmd, "+", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    
-    else if(strncmp(cmd, "h", 1) == 0)
-    {
-      gpio_port_queue[index] = DEBUG_LED_GPIO_Port;
-      gpio_pin_queue[index] = DEBUG_LED_Pin;
-    }
-    else
-      return ERROR_INVALID_CMD;
-  }
-  else
-    return ERROR_INVALID_CMD;
-  return 0;
-}
+GPIO_TypeDef* gpio_port_map[24] = 
+{
+  // left joycon
+  DEBUG_LED_GPIO_Port,  // 0 dpad up
+  DEBUG_LED_GPIO_Port,  // 1 dpad down
+  DEBUG_LED_GPIO_Port,  // 2 dpad left
+  DEBUG_LED_GPIO_Port,  // 3 dpad right
+  DEBUG_LED_GPIO_Port,  // 4 L
+  DEBUG_LED_GPIO_Port,  // 5 ZL
+  DEBUG_LED_GPIO_Port,  // 6 minus
+  DEBUG_LED_GPIO_Port,  // 7 capture
+  DEBUG_LED_GPIO_Port,  // 8 LSL
+  DEBUG_LED_GPIO_Port,  // 9 LSR
+  DEBUG_LED_GPIO_Port,  // 10 LSYNC
+  DEBUG_LED_GPIO_Port,  // 11 LSB
+  // right joycon
+  DEBUG_LED_GPIO_Port,  // 12 A
+  DEBUG_LED_GPIO_Port,  // 13 B
+  DEBUG_LED_GPIO_Port,  // 14 X
+  DEBUG_LED_GPIO_Port,  // 15 Y
+  DEBUG_LED_GPIO_Port,  // 16 R
+  DEBUG_LED_GPIO_Port,  // 17 ZR
+  DEBUG_LED_GPIO_Port,  // 18 plus
+  DEBUG_LED_GPIO_Port,  // 19 home
+  DEBUG_LED_GPIO_Port,  // 20 RSL
+  DEBUG_LED_GPIO_Port,  // 21 RSR
+  DEBUG_LED_GPIO_Port,  // 22 RSYNC
+  DEBUG_LED_GPIO_Port,  // 23 RSB
+};
 
 char* goto_next_arg(char* buf)
 {
@@ -308,25 +91,93 @@ char* goto_next_arg(char* buf)
   return curr;
 }
 
+int32_t arg_to_button_index(char* cmd)
+{
+  int32_t result;
+  if(strncmp(cmd, "du", 2) == 0)
+    result = 0;
+  else if(strncmp(cmd, "dd", 2) == 0)
+    result = 1;
+  else if(strncmp(cmd, "dl", 2) == 0)
+    result = 2;
+  else if(strncmp(cmd, "dr", 2) == 0)
+    result = 3;
+  else if(strncmp(cmd, "ls", 2) == 0)
+    result = 4;
+  else if(strncmp(cmd, "zl", 2) == 0)
+    result = 5;
+  else if(strncmp(cmd, "-", 1) == 0)
+    result = 6;
+  else if(strncmp(cmd, "cap", 3) == 0)
+    result = 7;
+  else if(strncmp(cmd, "lsl", 3) == 0)
+    result = 8;
+  else if(strncmp(cmd, "lsr", 3) == 0)
+    result = 9;
+  else if(strncmp(cmd, "syncl", 5) == 0)
+    result = 10;
+  else if(strncmp(cmd, "sbl", 3) == 0)
+    result = 11;
+  
+  else if(strncmp(cmd, "a", 1) == 0)
+    result = 12;
+  else if(strncmp(cmd, "b", 1) == 0)
+    result = 13;
+  else if(strncmp(cmd, "x", 1) == 0)
+    result = 14;
+  else if(strncmp(cmd, "y", 1) == 0)
+    result = 15;
+  else if(strncmp(cmd, "rs", 2) == 0)
+    result = 16;
+  else if(strncmp(cmd, "zr", 2) == 0)
+    result = 17;
+  else if(strncmp(cmd, "+", 1) == 0)
+    result = 18;
+  else if(strncmp(cmd, "h", 1) == 0)
+    result = 19;
+  else if(strncmp(cmd, "rsl", 3) == 0)
+    result = 20;
+  else if(strncmp(cmd, "rsr", 3) == 0)
+    result = 21;
+  else if(strncmp(cmd, "syncr", 5) == 0)
+    result = 22;
+  else if(strncmp(cmd, "sbr", 3) == 0)
+    result = 23;
+  else
+    return ARG_PARSE_ERROR_INVALID_CMD;
+
+  if((board_type == BOARD_TYPE_NDAC_MINI_JOYCON_LEFT && result >= 0 && result <= 11) ||
+    (board_type == BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT && result >= 12 && result <= 23) ||
+    (board_type == BOARD_TYPE_NDAC_PRO_CTRLER && result >= 0 && result <= 23))
+    return result;
+  return ARG_PARSE_ERROR_NOT_AVAILABLE;
+}
+
 int32_t process_multiarg(char* args)
 {
   char* arg_ptr = args;
   int32_t count = 0;
+  int32_t result;
   memset(gpio_port_queue, 0, ARG_QUEUE_SIZE * sizeof(GPIO_TypeDef*));
   memset(gpio_pin_queue, 0, ARG_QUEUE_SIZE * sizeof(uint16_t));
   while(1)
   {
     arg_ptr = goto_next_arg(arg_ptr);
-    if(arg_ptr == NULL)
+    if(arg_ptr == NULL || count >= ARG_QUEUE_SIZE)
       break;
-    if(fill_lookup(arg_ptr, count) == 0)
+    result = arg_to_button_index(arg_ptr);
+    if(result >= 0 && result <= 23)
+    {
       count++;
+      gpio_port_queue[count] = gpio_port_map[result];
+      gpio_pin_queue[count] = gpio_pin_map[result];
+    }
     else
-      return 1;
+      return result;
   }
   if(count <= 0)
-    return 1;
-  return 0;
+    return ARG_PARSE_ERROR_INVALID_CMD;
+  return ARG_PARSE_SUCCESS;
 }
 
 void button_ctrl(int32_t action)
@@ -340,6 +191,7 @@ void button_ctrl(int32_t action)
 
 void parse_cmd(char* cmd)
 {
+  int32_t result;
   if(strcmp(cmd, "test") == 0)
     puts("test OK");
   if(strcmp(cmd, "whoami") == 0)
@@ -366,24 +218,42 @@ void parse_cmd(char* cmd)
   // button hold, multiple args allowed
   else if(strncmp(cmd, "bh ", 3) == 0)
   {
-    if(process_multiarg(cmd) != 0)
+    result = process_multiarg(cmd);
+    switch(result)
     {
-      puts("bh ERROR");
-      return;
+      case ARG_PARSE_SUCCESS:
+      button_ctrl(GPIO_PIN_RESET);
+      puts("bh OK");
+      break;
+      case ARG_PARSE_ERROR_INVALID_CMD:
+      puts("bh ERROR INVALID CMD");
+      break;
+      case ARG_PARSE_ERROR_NOT_AVAILABLE:
+      puts("bh ERROR BUTTON NOT AVAILABLE");
+      break;
+      default:
+      puts("bh ERROR unknown");
     }
-    button_ctrl(GPIO_PIN_RESET);
-    puts("bh OK");
   }
   // button release, multiple args allowed
   else if(strncmp(cmd, "br ", 3) == 0)
   {
-    if(process_multiarg(cmd) != 0)
+    result = process_multiarg(cmd);
+    switch(result)
     {
-      puts("br ERROR");
-      return;
+      case ARG_PARSE_SUCCESS:
+      button_ctrl(GPIO_PIN_SET);
+      puts("br OK");
+      break;
+      case ARG_PARSE_ERROR_INVALID_CMD:
+      puts("br ERROR INVALID CMD");
+      break;
+      case ARG_PARSE_ERROR_NOT_AVAILABLE:
+      puts("br ERROR BUTTON NOT AVAILABLE");
+      break;
+      default:
+      puts("br ERROR unknown");
     }
-    button_ctrl(GPIO_PIN_SET);
-    puts("br OK");
   }
   // button release all
   else if(strcmp(cmd, "br") == 0)
