@@ -161,7 +161,6 @@ int32_t process_multiarg(char* args)
   memset(gpio_pin_queue, 0, ARG_QUEUE_SIZE * sizeof(uint16_t));
   while(1)
   {
-    arg_ptr = goto_next_arg(arg_ptr);
     if(arg_ptr == NULL || count >= ARG_QUEUE_SIZE)
       break;
     result = arg_to_button_index(arg_ptr);
@@ -173,6 +172,7 @@ int32_t process_multiarg(char* args)
     }
     else
       return result;
+    arg_ptr = goto_next_arg(arg_ptr);
   }
   if(count <= 0)
     return ARG_PARSE_ERROR_INVALID_CMD;
@@ -184,6 +184,86 @@ void button_ctrl(int32_t action)
   for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
     if(gpio_port_queue[i] != NULL)
       HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], action);
+}
+
+int32_t button_hold(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_RESET);
+  return result;
+}
+
+int32_t button_release(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_SET);
+  return result;
+}
+
+int32_t button_click(char* cmd)
+{
+  char* arg_ptr = cmd;
+  arg_ptr = goto_next_arg(arg_ptr);
+  int32_t duration_ms = atoi(arg_ptr);
+  if(duration_ms <= 0 || duration_ms >= 1000)
+    return ARG_PARSE_ERROR_INVALID_CMD;
+
+  int32_t result = button_hold(arg_ptr);
+  if(result != ARG_PARSE_SUCCESS)
+    return result;
+  HAL_Delay(duration_ms);
+
+  result = button_release(arg_ptr);
+  if(result != ARG_PARSE_SUCCESS)
+    return result;
+  HAL_Delay(duration_ms);
+
+  return ARG_PARSE_SUCCESS;
+}
+
+int32_t stick_hold(char* cmd)
+{
+  char* x_ptr = goto_next_arg(cmd);
+  char* y_ptr = goto_next_arg(x_ptr);
+  uint32_t x_8b = atoi(x_ptr);
+  uint32_t y_8b = atoi(y_ptr);
+  uint32_t x_12b = (uint32_t)((float)x_8b * 8.76);
+  uint32_t y_12b = (uint32_t)((float)y_8b * 8.76);
+  if(x_ptr == NULL || y_ptr == NULL || x_8b > 255 || y_8b > 255)
+    return ARG_PARSE_ERROR_INVALID_CMD;
+  if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
+    stm32_dac_init();
+  HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, x_12b, y_12b);
+  return ARG_PARSE_SUCCESS;
+}
+
+void stick_release()
+{
+  if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
+    stm32_dac_init();
+  HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, 1117, 1117);
+}
+
+int32_t stick_nudge(char* cmd)
+{
+  char* arg_ptr = cmd;
+  arg_ptr = goto_next_arg(arg_ptr);
+  int32_t duration_ms = atoi(arg_ptr);
+  if(duration_ms <= 0 || duration_ms >= 1000)
+    return ARG_PARSE_ERROR_INVALID_CMD;
+
+  int32_t result = stick_hold(arg_ptr);
+  if(result != ARG_PARSE_SUCCESS)
+    return result;
+  HAL_Delay(duration_ms);
+
+  stick_release();
+  HAL_Delay(duration_ms);
+  return ARG_PARSE_SUCCESS;
 }
 
 void parse_cmd(char* cmd)
@@ -211,15 +291,14 @@ void parse_cmd(char* cmd)
   // button hold, multiple args allowed
   else if(strncmp(cmd, "bh ", 3) == 0)
   {
-    result = process_multiarg(cmd);
+    result = button_hold(cmd);
     switch(result)
     {
       case ARG_PARSE_SUCCESS:
-      button_ctrl(GPIO_PIN_RESET);
       puts("bh OK");
       break;
       case ARG_PARSE_ERROR_INVALID_CMD:
-      puts("bh ERROR: invalid cmd");
+      puts("bh ERROR: invalid command");
       break;
       case ARG_PARSE_ERROR_NOT_AVAILABLE:
       puts("bh ERROR: button not available");
@@ -231,11 +310,10 @@ void parse_cmd(char* cmd)
   // button release, multiple args allowed
   else if(strncmp(cmd, "br ", 3) == 0)
   {
-    result = process_multiarg(cmd);
+    result = button_release(cmd);
     switch(result)
     {
       case ARG_PARSE_SUCCESS:
-      button_ctrl(GPIO_PIN_SET);
       puts("br OK");
       break;
       case ARG_PARSE_ERROR_INVALID_CMD:
@@ -253,32 +331,63 @@ void parse_cmd(char* cmd)
   {
     puts("bra OK");
   }
+  // button click, bc duration multiarg
+  else if(strncmp(cmd, "bc ", 3) == 0)
+  {
+    result = button_click(cmd);
+    switch(result)
+    {
+      case ARG_PARSE_SUCCESS:
+      puts("bc OK");
+      break;
+      case ARG_PARSE_ERROR_INVALID_CMD:
+      puts("bc ERROR: invalid command");
+      break;
+      case ARG_PARSE_ERROR_NOT_AVAILABLE:
+      puts("bc ERROR: button not available");
+      break;
+      default:
+      puts("bc ERROR: unknown");
+    }
+  }
   // stick hold, sh x y, x and y between 0 and 255 inclusive
   else if(strncmp(cmd, "sh ", 3) == 0)
   {
-    char* x_ptr = goto_next_arg(cmd);
-    char* y_ptr = goto_next_arg(x_ptr);
-    uint32_t x_8b = atoi(x_ptr);
-    uint32_t y_8b = atoi(y_ptr);
-    uint32_t x_12b = (uint32_t)((float)x_8b * 8.76);
-    uint32_t y_12b = (uint32_t)((float)y_8b * 8.76);
-    if(x_ptr == NULL || y_ptr == NULL || x_8b > 255 || y_8b > 255)
+    result = stick_hold(cmd);
+    switch(result)
     {
-      puts("sh ERROR: invalid arguments");
-      return;
+      case ARG_PARSE_SUCCESS:
+      puts("sh OK");
+      break;
+      case ARG_PARSE_ERROR_INVALID_CMD:
+      puts("sh ERROR: invalid command");
+      break;
+      default:
+      puts("sh ERROR: unknown");
     }
-    if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
-      stm32_dac_init();
-    HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, x_12b, y_12b);
-    puts("sh OK");
   }
+
   // stick release, to netural position 
   else if(strcmp(cmd, "sr") == 0)
   {
-    if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
-      stm32_dac_init();
-    HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, 1117, 1117);
+    stick_release();
     puts("sr OK");
+  }
+  // stick nudge, sn duration_ms x y, x and y between 0 and 255 inclusive
+  else if(strncmp(cmd, "sn ", 3) == 0)
+  {
+    result = stick_nudge(cmd);
+    switch(result)
+    {
+      case ARG_PARSE_SUCCESS:
+      puts("sn OK");
+      break;
+      case ARG_PARSE_ERROR_INVALID_CMD:
+      puts("sn ERROR: invalid command");
+      break;
+      default:
+      puts("sn ERROR: unknown");
+    }
   }
   // stick disengage, gives control back to user
   else if(strcmp(cmd, "sd") == 0)

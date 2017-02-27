@@ -1,3 +1,23 @@
+ switch(result)
+  {
+    case ARG_PARSE_SUCCESS:
+    button_ctrl(GPIO_PIN_RESET);
+    puts("bh OK");
+    break;
+
+    case ARG_PARSE_ERROR_INVALID_CMD:
+    puts("bh ERROR: invalid command");
+    break;
+
+    case ARG_PARSE_ERROR_NOT_AVAILABLE:
+    puts("bh ERROR: button not available");
+    break;
+
+    default:
+    puts("bh ERROR: unknown");
+  }
+
+
   int32_t get_arg(char* argstr, uint32_t index)
 {
   if(argstr == NULL)

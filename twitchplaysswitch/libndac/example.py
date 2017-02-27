@@ -38,14 +38,18 @@ Y: 0 Down, 127 Neutral, 255 Up
 
 switch = switch_ctrl.switch_ctrl("COM5")
 switch.connect()
-switch.release_all()
-
+count = 0
 try:
 	while 1:
-		# switch.button_click("dd", 50)
-		switch.stick_nudge(64, 255, 50)
-		# switch.stick_hold(255, 255)
-		# switch.release_all()
-		sleep_ms(100)
+		print(count)
+		count += 1
+		if switch.cmd_available():
+			switch.stick_hold(255, 255)
+			# sleep_ms(1)
 except KeyboardInterrupt:
 	switch.release_all()
+
+"""
+usb_recv_buf.last_recv
+last reset should clear it as well
+"""

@@ -100,13 +100,11 @@ int fputc(int ch, FILE *f)
 
 void blink(void)
 {
-  // idwg_kick();
   for (int i = 0; i < 8; ++i)
   {
     HAL_GPIO_TogglePin(DEBUG_LED_GPIO_Port, DEBUG_LED_Pin);
     HAL_Delay(100);
   }
-  // idwg_kick();
 }
 
 /* USER CODE END 0 */
