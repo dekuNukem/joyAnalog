@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -188,9 +188,8 @@
 <text x="22.7584" y="30.496" size="0.8128" layer="25" rot="R90">B12</text>
 <text x="22.7584" y="32.655" size="0.8128" layer="25" rot="R90">B13</text>
 <text x="22.7584" y="34.687" size="0.8128" layer="25" rot="R90">3V3</text>
-<text x="11.319" y="0.3048" size="0.8128" layer="25">dekuNukem</text>
-<text x="11.7094" y="25.67" size="0.8128" layer="25" rot="R90">NintenDAC mini</text>
-<text x="15.51" y="1.3208" size="0.8128" layer="25">2017</text>
+<text x="20.955" y="10.414" size="0.9144" layer="25" rot="R90">dekuNukem 2017</text>
+<text x="19.685" y="10.414" size="0.9144" layer="25" rot="R90">NintenDAC mini</text>
 <text x="2.3876" y="32.4104" size="0.8128" layer="25" distance="10" rot="R270">VIN</text>
 </plain>
 <libraries>
@@ -946,7 +945,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="7.636" y="24.8412" size="0.4064" layer="27"/>
 </element>
 <element name="C8" library="backplane" package="0805" value="" x="16.6276" y="14.224" smashed="yes" rot="R270">
-<attribute name="NAME" x="17.8087" y="15.0622" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="16.0782" y="11.4587" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="15.2306" y="15.24" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="PWR" library="backplane" package="CHIP-LED0805" value="" x="4.2832" y="25.3492" smashed="yes" rot="R180">
@@ -960,7 +959,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="4.7404" y="25.273" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="R8" library="SparkFun-Passives" package="0805" value="" x="20.082" y="8.382" smashed="yes">
-<attribute name="NAME" x="19.447" y="9.5123" size="0.8128" layer="25"/>
+<attribute name="NAME" x="18.0213" y="7.604" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="19.066" y="6.985" size="0.4064" layer="27"/>
 </element>
 <element name="R9" library="SparkFun-Passives" package="0805" value="" x="5.08" y="2.524" smashed="yes" rot="R90">
@@ -997,7 +996,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="17.4652" y="27.9694" size="0.8128" layer="25" rot="R270"/>
 </element>
 <element name="R2" library="SparkFun-Passives" package="0805" value="" x="20.4122" y="21.8186" smashed="yes" rot="R45">
-<attribute name="NAME" x="18.025925" y="20.446390625" size="0.8128" layer="25" rot="R315"/>
+<attribute name="NAME" x="18.923609375" y="21.708925" size="0.8128" layer="25" rot="R45"/>
 <attribute name="VALUE" x="20.68160625" y="20.11235" size="0.4064" layer="27" rot="R45"/>
 </element>
 <element name="R3" library="SparkFun-Passives" package="0805" value="" x="17.288" y="24.5364" smashed="yes" rot="R270">
