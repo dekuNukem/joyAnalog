@@ -291,7 +291,7 @@ void parse_cmd(char* cmd)
   int32_t result;
   if(strcmp(cmd, "test") == 0)
     puts("test OK");
-  if(strcmp(cmd, "whoami") == 0)
+  else if(strcmp(cmd, "whoami") == 0)
   {
     switch(board_type)
     {
@@ -424,6 +424,6 @@ void parse_cmd(char* cmd)
   }
   else
   {
-    puts("?");
+    puts("ERROR unknown command");
   }
 }
