@@ -36,16 +36,15 @@ X: 0 Right, 127 Neutral, 255 Left
 Y: 0 Down, 127 Neutral, 255 Up
 """
 
-switch = switch_ctrl.switch_ctrl("COM5")
+switch = switch_ctrl.switch_ctrl("COM4")
 switch.connect()
 count = 0
 try:
 	while 1:
-		print(count)
 		count += 1
 		if switch.cmd_available():
-			switch.stick_hold(255, 255)
-			# sleep_ms(1)
+			switch.button_click(33, "dd")
+			# sleep_ms(0.5)
 except KeyboardInterrupt:
 	switch.release_all()
 

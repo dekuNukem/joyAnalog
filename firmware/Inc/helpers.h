@@ -12,6 +12,7 @@
 typedef struct
 {
 	int32_t last_recv;
+	int32_t last_reset;
 	int32_t curr_index;
 	char buf[LB_SIZE];
 } linear_buf;

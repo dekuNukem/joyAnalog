@@ -10,11 +10,13 @@
 #define ARG_PARSE_ERROR_INVALID_CMD 126
 #define ARG_PARSE_ERROR_NOT_AVAILABLE 127
 #define ARG_QUEUE_SIZE 16
+#define RELEASE_DURATION_MS 66
+#define SWITCH_BUTTON_COUNT 24
 
 uint16_t gpio_pin_queue[ARG_QUEUE_SIZE];
 GPIO_TypeDef* gpio_port_queue[ARG_QUEUE_SIZE];
 
-uint16_t gpio_pin_map[24] = 
+uint16_t gpio_pin_map[SWITCH_BUTTON_COUNT] = 
 {
   // left joycon
   DEBUG_LED_Pin,  // 0 dpad up
@@ -44,7 +46,7 @@ uint16_t gpio_pin_map[24] =
   DEBUG_LED_Pin,  // 23 RSB
 };
 
-GPIO_TypeDef* gpio_port_map[24] = 
+GPIO_TypeDef* gpio_port_map[SWITCH_BUTTON_COUNT] = 
 {
   // left joycon
   DEBUG_LED_GPIO_Port,  // 0 dpad up
@@ -220,7 +222,7 @@ int32_t button_click(char* cmd)
   result = button_release(arg_ptr);
   if(result != ARG_PARSE_SUCCESS)
     return result;
-  HAL_Delay(duration_ms);
+  HAL_Delay(RELEASE_DURATION_MS);
 
   return ARG_PARSE_SUCCESS;
 }
@@ -241,7 +243,7 @@ int32_t stick_hold(char* cmd)
   return ARG_PARSE_SUCCESS;
 }
 
-void stick_release()
+void stick_release(void)
 {
   if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
     stm32_dac_init();
@@ -262,8 +264,26 @@ int32_t stick_nudge(char* cmd)
   HAL_Delay(duration_ms);
 
   stick_release();
-  HAL_Delay(duration_ms);
+  HAL_Delay(RELEASE_DURATION_MS);
   return ARG_PARSE_SUCCESS;
+}
+
+void stick_disengage(void)
+{
+  if(stm32_dac_ptr->State != HAL_DAC_STATE_RESET)
+  {
+    HAL_DAC_Stop(stm32_dac_ptr, DAC_CHANNEL_1);
+    HAL_DAC_Stop(stm32_dac_ptr, DAC_CHANNEL_2);
+    HAL_DAC_DeInit(stm32_dac_ptr);
+  }
+  return;
+}
+
+void release_all_button(void)
+{
+  for(int i = 0; i < SWITCH_BUTTON_COUNT; ++i)
+      HAL_GPIO_WritePin(gpio_port_map[i], gpio_pin_map[i], GPIO_PIN_SET);
+  return;
 }
 
 void parse_cmd(char* cmd)
@@ -329,6 +349,7 @@ void parse_cmd(char* cmd)
   // button release all
   else if(strcmp(cmd, "bra") == 0)
   {
+    release_all_button();
     puts("bra OK");
   }
   // button click, bc duration multiarg
@@ -366,7 +387,6 @@ void parse_cmd(char* cmd)
       puts("sh ERROR: unknown");
     }
   }
-
   // stick release, to netural position 
   else if(strcmp(cmd, "sr") == 0)
   {
@@ -392,10 +412,15 @@ void parse_cmd(char* cmd)
   // stick disengage, gives control back to user
   else if(strcmp(cmd, "sd") == 0)
   {
-    HAL_DAC_Stop(stm32_dac_ptr, DAC_CHANNEL_1);
-    HAL_DAC_Stop(stm32_dac_ptr, DAC_CHANNEL_2);
-    HAL_DAC_DeInit(stm32_dac_ptr);
+    stick_disengage();
     puts("sd OK");
+  }
+  // release all buttons and sticks
+  else if(strcmp(cmd, "reset") == 0)
+  {
+    release_all_button();
+    stick_disengage();
+    puts("reset OK");
   }
   else
   {

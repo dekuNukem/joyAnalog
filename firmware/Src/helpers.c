@@ -12,6 +12,7 @@ int32_t linear_buf_init(linear_buf *lb)
     return 1;
   linear_buf_reset(lb);
   lb->last_recv = 0;
+  lb->last_reset = 0;
   return 0;
 }
 
@@ -21,6 +22,7 @@ int32_t linear_buf_reset(linear_buf *lb)
     return 1;
   lb->curr_index = 0;
   memset(lb->buf, 0, LB_SIZE);
+  lb->last_reset = HAL_GetTick();
   return 0;
 }
 
@@ -85,7 +87,7 @@ void idwg_kick(void)
 void enter_standby(void)
 {
   __HAL_RCC_PWR_CLK_ENABLE();
-  HAL_Delay(10);
+  HAL_Delay(1);
   HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN6);
   __HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
   __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB);
