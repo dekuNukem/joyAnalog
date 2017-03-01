@@ -1,7 +1,7 @@
 command,arguments,remark,response,example
 `eepinit`,none,initializes EEPROM to default value,`eepinit OK`,`eepinit`
 `settype`,l / r,set this board as left or right joycon,`settype OK`,`settype l`
-`whoami`,none,see which side is this board for,"A string containing `LEFT` or `RIGHT`, `unknown` if incorrectly set up",`whoami`
+`whoami`,none,see which side is this board for,A string containing `LEFT` or `RIGHT`; `unknown` if incorrectly set up,`whoami`
 `bh`,one or more button args,hold down button,`bh OK` if no error; `ERROR`  otherwise,`bh a b x`
 `br`,one or more button args,release button,`br OK` if no error; `ERROR` otherwise,`br a b x`
 `bra`,none,release all buttons on this board,`bra ok`,`bra`
