@@ -12,9 +12,9 @@ The board has 2 versions. The smaller NintenDAC mini is intended to be used on a
 
 Both present themselves to PC as a USB serial port, so no special drivers are needed. Simply connect the button and joystick test points to the headers to allow the joycon be controlled from a PC. Details and tutorials to come after I got my Switch.
 
-## Communication protocol and Python library
+## Board Details, communication protocol and Python library
 
-For NintenDAC: under construction...
+For NintenDAC: [click here](./NintenDAC)
 
 For NintenDAC mini: [click here](./NintenDAC_mini)
 

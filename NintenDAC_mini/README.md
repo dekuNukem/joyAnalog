@@ -49,7 +49,7 @@ Commands should be in lower case, and end with a single `\n`.
 `syncl`|left Joycon SYNC button
 `sbl`|left Joycon stick button
 `a`|A button
-`b`|B burron
+`b`|B button
 `x`|X button
 `y`|Y button
 `rs`|R button
