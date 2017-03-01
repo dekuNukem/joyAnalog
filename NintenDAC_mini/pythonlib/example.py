@@ -11,12 +11,12 @@ switch.button_release_all()
 # press button(s) then release it
 # first arg is how long to press the button(s) down
 # second arg is how long to release them before the next action
-# value smaller than 1 frame (33ms) probably won't get recognized by the console
-# third arg is a list of button args
+# value smaller than 33ms (1 frame) probably won't get recognized by the console
+# third arg is the list of buttons
 switch.button_click(67, 67, ['+', '-', 'h'])
 
 # first arg is which stick to hold, should be 'l' or 'r'
-# second and third arg are desired stick positions
+# second and third arg are desired stick position
 # must between 0 to 255 inclusive, 127 is netural postion
 switch.stick_hold('l', 64, 192)
 switch.stick_release('r')
