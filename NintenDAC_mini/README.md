@@ -13,7 +13,7 @@ This is the board that's to be used on modifying the Joycon. It's small enough t
 
 ## Command protocol
 
-NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a command in ASCII string. The board will send a respond back.
+NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a command in ASCII string. The board will send a response back.
 
 Commands should be in lower case, and end with a single `\n`.
 
