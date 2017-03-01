@@ -28,32 +28,32 @@ Valid commands are:
 `sd`|none|stick disengage; give physical stick control back to user|`sd OK`|`sd`
 `reset`|none|release all buttons; as well as disengage the stick|`reset OK`|`reset`
 
-**arg**|**button**| | | 
-:-----:|:-----:|:-----:|:-----:|:-----:
-`du`|D-pad up| | | 
-`dd`|D-pad down| | | 
-`dl`|D-pad left| | | 
-`dr`|D-pad right| | | 
-`ls`|L button| | | 
-`zl`|ZL button| | | 
-`-`|minus button | | | 
-`cap`|capture button| | | 
-`lsl`|left Joycon SL button| | | 
-`lsr`|left Joycon SR button| | | 
-`syncl`|left Joycon SYNC button| | | 
-`sbl`|left Joycon stick button| | | 
-`a`|A button| | | 
-`b`|B burron| | | 
-`x`|X button| | | 
-`y`|Y button| | | 
-`rs`|R button| | | 
-`zr`|ZE button| | | 
-`+`|plus button| | | 
-`h`|home button| | | 
-`rsl`|right Joycon SL button| | | 
-`rsr`|right Joycon SR button| | | 
-`syncr`|right Joycon SYNC button| | | 
-`sbr`|right Joycon stick button| | | 
+**arg**|**button**
+:-----:|:-----:
+`du`|D-pad up
+`dd`|D-pad down
+`dl`|D-pad left
+`dr`|D-pad right
+`ls`|L button
+`zl`|ZL button
+`-`|minus button 
+`cap`|capture button
+`lsl`|left Joycon SL button
+`lsr`|left Joycon SR button
+`syncl`|left Joycon SYNC button
+`sbl`|left Joycon stick button
+`a`|A button
+`b`|B burron
+`x`|X button
+`y`|Y button
+`rs`|R button
+`zr`|ZE button
+`+`|plus button
+`h`|home button
+`rsl`|right Joycon SL button
+`rsr`|right Joycon SR button
+`syncr`|right Joycon SYNC button
+`sbr`|right Joycon stick button
 
 under construction...
 
