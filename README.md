@@ -19,7 +19,7 @@ The board has 2 versions. The bigger NintenDAC has more GPIOs and DAC channels, 
 
 And the smaller NintenDAC mini is intended to be used on a Joycon:
 
-![Alt text](http://i.imgur.com/sMGv5oS.jpg)
+![Alt text](http://i.imgur.com/f3qcFR7.jpg)
 
 * 48MHz STM32F072C8T6 microcontroller, 64KB flash, 16KB RAM.
 * Built-in 2-channel 12-bit DAC.
