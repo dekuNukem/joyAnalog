@@ -11,7 +11,9 @@
 
 ## Command protocol
 
-NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a ASCII command string terminated with `\n` and the board will send a respond back.
+NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a ASCII command. The board will send a respond back.
+
+Commands should be in lower case, and end with a single `\n`.
 
 ### Commands
 
@@ -56,8 +58,6 @@ NintenDAC mini uses a simple serial command protocol. To use it open the port at
 `rsr`|right Joycon SR button
 `syncr`|right Joycon SYNC button
 `sbr`|right Joycon stick button
-
-under construction...
 
 ## NintenDAC Python library
 
