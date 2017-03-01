@@ -4,11 +4,11 @@ This is actually a simplified version of the code used during TwitchPlaysPokemon
 
 To use it:
 
-* Connect the two NintenDAC mini board to the PC
+* Connect the two correctly configured NintenDAC mini board to the PC
 
 * Open up `launch.py` and configure the username, oauth, chat channel and serial port name.
 
-* Open up `banned_user.txt' and 'disabled_cmd.txt' and fill them in as you wish. These can be updated while main script is running too.
+* Open up `banned_user.txt` and `disabled_cmd.txt` and fill them in as you wish. These can be updated while main script is running too.
 
 * Run `python3 launch.py`
 
