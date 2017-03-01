@@ -12,6 +12,7 @@ switch.button_release_all()
 # first arg is how long to press the button(s) down
 # second arg is how long to release them before the next action
 # value smaller than 1 frame (33ms) probably won't get recognized by the console
+# third arg is a list of button args
 switch.button_click(67, 67, ['+', '-', 'h'])
 
 # first arg is which stick to hold, should be 'l' or 'r'

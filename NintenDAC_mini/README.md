@@ -72,16 +72,21 @@ Commands should be in lower case, and end with a single `\n`.
 
 ## NintenDAC Python3 library
 
-I also wrote a simple python3 library so you don't have to remember all the commands above. It requires `pyserial`.
+I also wrote a python3 library so you don't have to remember all the commands above. It requires `pyserial`.
 
-The simplest example is this:
+A simple example:
 
 ```
 import ndacmini
 
-switch = ndacmini.ndacmini("COM4", "COM8")
+switch = ndacmini.ndacmini("COM5", "COM6")
 switch.connect()
 
-while 1:
-	switch.button_click(100, ["du", "ls", "zl", "b", "x", "+"])
+switch.button_hold(['a', 'b', 'zl', 'zr'])
+switch.stick_hold('l', 64, 192)
+switch.reset()
+switch.disconnect()
+
 ```
+
+A more detailed example with comments can be found [here](./pythonlib/example.py)
