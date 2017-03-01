@@ -9,9 +9,9 @@
 * USB for power and communication, standby wakeup on USB connection.
 * Board size 2.5 x 4.1 cm, 1 x 1.6 inch.
 
-## NintenDAC mini serial command protocol
+## Command protocol
 
-NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate(it doesn't matter because it's USB based), then send a ASCII command string terminated with `\n` and the board will send a response back.
+NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a ASCII command string terminated with `\n` and the board will send a respond back.
 
 valid commands are:
 
