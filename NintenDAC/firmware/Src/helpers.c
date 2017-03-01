@@ -26,7 +26,7 @@ int32_t linear_buf_reset(linear_buf *lb)
   return 0;
 }
 
-int32_t linear_buf_add(linear_buf *lb, char c)
+int32_t linear_buf_add(linear_buf *lb, uint8_t c)
 {
   if(lb == NULL)
     return 1;
@@ -37,7 +37,7 @@ int32_t linear_buf_add(linear_buf *lb, char c)
   return 0;
 }
 
-int32_t linear_buf_add_str(linear_buf *lb, char *s, uint32_t len)
+int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len)
 {
   if(lb == NULL || s == NULL)
     return 1;

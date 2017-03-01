@@ -21,8 +21,8 @@ int32_t linear_buf_init(linear_buf *lb);
 int32_t linear_buf_reset(linear_buf *lb);
 int32_t linear_buf_idle(linear_buf *lb);
 int32_t linear_buf_line_available(linear_buf *lb);
-int32_t linear_buf_add(linear_buf *lb, char c);
-int32_t linear_buf_add_str(linear_buf *lb, char *s, uint32_t len);
+int32_t linear_buf_add(linear_buf *lb, uint8_t c);
+int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
 void idwg_kick(void);
 void enter_standby(void);
 
