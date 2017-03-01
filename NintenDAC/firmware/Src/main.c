@@ -66,7 +66,6 @@ SPI_HandleTypeDef hspi2;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 int32_t next_iwdg_kick;
-int32_t board_type;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -89,7 +88,6 @@ void stm32_dac_init(void)
   MX_DAC_Init();
   HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_1);
   HAL_DAC_Start(stm32_dac_ptr, DAC_CHANNEL_2);
-  // printf("STM32 built-in DAC initialized\n");
 }
 
 int fputc(int ch, FILE *f)
@@ -113,7 +111,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  board_type = BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT;
   my_usb_init();
   next_iwdg_kick = HAL_GetTick() + 500;
   /* USER CODE END 1 */
@@ -135,7 +132,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   blink();
   spi_cs_high();
-  printf("------------------started------------------\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */

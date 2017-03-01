@@ -11,12 +11,12 @@
 #define ARG_PARSE_ERROR_INVALID_CMD 126
 #define ARG_PARSE_ERROR_NOT_AVAILABLE 127
 #define ARG_QUEUE_SIZE 16
-#define SWITCH_BUTTON_COUNT 24
+#define SWITCH_JOYCON_BUTTON_COUNT 24
 
 uint16_t gpio_pin_queue[ARG_QUEUE_SIZE];
 GPIO_TypeDef* gpio_port_queue[ARG_QUEUE_SIZE];
 
-uint16_t gpio_pin_map[SWITCH_BUTTON_COUNT] = 
+uint16_t gpio_pin_map[SWITCH_JOYCON_BUTTON_COUNT] = 
 {
   // left joycon
   DEBUG_LED_Pin,  // 0 dpad up
@@ -46,7 +46,7 @@ uint16_t gpio_pin_map[SWITCH_BUTTON_COUNT] =
   DEBUG_LED_Pin,  // 23 RSB
 };
 
-GPIO_TypeDef* gpio_port_map[SWITCH_BUTTON_COUNT] = 
+GPIO_TypeDef* gpio_port_map[SWITCH_JOYCON_BUTTON_COUNT] = 
 {
   // left joycon
   DEBUG_LED_GPIO_Port,  // 0 dpad up
@@ -166,7 +166,7 @@ int32_t process_multiarg(char* args)
     if(arg_ptr == NULL || count >= ARG_QUEUE_SIZE)
       break;
     result = arg_to_button_index(arg_ptr);
-    if(result >= 0 && result <= 23)
+    if(result >= 0 && result < SWITCH_JOYCON_BUTTON_COUNT)
     {
       count++;
       gpio_port_queue[count] = gpio_port_map[result];
@@ -237,14 +237,12 @@ void stick_disengage(void)
     HAL_DAC_Stop(stm32_dac_ptr, DAC_CHANNEL_2);
     HAL_DAC_DeInit(stm32_dac_ptr);
   }
-  return;
 }
 
 void release_all_button(void)
 {
-  for(int i = 0; i < SWITCH_BUTTON_COUNT; ++i)
+  for(int i = 0; i < SWITCH_JOYCON_BUTTON_COUNT; ++i)
       HAL_GPIO_WritePin(gpio_port_map[i], gpio_pin_map[i], GPIO_PIN_SET);
-  return;
 }
 
 void parse_cmd(char* cmd)

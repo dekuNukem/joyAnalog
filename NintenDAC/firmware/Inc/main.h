@@ -66,10 +66,6 @@
 #define DEBUG_LED_Pin GPIO_PIN_9
 #define DEBUG_LED_GPIO_Port GPIOC
 
-#define BOARD_TYPE_NDAC_PRO_CTRLER 0
-#define BOARD_TYPE_NDAC_MINI_JOYCON_LEFT 1
-#define BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT 2
-
 /* USER CODE BEGIN Private defines */
 void stm32_dac_init(void);
 /* USER CODE END Private defines */

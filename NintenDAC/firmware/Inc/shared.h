@@ -17,7 +17,6 @@ extern IWDG_HandleTypeDef hiwdg;
 #define stm32_iwdg_ptr (&hiwdg)
 
 extern int32_t next_iwdg_kick;
-extern int32_t board_type;
 
 #define spi_cs_low() do { HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_RESET); } while (0)
 #define spi_cs_high() do { HAL_GPIO_WritePin(SPI2_CS_GPIO_Port, SPI2_CS_Pin, GPIO_PIN_SET); } while (0)
