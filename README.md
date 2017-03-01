@@ -1,4 +1,4 @@
-### A hub for my Nintendo Switch related projects
+# A hub for my Nintendo Switch related projects
 
 I'm going to put all the resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days.
 
