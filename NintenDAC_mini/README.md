@@ -19,10 +19,10 @@ Valid commands are:
 :-----:|:-----:|:-----:|:-----:|:-----:
 `eepinit`|none|initializes EEPROM to default value|`eepinit OK`|`eepinit`
 `settype`|l / r|set this board as left or right joycon|`settype OK`|`settype l`
-`whoami`|none|see which side is this board|`BOARD\_TYPE\_NDAC\_MINI\_JOYCON\_LEFT`|`whoami`
-`bh`|one or more button args|hold down button hold down|`bh OK` if no error; `ERROR` if something went wrong|`bh a b x y`
-`br`|one or more button args|release button|`br OK` if no error; `ERROR` if something went wrong|`br a b x y`
-
+`whoami`|none|see which side is this board for|"A string containing `LEFT` or `RIGHT`| `unknown` if incorrectly set up"
+`bh`|one or more button args|hold down button|`bh OK` if no error; `ERROR`  otherwise|`bh a b x`
+`br`|one or more button args|release button|`br OK` if no error; `ERROR` otherwise|`br a b x`
+`bra`|none|release all buttons on this board|`bra ok`|`bra`
 under construction...
 
 ## NintenDAC Python library
