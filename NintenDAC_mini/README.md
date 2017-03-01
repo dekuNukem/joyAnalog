@@ -61,11 +61,11 @@ Commands should be in lower case, and end with a single `\n`.
 
 ### A few words about commands
 
-`sh` and `sr` will take over the control stick, meaning the input won't change when you move the stick with your finger when those commands are active. To get back to manual control use `sd`
+* `sh` and `sr` will take over the control stick, meaning the input won't change when you move the stick with your finger when those commands are active. To get back to manual control use `sd`
 
-Not all buttons are available on one board. For example if you try to `bh a` on a left joycon board, you will get an error.
+* Not all buttons are available on one board. For example if you try to `bh a` on a left joycon board, you will get an error.
 
-`bh` and `br` can have one or multiple arguments, as long as they are all valid. So you can have `bh a` or `bh a b x y zr h +` etc. The max number of arguments is 16.
+* `bh` and `br` can have one or multiple arguments, as long as they are all valid. So you can have `bh a` or `bh a b x y zr h +` etc. The max number of arguments is 16.
 
 
 ## NintenDAC Python library
