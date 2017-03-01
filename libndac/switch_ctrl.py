@@ -109,6 +109,9 @@ class switch_ctrl:
             right_result = self.recvln(self.ser_right)
         self.check_error(left_message, right_message, left_result, right_result)
 
+    def button_stick_dual(self, duration_ms, button_list, x_left, x_right, y_left, y_right):
+        pass
+
     def button_hold(self, button_list):
         left_message = ''
         right_message = ''
