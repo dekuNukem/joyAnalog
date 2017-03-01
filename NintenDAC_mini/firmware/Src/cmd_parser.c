@@ -300,7 +300,7 @@ void parse_cmd(char* cmd)
       puts("bh ERROR: invalid command");
       break;
       case ARG_PARSE_ERROR_NOT_AVAILABLE:
-      puts("bh ERROR: button not available");
+      puts("bh ERROR: not available on this side");
       break;
       default:
       puts("bh ERROR: unknown");
@@ -319,7 +319,7 @@ void parse_cmd(char* cmd)
       puts("br ERROR: invalid command");
       break;
       case ARG_PARSE_ERROR_NOT_AVAILABLE:
-      puts("br ERROR: button not available");
+      puts("br ERROR: not available on this side");
       break;
       default:
       puts("br ERROR: unknown");
