@@ -37,3 +37,4 @@ nintendac_mini_firmware\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f
 nintendac_mini_firmware\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
 nintendac_mini_firmware\cmd_parser.o: ../Inc/shared.h
 nintendac_mini_firmware\cmd_parser.o: ../Inc/cmd_parser.h
+nintendac_mini_firmware\cmd_parser.o: ../Inc/eeprom.h

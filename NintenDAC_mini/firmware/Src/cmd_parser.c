@@ -5,12 +5,13 @@
 #include "helpers.h"
 #include "shared.h"
 #include "cmd_parser.h"
+#include "eeprom.h"
 
 #define ARG_PARSE_SUCCESS 0
 #define ARG_PARSE_ERROR_INVALID_CMD 126
 #define ARG_PARSE_ERROR_NOT_AVAILABLE 127
+#define RELASE_DURATION_MS_DEFAULT 67
 #define ARG_QUEUE_SIZE 16
-#define RELEASE_DURATION_MS 66
 #define SWITCH_BUTTON_COUNT 24
 
 uint16_t gpio_pin_queue[ARG_QUEUE_SIZE];
@@ -222,7 +223,7 @@ int32_t button_click(char* cmd)
   result = button_release(arg_ptr);
   if(result != ARG_PARSE_SUCCESS)
     return result;
-  HAL_Delay(RELEASE_DURATION_MS);
+  HAL_Delay(button_release_duration_ms);
 
   return ARG_PARSE_SUCCESS;
 }
@@ -264,7 +265,7 @@ int32_t stick_nudge(char* cmd)
   HAL_Delay(duration_ms);
 
   stick_release();
-  HAL_Delay(RELEASE_DURATION_MS);
+  HAL_Delay(stick_release_duration_ms);
   return ARG_PARSE_SUCCESS;
 }
 
@@ -291,22 +292,63 @@ void parse_cmd(char* cmd)
   int32_t result;
   if(strcmp(cmd, "test") == 0)
     puts("test OK");
+  if(strcmp(cmd, "eepinit") == 0)
+  {
+    eeprom_erase();
+    eeprom_write(EEPROM_BOARD_TYPE_ADDR, BOARD_TYPE_NDAC_MINI_JOYCON_LEFT);
+    eeprom_write(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR, RELASE_DURATION_MS_DEFAULT);
+    eeprom_write(EEPROM_STICK_RELEASE_DURATION_MS_ADDR, RELASE_DURATION_MS_DEFAULT);
+    board_type = BOARD_TYPE_NDAC_MINI_JOYCON_LEFT;
+    button_release_duration_ms = RELASE_DURATION_MS_DEFAULT;
+    stick_release_duration_ms = RELASE_DURATION_MS_DEFAULT;
+    puts("eepinit OK");
+  }
+  else if(strncmp(cmd, "settype l", 9) == 0)
+  {
+    eeprom_write(EEPROM_BOARD_TYPE_ADDR, BOARD_TYPE_NDAC_MINI_JOYCON_LEFT);
+    board_type = BOARD_TYPE_NDAC_MINI_JOYCON_LEFT;
+    printf("settype OK\n");
+  }
+  else if(strncmp(cmd, "settype r", 9) == 0)
+  {
+    eeprom_write(EEPROM_BOARD_TYPE_ADDR, BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT);
+    board_type = BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT;
+    printf("settype OK\n");
+  }
+  else if(strncmp(cmd, "sbrd ", 5) == 0)
+  {
+    button_release_duration_ms = atoi(cmd + 5);
+    button_release_duration_ms == 0 ? button_release_duration_ms = 17 : button_release_duration_ms;
+    eeprom_write(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR, button_release_duration_ms);
+    printf("sbrd OK\n");
+  }
+  else if(strncmp(cmd, "ssrd ", 5) == 0)
+  {
+    stick_release_duration_ms = atoi(cmd + 5);
+    stick_release_duration_ms == 0 ? stick_release_duration_ms = 17 : stick_release_duration_ms;
+    eeprom_write(EEPROM_STICK_RELEASE_DURATION_MS_ADDR, stick_release_duration_ms);
+    printf("ssrd OK\n");
+  }
   else if(strcmp(cmd, "whoami") == 0)
   {
+    board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
+    button_release_duration_ms = eeprom_read(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR);
+    stick_release_duration_ms = eeprom_read(EEPROM_STICK_RELEASE_DURATION_MS_ADDR);
     switch(board_type)
     {
       case BOARD_TYPE_NDAC_MINI_JOYCON_LEFT:
-      puts("BOARD_TYPE_NDAC_MINI_JOYCON_LEFT");
+      printf("BOARD_TYPE_NDAC_MINI_JOYCON_LEFT");
       break;
 
       case BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT:
-      puts("BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT");
+      printf("BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT");
       break;
 
       default:
-      puts("unknown");
+      printf("unknown board type, use 'settype l/r' to configure this board");
       break;
     }
+    printf(", %d, %d\n", button_release_duration_ms, stick_release_duration_ms);
   }
   // button hold, multiple args allowed
   else if(strncmp(cmd, "bh ", 3) == 0)

@@ -13,7 +13,11 @@ extern DAC_HandleTypeDef hdac;
 extern IWDG_HandleTypeDef hiwdg;
 #define stm32_iwdg_ptr (&hiwdg)
 
+extern I2C_HandleTypeDef hi2c2;
+#define stm32_i2c_ptr (&hi2c2)
+
 extern int32_t next_iwdg_kick;
 extern int32_t board_type;
-
+extern int32_t button_release_duration_ms;
+extern int32_t stick_release_duration_ms;
 #endif

@@ -42,3 +42,4 @@ nintendac_mini_firmware\main.o: ../Inc/helpers.h
 nintendac_mini_firmware\main.o: ../Inc/shared.h
 nintendac_mini_firmware\main.o: ../Inc/my_usb.h
 nintendac_mini_firmware\main.o: ../Inc/cmd_parser.h
+nintendac_mini_firmware\main.o: ../Inc/eeprom.h

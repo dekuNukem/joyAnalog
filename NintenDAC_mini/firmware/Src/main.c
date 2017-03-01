@@ -53,10 +53,13 @@
 #include "shared.h"
 #include "my_usb.h"
 #include "cmd_parser.h"
+#include "eeprom.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 DAC_HandleTypeDef hdac;
+
+I2C_HandleTypeDef hi2c2;
 
 IWDG_HandleTypeDef hiwdg;
 
@@ -64,12 +67,15 @@ IWDG_HandleTypeDef hiwdg;
 /* Private variables ---------------------------------------------------------*/
 int32_t next_iwdg_kick;
 int32_t board_type;
+int32_t button_release_duration_ms;
+int32_t stick_release_duration_ms;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
+static void MX_I2C2_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -107,7 +113,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	board_type = BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT;
   my_usb_init();
   next_iwdg_kick = HAL_GetTick() + 500;
   /* USER CODE END 1 */
@@ -123,6 +128,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
+  MX_I2C2_Init();
 
   /* USER CODE BEGIN 2 */
   standby_check();
@@ -132,14 +138,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
+  button_release_duration_ms = eeprom_read(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR);
+  stick_release_duration_ms = eeprom_read(EEPROM_STICK_RELEASE_DURATION_MS_ADDR);
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-  	idwg_kick();
-  	printf("usb: %d\n", HAL_GPIO_ReadPin(USB_PRESENT_GPIO_Port, USB_PRESENT_Pin));
-  	HAL_Delay(500);
+    idwg_kick();
+    usb_data = my_usb_readline();
+    if(usb_data != NULL)
+      parse_cmd(usb_data); 
   }
   /* USER CODE END 3 */
 
@@ -228,6 +238,33 @@ static void MX_DAC_Init(void)
     /**DAC channel OUT2 config 
     */
   if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+}
+
+/* I2C2 init function */
+static void MX_I2C2_Init(void)
+{
+
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.Timing = 0x2000090E;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+    /**Configure Analogue filter 
+    */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
