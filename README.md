@@ -29,3 +29,11 @@ And the smaller NintenDAC mini is intended to be used on a Joycon:
 * Board size 2.5 x 4.1 cm, or 1 x 1.6 inch.
 
 Both present themselves to PC as a USB serial port, so no special drivers are needed. Simply connect the button and joystick test points to the headers to allow the joycon be controlled from a PC. Details and tutorials to come after I got my Switch.
+
+## NintenDAC Python library
+
+I also wrote a simple python3 library for NintenDAC mini, an example is provided, and I'll finish up the documentation in the coming days.
+
+## Twitch Plays Nintendo Switch
+
+I dug up and reused a portion of my old code for TwitchPlaysPokemonX.
