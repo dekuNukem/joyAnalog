@@ -8,7 +8,7 @@ switch.button_hold(['a', 'b', 'zl', 'zr'])
 switch.button_release(['du'])
 switch.button_release_all()
 
-# press down button(s) then release it
+# press button(s) then release it
 # first arg is how long to press the button(s) down
 # second arg is how long to release them before the next action
 # value smaller than 1 frame (33ms) probably won't get recognized by the console

@@ -72,7 +72,7 @@ Commands should be in lower case, and end with a single `\n`.
 
 ## NintenDAC Python3 library
 
-I also wrote a python3 library so you don't have to remember all the commands above. It requires `pyserial`.
+I also wrote a [python3 library](./pythonlib) so you don't have to remember all the commands above. It requires `pyserial`.
 
 A simple example:
 
