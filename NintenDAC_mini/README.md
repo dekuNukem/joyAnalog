@@ -53,7 +53,7 @@ Commands should be in lower case, and end with a single `\n`.
 `x`|X button
 `y`|Y button
 `rs`|R button
-`zr`|ZE button
+`zr`|ZR button
 `+`|plus button
 `h`|home button
 `rsl`|right Joycon SL button

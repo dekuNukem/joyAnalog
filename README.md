@@ -38,5 +38,5 @@ For NintenDAC mini: [click here](./NintenDAC_mini)
 
 ## Twitch Plays Nintendo Switch
 
-I dug up and reused a portion of my old code for TwitchPlaysPokemonX.
+I dug up and reused a portion of my old code for TwitchPlaysPokemonX, [see here](./TwitchPlaysNintendoSwitch).
 
