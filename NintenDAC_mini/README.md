@@ -23,7 +23,7 @@ Valid commands are:
 `bh`|one or more button args|hold button|`bh OK` if no error; `ERROR`  otherwise|`bh a b x`
 `br`|one or more button args|release button|`br OK` if no error; `ERROR` otherwise|`br a b x`
 `bra`|none|release all buttons on this board|`bra OK`|`bra`
-`sh`|x and y value|move stick to x and y value; x y should be between 0 and 255 inclusive; 127 is netural position|`bh OK`|`sh 127 245`
+`sh`|x y|move stick to x and y value. x y should be between 0 and 255 inclusive; 127 is netural position|`bh OK`|`sh 127 245`
 `sr`|none|move stick back to netural position|`br OK`|`sr`
 `sd`|none|stick disengage; give physical stick control back to user|`sd OK`|`sd`
 `reset`|none|release all buttons; as well as disengage the stick|`reset OK`|`reset`
