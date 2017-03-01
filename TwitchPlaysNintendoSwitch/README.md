@@ -4,7 +4,7 @@ This is actually a simplified version of the code used during TwitchPlaysPokemon
 
 To use it:
 
-* Connect the two correctly configured NintenDAC mini board to the PC
+* Connect the two correctly configured NintenDAC mini board to the computer.
 
 * Open up `launch.py` and configure the username, oauth, chat channel and serial port name.
 
