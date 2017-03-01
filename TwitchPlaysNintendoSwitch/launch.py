@@ -144,8 +144,8 @@ def worker():
             latest_cmd = None
         time.sleep(0.005)
 
-# if(len(sys.argv) != 2):
-#     print ('launch.py <serial port>')
+# if(len(sys.argv) != 3):
+#     print ('launch.py port1 port2')
 #     sys.exit(0)
 
 disabled_cmd = get_list("disabled_cmd.txt")
