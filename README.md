@@ -1,6 +1,6 @@
 # A hub for my Nintendo Switch related projects
 
-I'm going to put all my resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days around the launch.
+I'm going to put all my resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days after the launch.
 
 ## NintenDAC dev board for Nintendo Switch modification
 
@@ -30,13 +30,11 @@ And the smaller NintenDAC mini is intended to be used on a Joycon:
 
 Both present themselves to PC as a USB serial port, so no special drivers are needed. Simply connect the button and joystick test points to the headers to allow the joycon be controlled from a PC. Details and tutorials to come after I got my Switch.
 
-## NintenDAC serial command protocol
+## Communication protocol and Python library
 
-Under construction...
+For NintenDAC: Under construction
 
-## NintenDAC Python library
-
-I also wrote a simple python3 library for NintenDAC mini, an example is provided, and I'll finish up the documentation in the coming days.
+For NintenDAC mini: [click here](./NintenDAC_mini)
 
 ## Twitch Plays Nintendo Switch
 
