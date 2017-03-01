@@ -13,7 +13,11 @@
 
 NintenDAC mini uses a simple serial command protocol. To use it open the port at any baud rate, then send a ASCII command string terminated with `\n` and the board will send a respond back.
 
-valid commands are:
+Valid commands are:
+
+**command**|**arguments**|**remark**|**response**|**example**
+:-----:|:-----:|:-----:|:-----:|:-----:
+eepinit|none|initializes EEPROM to default value|eepinit OK|eepinit
 
 under construction...
 
