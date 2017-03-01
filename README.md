@@ -14,9 +14,9 @@ Both present themselves to PC as a USB serial port, so no special drivers are ne
 
 ## Board resources, communication protocol and Python library
 
-For NintenDAC: [click here](./NintenDAC)
-
 For NintenDAC mini: [click here](./NintenDAC_mini)
+
+For NintenDAC: [click here (still under construction)](./NintenDAC)
 
 ## Assembly tutorials
 
