@@ -1,12 +1,12 @@
 # A hub for my Nintendo Switch related projects
 
-I'm going to put all the resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days.
+I'm going to put all my resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days around the launch.
 
 ## NintenDAC dev board for Nintendo Switch modification
 
-NintenDAC is a STM32 development boards with up to 10 high-speed 12-bit DAC channels. I intend to use it for automating Nintendo Switch Joycon inputs, and maybe for TAS as well. 
+NintenDAC is a STM32 development board with up to 10 high-speed 12-bit DAC channels. I intend to use it for automating Joycon inputs, and maybe it would be suitable for TAS as well. 
 
-The board has 2 versions. The bigger NintenDAC with more GPIOs and DAC channels is suitable for modifying the pro controller or the console itself:
+The board has 2 versions. The bigger NintenDAC has more GPIOs and DAC channels, and is suitable for modifying the pro controller or the console itself:
 
 ![Alt text](http://i.imgur.com/ir8jZFO.jpg)
 
