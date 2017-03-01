@@ -10,7 +10,6 @@
 #define ARG_PARSE_SUCCESS 0
 #define ARG_PARSE_ERROR_INVALID_CMD 126
 #define ARG_PARSE_ERROR_NOT_AVAILABLE 127
-#define RELASE_DURATION_MS_DEFAULT 67
 #define ARG_QUEUE_SIZE 16
 #define SWITCH_BUTTON_COUNT 24
 
@@ -182,7 +181,7 @@ int32_t process_multiarg(char* args)
   return ARG_PARSE_SUCCESS;
 }
 
-void button_ctrl(int32_t action)
+void button_ctrl(GPIO_PinState action)
 {
   for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
     if(gpio_port_queue[i] != NULL)
@@ -207,27 +206,6 @@ int32_t button_release(char* cmd)
   return result;
 }
 
-int32_t button_click(char* cmd)
-{
-  char* arg_ptr = cmd;
-  arg_ptr = goto_next_arg(arg_ptr);
-  int32_t duration_ms = atoi(arg_ptr);
-  if(duration_ms <= 0 || duration_ms >= 1000)
-    return ARG_PARSE_ERROR_INVALID_CMD;
-
-  int32_t result = button_hold(arg_ptr);
-  if(result != ARG_PARSE_SUCCESS)
-    return result;
-  HAL_Delay(duration_ms);
-
-  result = button_release(arg_ptr);
-  if(result != ARG_PARSE_SUCCESS)
-    return result;
-  HAL_Delay(button_release_duration_ms);
-
-  return ARG_PARSE_SUCCESS;
-}
-
 int32_t stick_hold(char* cmd)
 {
   char* x_ptr = goto_next_arg(cmd);
@@ -249,24 +227,6 @@ void stick_release(void)
   if(stm32_dac_ptr->State == HAL_DAC_STATE_RESET)
     stm32_dac_init();
   HAL_DACEx_DualSetValue(stm32_dac_ptr, DAC_ALIGN_12B_R, 1117, 1117);
-}
-
-int32_t stick_nudge(char* cmd)
-{
-  char* arg_ptr = cmd;
-  arg_ptr = goto_next_arg(arg_ptr);
-  int32_t duration_ms = atoi(arg_ptr);
-  if(duration_ms <= 0 || duration_ms >= 1000)
-    return ARG_PARSE_ERROR_INVALID_CMD;
-
-  int32_t result = stick_hold(arg_ptr);
-  if(result != ARG_PARSE_SUCCESS)
-    return result;
-  HAL_Delay(duration_ms);
-
-  stick_release();
-  HAL_Delay(stick_release_duration_ms);
-  return ARG_PARSE_SUCCESS;
 }
 
 void stick_disengage(void)
@@ -296,11 +256,7 @@ void parse_cmd(char* cmd)
   {
     eeprom_erase();
     eeprom_write(EEPROM_BOARD_TYPE_ADDR, BOARD_TYPE_NDAC_MINI_JOYCON_LEFT);
-    eeprom_write(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR, RELASE_DURATION_MS_DEFAULT);
-    eeprom_write(EEPROM_STICK_RELEASE_DURATION_MS_ADDR, RELASE_DURATION_MS_DEFAULT);
     board_type = BOARD_TYPE_NDAC_MINI_JOYCON_LEFT;
-    button_release_duration_ms = RELASE_DURATION_MS_DEFAULT;
-    stick_release_duration_ms = RELASE_DURATION_MS_DEFAULT;
     puts("eepinit OK");
   }
   else if(strncmp(cmd, "settype l", 9) == 0)
@@ -315,40 +271,23 @@ void parse_cmd(char* cmd)
     board_type = BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT;
     printf("settype OK\n");
   }
-  else if(strncmp(cmd, "sbrd ", 5) == 0)
-  {
-    button_release_duration_ms = atoi(cmd + 5);
-    button_release_duration_ms == 0 ? button_release_duration_ms = 17 : button_release_duration_ms;
-    eeprom_write(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR, button_release_duration_ms);
-    printf("sbrd OK\n");
-  }
-  else if(strncmp(cmd, "ssrd ", 5) == 0)
-  {
-    stick_release_duration_ms = atoi(cmd + 5);
-    stick_release_duration_ms == 0 ? stick_release_duration_ms = 17 : stick_release_duration_ms;
-    eeprom_write(EEPROM_STICK_RELEASE_DURATION_MS_ADDR, stick_release_duration_ms);
-    printf("ssrd OK\n");
-  }
   else if(strcmp(cmd, "whoami") == 0)
   {
     board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
-    button_release_duration_ms = eeprom_read(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR);
-    stick_release_duration_ms = eeprom_read(EEPROM_STICK_RELEASE_DURATION_MS_ADDR);
     switch(board_type)
     {
       case BOARD_TYPE_NDAC_MINI_JOYCON_LEFT:
-      printf("BOARD_TYPE_NDAC_MINI_JOYCON_LEFT");
+      puts("BOARD_TYPE_NDAC_MINI_JOYCON_LEFT");
       break;
 
       case BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT:
-      printf("BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT");
+      puts("BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT");
       break;
 
       default:
-      printf("unknown board type, use 'settype l/r' to configure this board");
+      puts("unknown board type, use 'settype l/r' to configure this board");
       break;
     }
-    printf(", %d, %d\n", button_release_duration_ms, stick_release_duration_ms);
   }
   // button hold, multiple args allowed
   else if(strncmp(cmd, "bh ", 3) == 0)
@@ -394,25 +333,6 @@ void parse_cmd(char* cmd)
     release_all_button();
     puts("bra OK");
   }
-  // button click, bc duration multiarg
-  else if(strncmp(cmd, "bc ", 3) == 0)
-  {
-    result = button_click(cmd);
-    switch(result)
-    {
-      case ARG_PARSE_SUCCESS:
-      puts("bc OK");
-      break;
-      case ARG_PARSE_ERROR_INVALID_CMD:
-      puts("bc ERROR: invalid command");
-      break;
-      case ARG_PARSE_ERROR_NOT_AVAILABLE:
-      puts("bc ERROR: button not available");
-      break;
-      default:
-      puts("bc ERROR: unknown");
-    }
-  }
   // stick hold, sh x y, x and y between 0 and 255 inclusive
   else if(strncmp(cmd, "sh ", 3) == 0)
   {
@@ -434,22 +354,6 @@ void parse_cmd(char* cmd)
   {
     stick_release();
     puts("sr OK");
-  }
-  // stick nudge, sn duration_ms x y, x and y between 0 and 255 inclusive
-  else if(strncmp(cmd, "sn ", 3) == 0)
-  {
-    result = stick_nudge(cmd);
-    switch(result)
-    {
-      case ARG_PARSE_SUCCESS:
-      puts("sn OK");
-      break;
-      case ARG_PARSE_ERROR_INVALID_CMD:
-      puts("sn ERROR: invalid command");
-      break;
-      default:
-      puts("sn ERROR: unknown");
-    }
   }
   // stick disengage, gives control back to user
   else if(strcmp(cmd, "sd") == 0)

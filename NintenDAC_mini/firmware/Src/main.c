@@ -67,8 +67,6 @@ IWDG_HandleTypeDef hiwdg;
 /* Private variables ---------------------------------------------------------*/
 int32_t next_iwdg_kick;
 int32_t board_type;
-int32_t button_release_duration_ms;
-int32_t stick_release_duration_ms;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -139,8 +137,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
-  button_release_duration_ms = eeprom_read(EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR);
-  stick_release_duration_ms = eeprom_read(EEPROM_STICK_RELEASE_DURATION_MS_ADDR);
   while (1)
   {
   /* USER CODE END WHILE */

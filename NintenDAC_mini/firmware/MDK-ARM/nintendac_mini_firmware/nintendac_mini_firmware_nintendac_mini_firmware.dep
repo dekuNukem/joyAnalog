@@ -856,7 +856,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
 I (../Inc/stm32f0xx_it.h)(0x58B69C86)
-F (../Src/main.c)(0x58B6A81D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\main.o --omf_browse nintendac_mini_firmware\main.crf --depend nintendac_mini_firmware\main.d)
+F (../Src/main.c)(0x58B6B046)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\main.o --omf_browse nintendac_mini_firmware\main.crf --depend nintendac_mini_firmware\main.d)
 I (../Inc/main.h)(0x58B69C87)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58B69C86)
@@ -894,8 +894,8 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58410E77)
 I (../Inc/usbd_conf.h)(0x58B69C84)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
-I (../Inc/helpers.h)(0x58B693FF)
-I (../Inc/shared.h)(0x58B6A7D9)
+I (../Inc/helpers.h)(0x58B6B1C6)
+I (../Inc/shared.h)(0x58B6B021)
 I (../Inc/my_usb.h)(0x58B693FF)
 I (../Inc/cmd_parser.h)(0x58B693FF)
 I (../Inc/eeprom.h)(0x58B6A79C)
@@ -1100,19 +1100,19 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58410E77)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58410E77)
-I (../Inc/helpers.h)(0x58B693FF)
+I (../Inc/helpers.h)(0x58B6B1C6)
 I (../Inc/my_usb.h)(0x58B693FF)
-F (..\Inc\helpers.h)(0x58B693FF)()
+F (..\Inc\helpers.h)(0x58B6B1C6)()
 F (..\Inc\main.h)(0x58B69C87)()
-F (..\Inc\shared.h)(0x58B6A7D9)()
+F (..\Inc\shared.h)(0x58B6B021)()
 F (..\Inc\cmd_parser.h)(0x58B693FF)()
 F (..\Inc\my_usb.h)(0x58B693FF)()
-F (..\Src\cmd_parser.c)(0x58B6AC75)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\cmd_parser.o --omf_browse nintendac_mini_firmware\cmd_parser.crf --depend nintendac_mini_firmware\cmd_parser.d)
+F (..\Src\cmd_parser.c)(0x58B6B16E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\cmd_parser.o --omf_browse nintendac_mini_firmware\cmd_parser.crf --depend nintendac_mini_firmware\cmd_parser.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
 I (../Inc/main.h)(0x58B69C87)
-I (../Inc/helpers.h)(0x58B693FF)
+I (../Inc/helpers.h)(0x58B6B1C6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58B69C86)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58410E72)
@@ -1143,14 +1143,14 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
-I (../Inc/shared.h)(0x58B6A7D9)
+I (../Inc/shared.h)(0x58B6B021)
 I (../Inc/cmd_parser.h)(0x58B693FF)
 I (../Inc/eeprom.h)(0x58B6A79C)
-F (..\Src\helpers.c)(0x58B69400)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\helpers.o --omf_browse nintendac_mini_firmware\helpers.crf --depend nintendac_mini_firmware\helpers.d)
+F (..\Src\helpers.c)(0x58B6B1D5)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\helpers.o --omf_browse nintendac_mini_firmware\helpers.crf --depend nintendac_mini_firmware\helpers.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
-I (../Inc/helpers.h)(0x58B693FF)
+I (../Inc/helpers.h)(0x58B6B1C6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58410E72)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58B69C86)
 I (../Inc/main.h)(0x58B69C87)
@@ -1182,7 +1182,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
-I (../Inc/shared.h)(0x58B6A7D9)
+I (../Inc/shared.h)(0x58B6B021)
 F (..\Src\my_usb.c)(0x58B69400)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\my_usb.o --omf_browse nintendac_mini_firmware\my_usb.crf --depend nintendac_mini_firmware\my_usb.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
@@ -1219,7 +1219,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
-I (../Inc/helpers.h)(0x58B693FF)
+I (../Inc/helpers.h)(0x58B6B1C6)
 I (../Inc/usbd_cdc_if.h)(0x58B69C85)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58410E77)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58410E77)
@@ -1227,7 +1227,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58410E77)
 I (../Inc/usbd_conf.h)(0x58B69C84)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58410E77)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58410E77)
-F (..\Src\eeprom.c)(0x58B6A26E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\eeprom.o --omf_browse nintendac_mini_firmware\eeprom.crf --depend nintendac_mini_firmware\eeprom.d)
+F (..\Src\eeprom.c)(0x58B6B06A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include --C99-I C:\Users\Allen\Desktop\switch\NintenDAC\NintenDAC_mini\firmware\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o nintendac_mini_firmware\eeprom.o --omf_browse nintendac_mini_firmware\eeprom.crf --depend nintendac_mini_firmware\eeprom.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB1D66)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB1D68)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB1D68)
@@ -1263,6 +1263,6 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x58410E72)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58410E72)
-I (../Inc/helpers.h)(0x58B693FF)
-I (../Inc/shared.h)(0x58B6A7D9)
+I (../Inc/helpers.h)(0x58B6B1C6)
+I (../Inc/shared.h)(0x58B6B021)
 F (..\Inc\eeprom.h)(0x58B6A79C)()

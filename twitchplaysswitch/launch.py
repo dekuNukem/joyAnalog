@@ -2,65 +2,102 @@ import sys
 import time
 import serial
 import threading
-import switch_ctrl
+import ndacmini
 import irc_bot_noblock
 from command_printer import *
 from collections import OrderedDict
 
 switch_cmd_map = {
-"dup" : [0, "du"],
-"ddown" : [1, "dd"],
-"dleft" : [2, "dl"],
-"dright" : [3, "dr"],
-"l" : [4, "ls"],
-"zl" : [5, "zl"],
-"minus" : [6, "-"],
-"cap" : [7, "cap"],
-"lsl" : [8, "lsl"],
-"lsr" : [9, "lsr"],
-"syncl" : [10, "syncl"],
-"sbl" : [11, "sbl"],
-"a" : [12, "a"],
-"b" : [13, "b"],
-"x" : [14, "x"],
-"y" : [15, "y"],
-"r" : [16, "rs"],
-"zr" : [17, "zr"],
-"plus" : [18, "+"],
-"h" : [19, "h"],
-"rsl" : [20, "rsl"],
-"rsr" : [21, "rsr"],
-"syncr" : [22, "syncr"],
-"sbr" : [23, "sbr"],
-"up" : [24, ""],
-"down" : [25, ""],
-"left" : [26, ""],
-"right" : [27, ""],
-"cup" : [28, ""],
-"cdown" : [29, ""],
-"cleft" : [30, ""],
-"cright" : [31, ""]
+"dup" : "du",
+"ddown" : "dd",
+"dleft" : "dl",
+"dright" : "dr",
+"l" : "ls",
+"zl" : "zl",
+"minus" : "-",
+"cap" : "cap",
+"lsl" : "lsl",
+"lsr" : "lsr",
+"syncl" : "syncl",
+"sbl" : "sbl",
+"a" : "a",
+"b" : "b",
+"x" : "x",
+"y" : "y",
+"r" : "rs",
+"zr" : "zr",
+"plus" : "+",
+"h" : "h",
+"rsl" : "rsl",
+"rsr" : "rsr",
+"syncr" : "syncr",
+"sbr" : "sbr",
+"up": "",
+"down": "",
+"left": "",
+"right": "",
+"cup": "",
+"cdown": "",
+"cleft": "",
+"cright": "",
 }
 
 latest_cmd = None
 username_color_dict = OrderedDict()
 
-def is_valid_command(command_list):
-    if len(command_list) > 3 or len(command_list) <= 0:
-        return False
-    return True
+def get_list(filename):
+    ret = []
+    try:
+        with open(filename, 'r') as fp:
+            for line in fp:
+                line = line.lower().replace('\n', '').replace('\r', '').lstrip().rstrip()
+                if len(line) <= 0 or line[0] == ';' or line in ret:
+                    continue
+                ret.append(line)
+    except Exception as e:
+        print("get_list: " + str(e))
+    return ret
 
 def execute_cmd(cmd_list):
     global latest_cmd
-    button_args = []
+    button_list = []
+    left_tuple = None
+    right_tuple = None
     for item in cmd_list:
-        if 0 <= switch_cmd_map[item][0] <= 23:
-            button_args.append(switch_cmd_map[item][1])
-    latest_cmd = (switch.button_click, button_args)
-    return
+        if item == 'up':
+            left_tuple = (128, 255)
+        elif item == 'down':
+            left_tuple = (128, 0)
+        elif item == 'left':
+            left_tuple = (0, 128)
+        elif item == 'right':
+            left_tuple = (255, 128)
+        elif item == 'cup':
+            right_tuple = (128, 255)
+        elif item == 'cdown':
+            right_tuple = (128, 0)
+        elif item == 'cleft':
+            right_tuple = (0, 128)
+        elif item == 'cright':
+            right_tuple = (255, 128)
+        elif item in switch_cmd_map:
+            button_list.append(switch_cmd_map[item])
+    latest_cmd = (button_list, left_tuple, right_tuple)
+
+def is_valid_command(command_list, username):
+    if len(command_list) > 3 or len(command_list) <= 0:
+        return False
+    if username in banned_user:
+        print(username + ' is banned!')
+        return False
+    for item in command_list:
+        if item in disabled_cmd:
+            print(item + ' is disabled!')
+            return False
+    return True
 
 def do_anarchy(chat_username, cmd_list):
-    if(is_valid_command(cmd_list)):
+    if(is_valid_command(cmd_list, chat_username)):
         command_printer_in = []
         command_printer_in.append(chat_username)
         command_printer_in.append(cmd_list)
@@ -103,9 +140,7 @@ def worker():
     global latest_cmd
     while 1:
         if latest_cmd != None:
-            func = latest_cmd[0]
-            arg = latest_cmd[1]
-            func(200, arg)
+            switch.button_stick_ctrl(100, 67, latest_cmd[0], latest_cmd[1], latest_cmd[2])
             latest_cmd = None
         time.sleep(0.005)
 
@@ -113,7 +148,10 @@ def worker():
 #     print ('launch.py <serial port>')
 #     sys.exit(0)
 
-switch = switch_ctrl.switch_ctrl("COM4", "COM9")
+disabled_cmd = get_list("disabled_cmd.txt")
+banned_user = get_list("banned_user.txt")
+
+switch = ndacmini.ndacmini("COM4", "COM8")
 switch.connect()
 
 nickname = 'STM32F429ZIT6U'
@@ -126,19 +164,27 @@ bot.connect()
 t = threading.Thread(target=worker)
 t.start()
 
-while 1:
-    tmi_list = bot.get_parsed_message()
-    tmi_list.reverse()
-    for item in [x for x in tmi_list if "." not in x.username]:
-        username = item.username
-        message_orig = item.message.replace(chr(1) + "ACTION", "").replace(chr(1), '').lstrip().rstrip()
-        safe_print(item.username + ": " + message_orig)
+try:
+    while 1:
+        tmi_list = bot.get_parsed_message()
+        for item in [x for x in tmi_list if "." not in x.username]:
+            disabled_cmd = get_list("disabled_cmd.txt")
+            banned_user = get_list("banned_user.txt")
 
-        username_color_dict[username] = item.color
-        if len(username_color_dict) > 200:
-            username_color_dict.popitem(last=False)
+            username = item.username
+            message_orig = item.message.replace(chr(1) + "ACTION", "").replace(chr(1), '').lstrip().rstrip()
+            safe_print(item.username + ": " + message_orig)
 
-        command_list = get_cmd(message_orig)
-        do_anarchy(username, command_list)
-    user_command_root.update()
-    time.sleep(0.01)
+            username_color_dict[username] = item.color
+            if len(username_color_dict) > 200:
+                username_color_dict.popitem(last=False)
+
+            command_list = get_cmd(message_orig)
+            do_anarchy(username, command_list)
+
+        user_command_root.update()
+        time.sleep(0.01)
+
+except KeyboardInterrupt:
+    switch.disconnect()
+    exit()

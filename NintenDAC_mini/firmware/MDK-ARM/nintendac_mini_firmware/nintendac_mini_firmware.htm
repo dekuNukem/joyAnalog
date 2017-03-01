@@ -3,7 +3,7 @@
 <title>Static Call Graph - [nintendac_mini_firmware\nintendac_mini_firmware.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image nintendac_mini_firmware\nintendac_mini_firmware.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Mar 01 11:11:54 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Mar 01 11:35:38 2017
 <BR><P>
 <H3>Maximum Stack Usage =        228 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -80,7 +80,7 @@ Function Pointers
  <LI><a href="#[3a]">USB_IRQHandler</a> from stm32f0xx_it.o(i.USB_IRQHandler) referenced from startup_stm32f072xb.o(RESET)
  <LI><a href="#[1b]">WWDG_IRQHandler</a> from startup_stm32f072xb.o(.text) referenced from startup_stm32f072xb.o(RESET)
  <LI><a href="#[3d]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_stm32f072xb.o(.text)
- <LI><a href="#[3e]">fputc</a> from main.o(i.fputc) referenced from printf1.o(i.__0printf$1)
+ <LI><a href="#[3e]">fputc</a> from main.o(i.fputc) referenced from printfb.o(i.__0printf$bare)
  <LI><a href="#[3b]">main</a> from main.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P>
@@ -90,7 +90,7 @@ Global Symbols
 <P><STRONG><a name="[3d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f072xb.o(.text)
 </UL>
-<P><STRONG><a name="[f6]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[f4]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[3f]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -100,15 +100,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[f7]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[f5]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[f8]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[f6]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[f9]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[f7]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[fa]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[f8]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[fb]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[f9]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[15]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f072xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f072xb.o(RESET)
@@ -210,7 +210,7 @@ Global Symbols
 <P><STRONG><a name="[1b]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f072xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f072xb.o(RESET)
 </UL>
-<P><STRONG><a name="[fc]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[fa]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[72]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
@@ -219,7 +219,6 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[4c]"></a>__aeabi_llsr</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, llushr.o(.text))
@@ -229,54 +228,54 @@ Global Symbols
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[fd]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[fb]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[42]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[fe]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[fc]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[ff]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[fd]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[41]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
 </UL>
 
-<P><STRONG><a name="[df]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
+<P><STRONG><a name="[de]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 </UL>
 
-<P><STRONG><a name="[100]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[fe]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[43]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[d8]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
+<P><STRONG><a name="[d7]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
 </UL>
 
-<P><STRONG><a name="[e4]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[e3]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[e3]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
+<P><STRONG><a name="[e2]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 </UL>
 
 <P><STRONG><a name="[cb]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_to_button_index
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
 <P><STRONG><a name="[44]"></a>atoi</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, atoi.o(.text))
@@ -285,10 +284,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
 <P><STRONG><a name="[47]"></a>__aeabi_dmul</STRONG> (Thumb, 202 bytes, Stack size 72 bytes, dmul.o(.text))
@@ -296,7 +292,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
 <P><STRONG><a name="[49]"></a>__aeabi_ui2f</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ffltui.o(.text))
@@ -304,7 +300,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
 <P><STRONG><a name="[4b]"></a>__aeabi_d2uiz</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, dfixui.o(.text))
@@ -312,11 +308,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
-<P><STRONG><a name="[f1]"></a>__aeabi_f2d</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<P><STRONG><a name="[ef]"></a>__aeabi_f2d</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, f2d.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
 <P><STRONG><a name="[46]"></a>strtol</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, strtol.o(.text))
@@ -329,9 +325,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[101]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[ff]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
-<P><STRONG><a name="[102]"></a>_float_round</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fepilogue.o(.text), UNUSED)
+<P><STRONG><a name="[100]"></a>_float_round</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fepilogue.o(.text), UNUSED)
 
 <P><STRONG><a name="[4a]"></a>_float_epilogue</STRONG> (Thumb, 114 bytes, Stack size 12 bytes, fepilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _float_epilogue
@@ -362,7 +358,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[103]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[101]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[50]"></a>__aeabi_llsl</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, llshl.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_llsl
@@ -370,7 +366,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[104]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[102]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[4d]"></a>__rt_ctype_table</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ctype_o.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
@@ -389,9 +385,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_strtoul
 </UL>
 
-<P><STRONG><a name="[105]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[103]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[106]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[104]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[59]"></a>CDC_Transmit_FS</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, usbd_cdc_if.o(i.CDC_Transmit_FS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CDC_Transmit_FS &rArr; USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; PCD_WritePMA
@@ -399,7 +395,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_TransmitPacket
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_SetTxBuffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_putchar
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_putchar
 </UL>
 
 <P><STRONG><a name="[5b]"></a>Error_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
@@ -409,15 +405,15 @@ Global Symbols
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
 </UL>
 
-<P><STRONG><a name="[f3]"></a>HAL_DACEx_DualSetValue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DACEx_DualSetValue))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<P><STRONG><a name="[f1]"></a>HAL_DACEx_DualSetValue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DACEx_DualSetValue))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 
-<P><STRONG><a name="[f4]"></a>HAL_DAC_ConfigChannel</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DAC_ConfigChannel))
+<P><STRONG><a name="[f2]"></a>HAL_DAC_ConfigChannel</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DAC_ConfigChannel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_DAC_ConfigChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
 </UL>
 
 <P><STRONG><a name="[5c]"></a>HAL_DAC_DeInit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, stm32f0xx_hal_dac.o(i.HAL_DAC_DeInit))
@@ -425,7 +421,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_MspDeInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
 </UL>
 
 <P><STRONG><a name="[5e]"></a>HAL_DAC_Init</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, stm32f0xx_hal_dac.o(i.HAL_DAC_Init))
@@ -433,7 +429,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
 </UL>
 
 <P><STRONG><a name="[5d]"></a>HAL_DAC_MspDeInit</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, stm32f0xx_hal_msp.o(i.HAL_DAC_MspDeInit))
@@ -452,16 +448,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Init
 </UL>
 
-<P><STRONG><a name="[f5]"></a>HAL_DAC_Start</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DAC_Start))
+<P><STRONG><a name="[f3]"></a>HAL_DAC_Start</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f0xx_hal_dac_ex.o(i.HAL_DAC_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_DAC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
 </UL>
 
-<P><STRONG><a name="[f0]"></a>HAL_DAC_Stop</STRONG> (Thumb, 22 bytes, Stack size 12 bytes, stm32f0xx_hal_dac.o(i.HAL_DAC_Stop))
+<P><STRONG><a name="[ee]"></a>HAL_DAC_Stop</STRONG> (Thumb, 22 bytes, Stack size 12 bytes, stm32f0xx_hal_dac.o(i.HAL_DAC_Stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_DAC_Stop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
 </UL>
 
 <P><STRONG><a name="[62]"></a>HAL_Delay</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, stm32f0xx_hal.o(i.HAL_Delay))
@@ -469,9 +465,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
 </UL>
 
@@ -479,7 +473,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_GPIO_DeInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_MspDeInit
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 
 <P><STRONG><a name="[61]"></a>HAL_GPIO_Init</STRONG> (Thumb, 314 bytes, Stack size 24 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_Init))
@@ -490,8 +484,8 @@ Global Symbols
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[ec]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<P><STRONG><a name="[ea]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
+<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 
 <P><STRONG><a name="[cd]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_TogglePin))
@@ -499,9 +493,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[97]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f0xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_all_button
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_all_button
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
@@ -519,11 +513,11 @@ Global Symbols
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_IsAcknowledgeFailed
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_add
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_add
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Control_FS
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -547,7 +541,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
 </UL>
 
 <P><STRONG><a name="[67]"></a>HAL_I2C_Master_Receive</STRONG> (Thumb, 274 bytes, Stack size 40 bytes, stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Receive))
@@ -559,7 +553,7 @@ Global Symbols
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
+<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 </UL>
 
 <P><STRONG><a name="[6b]"></a>HAL_I2C_Master_Transmit</STRONG> (Thumb, 274 bytes, Stack size 40 bytes, stm32f0xx_hal_i2c.o(i.HAL_I2C_Master_Transmit))
@@ -571,8 +565,8 @@ Global Symbols
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 </UL>
 
 <P><STRONG><a name="[64]"></a>HAL_I2C_MspInit</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, stm32f0xx_hal_msp.o(i.HAL_I2C_MspInit))
@@ -591,8 +585,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[db]"></a>HAL_IWDG_Refresh</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_iwdg.o(i.HAL_IWDG_Refresh))
-<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
+<P><STRONG><a name="[da]"></a>HAL_IWDG_Refresh</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_iwdg.o(i.HAL_IWDG_Refresh))
+<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
 </UL>
 
 <P><STRONG><a name="[a1]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal.o(i.HAL_IncTick))
@@ -790,16 +784,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PCD_IRQHandler
 </UL>
 
-<P><STRONG><a name="[ed]"></a>HAL_PWR_DisableWakeUpPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableWakeUpPin))
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<P><STRONG><a name="[eb]"></a>HAL_PWR_DisableWakeUpPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_DisableWakeUpPin))
+<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 
-<P><STRONG><a name="[ee]"></a>HAL_PWR_EnableWakeUpPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableWakeUpPin))
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<P><STRONG><a name="[ec]"></a>HAL_PWR_EnableWakeUpPin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_EnableWakeUpPin))
+<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 
-<P><STRONG><a name="[ef]"></a>HAL_PWR_EnterSTANDBYMode</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_EnterSTANDBYMode))
-<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<P><STRONG><a name="[ed]"></a>HAL_PWR_EnterSTANDBYMode</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f0xx_hal_pwr.o(i.HAL_PWR_EnterSTANDBYMode))
+<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 
 <P><STRONG><a name="[8e]"></a>HAL_RCCEx_PeriphCLKConfig</STRONG> (Thumb, 274 bytes, Stack size 24 bytes, stm32f0xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig))
@@ -1324,16 +1318,16 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f072xb.o(RESET)
 </UL>
-<P><STRONG><a name="[c8]"></a>__0printf$1</STRONG> (Thumb, 24 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+<P><STRONG><a name="[c8]"></a>__0printf$bare</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, printfb.o(i.__0printf$bare), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[107]"></a>__1printf$1</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
+<P><STRONG><a name="[105]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, printfb.o(i.__0printf$bare), UNUSED)
 
-<P><STRONG><a name="[e6]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
+<P><STRONG><a name="[e5]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, printfb.o(i.__0printf$bare))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
 <P><STRONG><a name="[4f]"></a>__ARM_clz</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, depilogue.o(i.__ARM_clz))
@@ -1353,20 +1347,20 @@ Global Symbols
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
-<P><STRONG><a name="[108]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
+<P><STRONG><a name="[106]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
 
-<P><STRONG><a name="[109]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[107]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[10a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[108]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[10b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[109]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[ca]"></a>arg_to_button_index</STRONG> (Thumb, 498 bytes, Stack size 8 bytes, cmd_parser.o(i.arg_to_button_index))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = arg_to_button_index &rArr; strncmp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
 </UL>
 
 <P><STRONG><a name="[cc]"></a>blink</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, main.o(i.blink))
@@ -1378,112 +1372,96 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ce]"></a>button_click</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cmd_parser.o(i.button_click))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = button_click &rArr; atoi &rArr; strtol &rArr; _strtoul
-</UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-</UL>
-
-<P><STRONG><a name="[d2]"></a>button_ctrl</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, cmd_parser.o(i.button_ctrl))
+<P><STRONG><a name="[ce]"></a>button_ctrl</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, cmd_parser.o(i.button_ctrl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = button_ctrl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
 </UL>
 
-<P><STRONG><a name="[d0]"></a>button_hold</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cmd_parser.o(i.button_hold))
+<P><STRONG><a name="[cf]"></a>button_hold</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cmd_parser.o(i.button_hold))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = button_hold &rArr; process_multiarg &rArr; arg_to_button_index &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[d1]"></a>button_release</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, cmd_parser.o(i.button_release))
+<P><STRONG><a name="[d2]"></a>button_release</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, cmd_parser.o(i.button_release))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = button_release &rArr; process_multiarg &rArr; arg_to_button_index &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_ctrl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[d4]"></a>eeprom_erase</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, eeprom.o(i.eeprom_erase))
+<P><STRONG><a name="[d3]"></a>eeprom_erase</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, eeprom.o(i.eeprom_erase))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = eeprom_erase &rArr; eeprom_write &rArr; eeprom_read &rArr; HAL_I2C_Master_Receive &rArr; I2C_WaitOnRXNEFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
+<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[d6]"></a>eeprom_read</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, eeprom.o(i.eeprom_read))
+<P><STRONG><a name="[d5]"></a>eeprom_read</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, eeprom.o(i.eeprom_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = eeprom_read &rArr; HAL_I2C_Master_Receive &rArr; I2C_WaitOnRXNEFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Transmit
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Receive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d5]"></a>eeprom_write</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, eeprom.o(i.eeprom_write))
+<P><STRONG><a name="[d4]"></a>eeprom_write</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, eeprom.o(i.eeprom_write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = eeprom_write &rArr; eeprom_read &rArr; HAL_I2C_Master_Receive &rArr; I2C_WaitOnRXNEFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Transmit
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_IsDeviceReady
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_erase
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_erase
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
 <P><STRONG><a name="[3e]"></a>fputc</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = fputc &rArr; my_usb_putchar &rArr; CDC_Transmit_FS &rArr; USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; PCD_WritePMA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_putchar
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_putchar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> printf1.o(i.__0printf$1)
+<BR>[Address Reference Count : 1]<UL><LI> printfb.o(i.__0printf$bare)
 </UL>
-<P><STRONG><a name="[cf]"></a>goto_next_arg</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, cmd_parser.o(i.goto_next_arg))
+<P><STRONG><a name="[d0]"></a>goto_next_arg</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, cmd_parser.o(i.goto_next_arg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = goto_next_arg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
 </UL>
 
-<P><STRONG><a name="[d9]"></a>idwg_kick</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, helpers.o(i.idwg_kick))
+<P><STRONG><a name="[d8]"></a>idwg_kick</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, helpers.o(i.idwg_kick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = idwg_kick &rArr; standby_check &rArr; HAL_GPIO_DeInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IWDG_Refresh
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IWDG_Refresh
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[dc]"></a>linear_buf_add</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_add))
+<P><STRONG><a name="[db]"></a>linear_buf_add</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_add))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = linear_buf_add
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -1494,41 +1472,41 @@ Global Symbols
 <P><STRONG><a name="[57]"></a>linear_buf_add_str</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, helpers.o(i.linear_buf_add_str))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = linear_buf_add_str &rArr; linear_buf_add
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_add
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_add
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Receive_FS
 </UL>
 
-<P><STRONG><a name="[dd]"></a>linear_buf_init</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_init))
+<P><STRONG><a name="[dc]"></a>linear_buf_init</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = linear_buf_init &rArr; linear_buf_reset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_init
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_init
 </UL>
 
-<P><STRONG><a name="[de]"></a>linear_buf_reset</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_reset))
+<P><STRONG><a name="[dd]"></a>linear_buf_reset</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, helpers.o(i.linear_buf_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = linear_buf_reset
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
+<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 </UL>
 
-<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = main &rArr; parse_cmd &rArr; stick_nudge &rArr; stick_hold &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
+<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IWDG_Init
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_init
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;standby_check
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_init
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USB_DEVICE_Init
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blink
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
@@ -1537,15 +1515,15 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[e0]"></a>my_usb_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, my_usb.o(i.my_usb_init))
+<P><STRONG><a name="[df]"></a>my_usb_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, my_usb.o(i.my_usb_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = my_usb_init &rArr; linear_buf_init &rArr; linear_buf_reset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d7]"></a>my_usb_putchar</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, my_usb.o(i.my_usb_putchar))
+<P><STRONG><a name="[d6]"></a>my_usb_putchar</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, my_usb.o(i.my_usb_putchar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = my_usb_putchar &rArr; CDC_Transmit_FS &rArr; USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; PCD_WritePMA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CDC_Transmit_FS
@@ -1553,139 +1531,122 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[e1]"></a>my_usb_readline</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, my_usb.o(i.my_usb_readline))
+<P><STRONG><a name="[e0]"></a>my_usb_readline</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, my_usb.o(i.my_usb_readline))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = my_usb_readline &rArr; linear_buf_reset
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e2]"></a>parse_cmd</STRONG> (Thumb, 638 bytes, Stack size 24 bytes, cmd_parser.o(i.parse_cmd))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = parse_cmd &rArr; stick_nudge &rArr; stick_hold &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
+<P><STRONG><a name="[e1]"></a>parse_cmd</STRONG> (Thumb, 382 bytes, Stack size 16 bytes, cmd_parser.o(i.parse_cmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = parse_cmd &rArr; stick_hold &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_erase
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_all_button
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_click
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_erase
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_all_button
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d3]"></a>process_multiarg</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, cmd_parser.o(i.process_multiarg))
+<P><STRONG><a name="[d1]"></a>process_multiarg</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, cmd_parser.o(i.process_multiarg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = process_multiarg &rArr; arg_to_button_index &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_to_button_index
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_release
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_hold
 </UL>
 
-<P><STRONG><a name="[e5]"></a>puts</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, puts.o(i.puts))
+<P><STRONG><a name="[e4]"></a>puts</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, puts.o(i.puts))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = puts &rArr; fputc &rArr; my_usb_putchar &rArr; CDC_Transmit_FS &rArr; USBD_CDC_TransmitPacket &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; PCD_WritePMA
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[e7]"></a>release_all_button</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, cmd_parser.o(i.release_all_button))
+<P><STRONG><a name="[e6]"></a>release_all_button</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, cmd_parser.o(i.release_all_button))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = release_all_button
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[da]"></a>standby_check</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, helpers.o(i.standby_check))
+<P><STRONG><a name="[d9]"></a>standby_check</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, helpers.o(i.standby_check))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = standby_check &rArr; HAL_GPIO_DeInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnterSTANDBYMode
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnableWakeUpPin
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_DisableWakeUpPin
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnterSTANDBYMode
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_EnableWakeUpPin
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWR_DisableWakeUpPin
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_DeInit
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;idwg_kick
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[eb]"></a>stick_disengage</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cmd_parser.o(i.stick_disengage))
+<P><STRONG><a name="[e9]"></a>stick_disengage</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cmd_parser.o(i.stick_disengage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = stick_disengage &rArr; HAL_DAC_DeInit &rArr; HAL_DAC_MspDeInit &rArr; HAL_GPIO_DeInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Stop
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Stop
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_DeInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[e8]"></a>stick_hold</STRONG> (Thumb, 138 bytes, Stack size 48 bytes, cmd_parser.o(i.stick_hold))
+<P><STRONG><a name="[e7]"></a>stick_hold</STRONG> (Thumb, 138 bytes, Stack size 48 bytes, cmd_parser.o(i.stick_hold))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = stick_hold &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DACEx_DualSetValue
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DACEx_DualSetValue
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[ea]"></a>stick_nudge</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cmd_parser.o(i.stick_nudge))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = stick_nudge &rArr; stick_hold &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
-</UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-</UL>
-
-<P><STRONG><a name="[e9]"></a>stick_release</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, cmd_parser.o(i.stick_release))
+<P><STRONG><a name="[e8]"></a>stick_release</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, cmd_parser.o(i.stick_release))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = stick_release &rArr; stm32_dac_init &rArr; HAL_DAC_Init &rArr; HAL_DAC_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DACEx_DualSetValue
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DACEx_DualSetValue
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_dac_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_nudge
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
 </UL>
 
-<P><STRONG><a name="[f2]"></a>stm32_dac_init</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, main.o(i.stm32_dac_init))
+<P><STRONG><a name="[f0]"></a>stm32_dac_init</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, main.o(i.stm32_dac_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = stm32_dac_init &rArr; HAL_DAC_Init &rArr; HAL_DAC_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Start
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_ConfigChannel
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Start
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_ConfigChannel
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_hold
 </UL>
 <P>
 <H3>
@@ -1885,10 +1846,8 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_cdc_if.o(.data)
 </UL>
-<P><STRONG><a name="[c9]"></a>_printf_core</STRONG> (Thumb, 332 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-</UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$1
+<P><STRONG><a name="[c9]"></a>_printf_core</STRONG> (Thumb, 30 bytes, Stack size 24 bytes, printfb.o(i._printf_core), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$bare
 </UL>
 <P>
 <H3>

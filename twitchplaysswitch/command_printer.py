@@ -29,6 +29,9 @@ color_print_queue = deque()
 def make_tag(line_number, position):
 	return str(line_number) + "." + str(position)
 
+def replace_arrows(cmd):
+	return cmd.replace("up", "↑").replace("down", "↓").replace("left", "←").replace("right", "→")
+
 def print_command_list(command_printer_in, command_length, offset):
 	chat_username = command_printer_in[0]
 	command_list = command_printer_in[1]
@@ -40,6 +43,7 @@ def print_command_list(command_printer_in, command_length, offset):
 	user_command = ""
 	for item in command_list:
 		user_command += item
+	user_command = replace_arrows(user_command)
 
 	username_print_queue.append(chat_username[:21].capitalize())
 	if(len(username_print_queue) > command_length - offset):
@@ -74,7 +78,7 @@ def print_command_list(command_printer_in, command_length, offset):
 # while 1:
 # 	command_printer_in = []
 # 	command_printer_in.append(str(count))
-# 	command_printer_in.append(['a', 'b', 'x', 'y', 'l'])
+# 	command_printer_in.append(['down', 'left', "up", 'right'])
 # 	command_printer_in.append('white')
 # 	print(command_printer_in)
 # 	time.sleep(0.1)

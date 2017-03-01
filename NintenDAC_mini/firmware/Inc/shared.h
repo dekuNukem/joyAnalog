@@ -18,6 +18,5 @@ extern I2C_HandleTypeDef hi2c2;
 
 extern int32_t next_iwdg_kick;
 extern int32_t board_type;
-extern int32_t button_release_duration_ms;
-extern int32_t stick_release_duration_ms;
+
 #endif
