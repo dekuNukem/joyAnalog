@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/Allen/Desktop/switch/NintenDAC/NintenDAC_mini/firmware/Inc
+HeaderPath=C:/Users/Allen/Desktop/NintenDAC/NintenDAC_mini/firmware/Inc
 HeaderFiles=usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;
-SourcePath=C:/Users/Allen/Desktop/switch/NintenDAC/NintenDAC_mini/firmware/Src
+SourcePath=C:/Users/Allen/Desktop/NintenDAC/NintenDAC_mini/firmware/Src
 SourceFiles=usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;usb_device.c;usbd_conf.c;usbd_desc.c;usbd_cdc_if.c;stm32f0xx_it.c;stm32f0xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

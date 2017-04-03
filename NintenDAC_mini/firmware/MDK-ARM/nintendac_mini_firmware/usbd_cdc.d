@@ -38,6 +38,8 @@ nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0x
 nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
+nintendac_mini_firmware\usbd_cdc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 nintendac_mini_firmware\usbd_cdc.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 nintendac_mini_firmware\usbd_cdc.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 nintendac_mini_firmware\usbd_cdc.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h

@@ -32,3 +32,5 @@ nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/
 nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
+nintendac_mini_firmware\stm32f0xx_hal_pwr_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h

@@ -35,6 +35,7 @@
 "nintendac_mini_firmware\helpers.o"
 "nintendac_mini_firmware\my_usb.o"
 "nintendac_mini_firmware\eeprom.o"
+"nintendac_mini_firmware\delay_us.o"
 --library_type=microlib --strict --scatter "nintendac_mini_firmware\nintendac_mini_firmware.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

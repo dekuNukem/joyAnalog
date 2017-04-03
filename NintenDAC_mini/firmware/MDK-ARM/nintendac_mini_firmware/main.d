@@ -32,6 +32,8 @@ nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ha
 nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
+nintendac_mini_firmware\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 nintendac_mini_firmware\main.o: ../Inc/usb_device.h
 nintendac_mini_firmware\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 nintendac_mini_firmware\main.o: ../Inc/usbd_conf.h
@@ -43,3 +45,4 @@ nintendac_mini_firmware\main.o: ../Inc/shared.h
 nintendac_mini_firmware\main.o: ../Inc/my_usb.h
 nintendac_mini_firmware\main.o: ../Inc/cmd_parser.h
 nintendac_mini_firmware\main.o: ../Inc/eeprom.h
+nintendac_mini_firmware\main.o: ../Inc/delay_us.h
