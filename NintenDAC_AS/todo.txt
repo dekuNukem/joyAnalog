@@ -1,3 +1,5 @@
 add button label
 add pullup on miso
 delete pa8 label beside eeprom
+add usb wakeup pulldown
+unused analog switch testpoint 
