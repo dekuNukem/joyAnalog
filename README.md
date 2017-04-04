@@ -1,26 +1,14 @@
-# A hub for my Nintendo Switch related projects
+joyAnalog is a custom STM32 board with 12 analog switches and 2 12-bit DAC channels. Its main purpose is for automating Nintendo Switch Joycon inputs, and maybe it would be suitable for TAS as well. 
 
-I'm going to put all my resources and discoveries related to Nintendo Switch here, which will probably be updated frequently in the coming days after the launch.
+This project was previously named NintenDAC, and had two versions. I started working on them before Nintendo Switch came out, and assumed that the button would be in one-side-pulled-up-other-side-to-ground configuration as it has always been. However as it turned out Joycon and Pro controller uses keypad scanning for reading buttons, rendering my original design useless. 
 
-## NintenDAC dev board for Nintendo Switch modification
+So I started a new design featuring 2 SPI analog switches that connects the buttons to the common column input, therefore activating the buttons. 2 built-in DAC will be able to take over the joystick input.
 
-NintenDAC is a STM32 development board with up to 10 high-speed 12-bit DAC channels. I intend to use it for automating Joycon inputs, and maybe it would be suitable for TAS as well. 
-
-The board has 2 versions. The smaller NintenDAC mini (left) is intended to be used on a Joycon, while the bigger NintenDAC (right) has more GPIOs and a dedicated high-speed DAC chip, and is suitable for modifying the pro controller or the console itself.
-
-![Alt text](http://i.imgur.com/zYkvhDJ.jpg)
-
-Both present themselves to PC as a USB serial port, so no special drivers are needed. Simply connect the button and joystick test points to the headers to allow the joycon be controlled from a PC.
+joyAnalog presents itself to PC as a virtual USB serial port, so no special drivers are needed. Simply connect the button and joystick test points to the headers to allow the Joycon be controlled from a PC.
 
 ## Board resources, communication protocol and Python library
 
-For NintenDAC mini: [click here](./NintenDAC_mini)
-
-For NintenDAC: [click here (still under construction)](./NintenDAC)
-
-## Assembly tutorials
-
-Coming soon after I got my Switch
+Updating....
 
 ## Twitch Plays Nintendo Switch
 
