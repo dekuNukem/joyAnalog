@@ -15,7 +15,8 @@ joyAnalog presents itself to PC as a virtual USB serial port, so no special driv
 * STM32F072C8T6 microcontroller, 16KB RAM, 64KB ROM
 * 2x ADG714 SPI analog switch
 * 1KB I2C EEPROM
-* Automatic Vin switching
+* Automatic power switching
+* User LED and button
 
 ## Board resources, communication protocol and Python library
 
