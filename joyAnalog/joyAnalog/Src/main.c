@@ -52,6 +52,7 @@
 #include "helpers.h"
 #include "jc_ctrl.h"
 #include "eeprom.h"
+#include "cmd_parser.h"
 
 /* USER CODE END Includes */
 
@@ -64,7 +65,7 @@ SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+int32_t board_type;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -81,6 +82,13 @@ static void MX_SPI1_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+
+void stm32_dac_init(void)
+{
+  HAL_DAC_Start(dac_ptr, DAC_CHANNEL_1);
+  HAL_DAC_Start(dac_ptr, DAC_CHANNEL_2);
+}
+
 int fputc(int ch, FILE *f)
 {
   my_usb_putchar((uint8_t)ch);
@@ -127,7 +135,7 @@ int main(void)
     if(usb_data != NULL)
     {
 	    printf("%s\n", usb_data);
-	    button_write(0x29ae);
+      parse_cmd(usb_data);
     }
   }
   /* USER CODE END 3 */

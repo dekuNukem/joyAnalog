@@ -44,3 +44,4 @@ joyanalog\main.o: ../Inc/my_usb.h
 joyanalog\main.o: ../Inc/helpers.h
 joyanalog\main.o: ../Inc/jc_ctrl.h
 joyanalog\main.o: ../Inc/eeprom.h
+joyanalog\main.o: ../Inc/cmd_parser.h

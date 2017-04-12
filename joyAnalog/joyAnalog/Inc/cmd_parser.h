@@ -6,9 +6,19 @@
 #endif 
 
 #include "stm32f0xx_hal.h"
+#include "main.h"
+#include "helpers.h"
+#include "shared.h"
+#include "eeprom.h"
+#include "jc_ctrl.h"
+
+#define ACTION_RELEASE 0
+#define ACTION_HOLD 1
+#define ARG_PARSE_SUCCESS 0
+#define ARG_PARSE_ERROR_INVALID_CMD 126
+#define ARG_PARSE_ERROR_NOT_AVAILABLE 127
 
 void parse_cmd(char* cmd);
-
 
 #ifdef __cplusplus
 }

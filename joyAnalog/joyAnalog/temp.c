@@ -42,3 +42,43 @@ void my_usb_putchar(uint8_t ch)
 
   printf("%x %x %x\n", value, array[1], array[0]);
     
+void button_ctrl(GPIO_PinState action)
+{
+  for(int i = 0; i < ARG_QUEUE_SIZE; ++i)
+    if(gpio_port_queue[i] != NULL)
+      HAL_GPIO_WritePin(gpio_port_queue[i], gpio_pin_queue[i], action);
+}
+int32_t button_hold(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_RESET);
+  return result;
+}
+
+int32_t button_release(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_SET);
+  return result;
+}
+int32_t button_hold(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_RESET);
+  return result;
+}
+
+int32_t button_release(char* cmd)
+{
+  char* arg_start = goto_next_arg(cmd);
+  int32_t result = process_multiarg(arg_start);
+  if(result == ARG_PARSE_SUCCESS)
+    button_ctrl(GPIO_PIN_SET);
+  return result;
+}

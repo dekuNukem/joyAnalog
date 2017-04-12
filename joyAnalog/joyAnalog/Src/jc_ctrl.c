@@ -15,7 +15,6 @@ void jc_ctrl_init(void)
 	button_write(button_status);
 }
 
-
 /*
 bit			button
 15			B8
@@ -43,4 +42,37 @@ void button_write(uint16_t value)
 	spi_cs_low();
     HAL_SPI_Transmit(spi1_ptr, spi_buf, 2, 100);
     spi_cs_high();
+}
+
+
+void dac_write(uint8_t x_8b, uint8_t y_8b)
+{
+  uint32_t x_12b = (uint32_t)((float)x_8b * 8.76);
+  uint32_t y_12b = (uint32_t)((float)y_8b * 8.76);
+  if(dac_ptr->State == HAL_DAC_STATE_RESET)
+    stm32_dac_init();
+  HAL_DACEx_DualSetValue(dac_ptr, DAC_ALIGN_12B_R, x_12b, y_12b);
+}
+
+void stick_release(void)
+{
+  if(dac_ptr->State == HAL_DAC_STATE_RESET)
+    stm32_dac_init();
+  HAL_DACEx_DualSetValue(dac_ptr, DAC_ALIGN_12B_R, 1117, 1117);
+}
+
+void stick_disengage(void)
+{
+  if(dac_ptr->State != HAL_DAC_STATE_RESET)
+  {
+    HAL_DAC_Stop(dac_ptr, DAC_CHANNEL_1);
+    HAL_DAC_Stop(dac_ptr, DAC_CHANNEL_2);
+    HAL_DAC_DeInit(dac_ptr);
+  }
+}
+
+void release_all_button(void)
+{
+	button_status = 0;
+	button_write(button_status);
 }

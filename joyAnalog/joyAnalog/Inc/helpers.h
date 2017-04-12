@@ -7,6 +7,9 @@
 
 #include "stm32f0xx_hal.h"
 
+#define SetBit(number,bit) (number|=(1<<bit) )		
+#define ClearBit(number,bit) (number&=(~(1<<bit)))
+
 typedef struct
 {
   int32_t last_recv;

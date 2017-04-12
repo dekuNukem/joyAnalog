@@ -32,6 +32,7 @@
 "joyanalog\my_usb.o"
 "joyanalog\jc_ctrl.o"
 "joyanalog\eeprom.o"
+"joyanalog\cmd_parser.o"
 "joyanalog\usbd_core.o"
 "joyanalog\usbd_ctlreq.o"
 "joyanalog\usbd_ioreq.o"

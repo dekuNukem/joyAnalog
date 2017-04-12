@@ -59,7 +59,7 @@
 #define USER_BUTTON_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+void stm32_dac_init(void);
 /* USER CODE END Private defines */
 
 /**

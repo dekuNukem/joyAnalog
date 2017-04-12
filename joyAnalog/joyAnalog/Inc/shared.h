@@ -16,4 +16,9 @@ extern I2C_HandleTypeDef hi2c1;
 #define spi_cs_low() do { HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET); } while (0)
 #define spi_cs_high() do { HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET); } while (0)
 
+#define BOARD_TYPE_NDAC_MINI_JOYCON_LEFT 0
+#define BOARD_TYPE_NDAC_MINI_JOYCON_RIGHT 1
+
+extern int32_t board_type;
+
 #endif
