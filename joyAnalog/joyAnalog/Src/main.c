@@ -121,6 +121,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   my_usb_init();
   jc_ctrl_init();
+  board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -133,10 +134,7 @@ int main(void)
   /* USER CODE BEGIN 3 */
   	usb_data = my_usb_readline();
     if(usb_data != NULL)
-    {
-	    printf("%s\n", usb_data);
       parse_cmd(usb_data);
-    }
   }
   /* USER CODE END 3 */
 

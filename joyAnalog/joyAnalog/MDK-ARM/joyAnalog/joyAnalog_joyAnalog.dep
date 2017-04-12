@@ -749,7 +749,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x58EE922E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58EE922E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58EE922E)
 I (../Inc/stm32f0xx_it.h)(0x58EE922E)
-F (../Src/main.c)(0x58EE9D5C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\main.o --omf_browse joyanalog\main.crf --depend joyanalog\main.d)
+F (../Src/main.c)(0x58EEA791)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\main.o --omf_browse joyanalog\main.crf --depend joyanalog\main.d)
 I (../Inc/main.h)(0x58EE9A6F)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58EE922E)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58EE922E)
@@ -791,9 +791,9 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (../Inc/shared.h)(0x58EE9A8A)
 I (../Inc/my_usb.h)(0x58EE922E)
 I (../Inc/helpers.h)(0x58EE9679)
-I (../Inc/jc_ctrl.h)(0x58EEA419)
+I (../Inc/jc_ctrl.h)(0x58EEA794)
 I (../Inc/eeprom.h)(0x58EE922E)
-I (../Inc/cmd_parser.h)(0x58EE9C77)
+I (../Inc/cmd_parser.h)(0x58EEA792)
 F (../Src/stm32f0xx_hal_msp.c)(0x58EE922F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\stm32f0xx_hal_msp.o --omf_browse joyanalog\stm32f0xx_hal_msp.crf --depend joyanalog\stm32f0xx_hal_msp.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58EE922E)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58EE922E)
@@ -1088,12 +1088,12 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58EE922F)
 I (../Inc/usbd_conf.h)(0x58EE922E)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58EE922E)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58EE922F)
-F (..\Inc\jc_ctrl.h)(0x58EEA419)()
+F (..\Inc\jc_ctrl.h)(0x58EEA794)()
 F (..\Src\jc_ctrl.c)(0x58EEA4DB)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\jc_ctrl.o --omf_browse joyanalog\jc_ctrl.crf --depend joyanalog\jc_ctrl.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
-I (../Inc/jc_ctrl.h)(0x58EEA419)
+I (../Inc/jc_ctrl.h)(0x58EEA794)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58EE922E)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58EE922E)
 I (../Inc/main.h)(0x58EE9A6F)
@@ -1168,12 +1168,12 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58EE922E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58EE922E)
 I (../Inc/helpers.h)(0x58EE9679)
 I (../Inc/shared.h)(0x58EE9A8A)
-F (..\Inc\cmd_parser.h)(0x58EE9C77)()
-F (..\Src\cmd_parser.c)(0x58EEA4DA)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\cmd_parser.o --omf_browse joyanalog\cmd_parser.crf --depend joyanalog\cmd_parser.d)
+F (..\Inc\cmd_parser.h)(0x58EEA792)()
+F (..\Src\cmd_parser.c)(0x58EEA7F8)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\cmd_parser.o --omf_browse joyanalog\cmd_parser.crf --depend joyanalog\cmd_parser.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
-I (../Inc/cmd_parser.h)(0x58EE9C77)
+I (../Inc/cmd_parser.h)(0x58EEA792)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58EE922E)
 I (../Inc/stm32f0xx_hal_conf.h)(0x58EE922E)
 I (../Inc/main.h)(0x58EE9A6F)
@@ -1209,7 +1209,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58EE922E)
 I (../Inc/helpers.h)(0x58EE9679)
 I (../Inc/shared.h)(0x58EE9A8A)
 I (../Inc/eeprom.h)(0x58EE922E)
-I (../Inc/jc_ctrl.h)(0x58EEA419)
+I (../Inc/jc_ctrl.h)(0x58EEA794)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c)(0x58EE922F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc --C99-I.\RTE\_joyAnalog-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o joyanalog\usbd_core.o --omf_browse joyanalog\usbd_core.crf --depend joyanalog\usbd_core.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58EE922E)
 I (../Inc/usbd_conf.h)(0x58EE922E)

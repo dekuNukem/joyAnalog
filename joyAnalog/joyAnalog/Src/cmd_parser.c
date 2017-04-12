@@ -95,12 +95,12 @@ int32_t process_multiarg(char* args, uint8_t action)
     		SetBit(button_status, result);
     	else
     		ClearBit(button_status, result);
-    	button_write(button_status);
     }
     else
       return result;
     arg_ptr = goto_next_arg(arg_ptr);
   }
+  button_write(button_status);
   return ARG_PARSE_SUCCESS;
 }
 
@@ -241,6 +241,5 @@ void parse_cmd(char* cmd)
   {
     puts("ERROR unknown command");
   }
-
   printf("button_status: %x\n", button_status);
 }

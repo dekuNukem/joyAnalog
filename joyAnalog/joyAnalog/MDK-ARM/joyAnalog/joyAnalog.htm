@@ -3,7 +3,7 @@
 <title>Static Call Graph - [joyAnalog\joyAnalog.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image joyAnalog\joyAnalog.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Apr 12 23:06:47 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Wed Apr 12 23:21:13 2017
 <BR><P>
 <H3>Maximum Stack Usage =        220 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1325,7 +1325,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[50]"></a>__ARM_clz</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, depilogue.o(i.__ARM_clz))
@@ -1400,6 +1399,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_cmd
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[d8]"></a>eeprom_write</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, eeprom.o(i.eeprom_write))
@@ -1477,7 +1477,7 @@ Global Symbols
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 </UL>
 
-<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_Init
@@ -1490,9 +1490,9 @@ Global Symbols
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_readline
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_usb_init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jc_ctrl_init
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USB_DEVICE_Init
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
@@ -1537,11 +1537,11 @@ Global Symbols
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_multiarg
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_next_arg
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_write
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_erase
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_release
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stick_disengage
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;release_all_button
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eeprom_read
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
