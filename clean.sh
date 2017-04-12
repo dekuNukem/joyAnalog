@@ -4,3 +4,4 @@ find . -type f -name "*.l#*" -exec rm -f {} \;
 find . -type f -name "*.csv#*" -exec rm -f {} \;
 find . -type f -name "*.DS_Store*" -exec rm -f {} \;
 find . -name "__pycache__" -exec rm -rf {} \;
+rm -rf ./joyAnalog/joyAnalog_backup/
