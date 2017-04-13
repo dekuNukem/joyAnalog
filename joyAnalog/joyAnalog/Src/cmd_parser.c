@@ -241,5 +241,5 @@ void parse_cmd(char* cmd)
   {
     puts("ERROR unknown command");
   }
-  printf("button_status: %x\n", button_status);
+  // printf("button_status: %x\n", button_status);
 }

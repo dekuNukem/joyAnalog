@@ -1092,6 +1092,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="19.177" y="21.717" size="0.4064" layer="28" rot="MR90"/>
 </element>
 <element name="TP7" library="SparkFun-Connectors" package="PAD.03X.04" value="TEST-POINT3X4" x="19.05" y="24.511" rot="MR0"/>
+<element name="R12" library="SparkFun-Passives" package="0805" value="" x="19.812" y="29.591" rot="MR180"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -1466,17 +1467,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="JP3" pad="1"/>
 <wire x1="20.392" y1="30.099" x2="22.606" y2="30.099" width="0.3556" layer="1"/>
 <wire x1="22.606" y1="30.099" x2="23.114" y2="29.591" width="0.3556" layer="1"/>
-<contactref element="IC1" pad="2"/>
 <contactref element="R9" pad="2"/>
 <wire x1="23.114" y1="31.612" x2="23.114" y2="29.591" width="0.2032" layer="16"/>
-<wire x1="16.51" y1="27.432" x2="16.51" y2="18.288" width="0.2032" layer="16"/>
-<wire x1="16.51" y1="18.288" x2="14.097" y2="15.875" width="0.2032" layer="16"/>
-<via x="10.414" y="15.875" extent="1-16" drill="0.508"/>
-<wire x1="14.097" y1="15.875" x2="10.414" y2="15.875" width="0.2032" layer="16"/>
-<wire x1="10.414" y1="15.875" x2="10.196" y2="16.093" width="0.2032" layer="1"/>
-<wire x1="10.196" y1="16.093" x2="10.196" y2="17.217" width="0.2032" layer="1"/>
-<wire x1="23.114" y1="29.591" x2="18.669" y2="29.591" width="0.2032" layer="16"/>
-<wire x1="18.669" y1="29.591" x2="16.51" y2="27.432" width="0.2032" layer="16"/>
+<contactref element="R12" pad="2"/>
+<wire x1="20.712" y1="29.591" x2="23.114" y2="29.591" width="0.2032" layer="16"/>
 </signal>
 <signal name="N$3">
 <contactref element="LED1" pad="C"/>
@@ -1843,6 +1837,17 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="TP7" pad="P$1"/>
 <wire x1="20.574" y1="24.511" x2="20.574" y2="23.633" width="0.2032" layer="16"/>
 <wire x1="19.05" y1="24.511" x2="20.574" y2="24.511" width="0.2032" layer="16"/>
+</signal>
+<signal name="N$30">
+<contactref element="IC1" pad="2"/>
+<contactref element="R12" pad="1"/>
+<wire x1="18.912" y1="29.591" x2="16.383" y2="27.062" width="0.2032" layer="16"/>
+<wire x1="16.383" y1="27.062" x2="16.383" y2="17.78" width="0.2032" layer="16"/>
+<wire x1="16.383" y1="17.78" x2="14.478" y2="15.875" width="0.2032" layer="16"/>
+<wire x1="14.478" y1="15.875" x2="10.414" y2="15.875" width="0.2032" layer="16"/>
+<via x="10.414" y="15.875" extent="1-16" drill="0.5"/>
+<wire x1="10.414" y1="15.875" x2="10.196" y2="16.093" width="0.2032" layer="1"/>
+<wire x1="10.196" y1="16.093" x2="10.196" y2="17.217" width="0.2032" layer="1"/>
 </signal>
 </signals>
 </board>

@@ -12,8 +12,8 @@
 #include "eeprom.h"
 #include "jc_ctrl.h"
 
-#define ACTION_RELEASE 0
-#define ACTION_HOLD 1
+#define ACTION_RELEASE 1
+#define ACTION_HOLD 0
 #define ARG_PARSE_SUCCESS 0
 #define ARG_PARSE_ERROR_INVALID_CMD 126
 #define ARG_PARSE_ERROR_NOT_AVAILABLE 127

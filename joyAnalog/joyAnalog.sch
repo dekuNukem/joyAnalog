@@ -8330,13 +8330,14 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="TP22" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="R8" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
 <part name="+3V17" library="backplane" deviceset="+3V3" device=""/>
-<part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="R9" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
 <part name="GND17" library="backplane" deviceset="GND" device=""/>
 <part name="R10" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R11" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
 <part name="GND18" library="backplane" deviceset="GND" device=""/>
 <part name="TP7" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES"/>
+<part name="P+3" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8437,13 +8438,14 @@ Used as a test point connection for pogo pins or other debugging tools.
 <instance part="TP22" gate="G$1" x="-243.84" y="-40.64" rot="R180"/>
 <instance part="R8" gate="G$1" x="-109.22" y="-40.64" rot="R90"/>
 <instance part="+3V17" gate="G$1" x="-109.22" y="-33.02"/>
-<instance part="P+3" gate="1" x="-58.42" y="-129.54"/>
 <instance part="R9" gate="G$1" x="109.22" y="-43.18" rot="R90"/>
 <instance part="GND17" gate="1" x="109.22" y="-50.8"/>
 <instance part="R10" gate="G$1" x="119.38" y="2.54" rot="R90"/>
 <instance part="R11" gate="G$1" x="119.38" y="-15.24" rot="R90"/>
 <instance part="GND18" gate="1" x="119.38" y="-22.86"/>
 <instance part="TP7" gate="G$1" x="119.38" y="-5.08"/>
+<instance part="R12" gate="G$1" x="-58.42" y="-132.08" rot="R180"/>
+<instance part="P+3" gate="1" x="-63.5" y="-129.54"/>
 </instances>
 <busses>
 </busses>
@@ -8885,9 +8887,8 @@ Used as a test point connection for pogo pins or other debugging tools.
 <wire x1="88.9" y1="-142.24" x2="104.14" y2="-142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<pinref part="IC1" gate="PORTC" pin="PC13"/>
-<wire x1="-58.42" y1="-132.08" x2="-53.34" y2="-132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -9306,6 +9307,12 @@ Used as a test point connection for pogo pins or other debugging tools.
 <pinref part="TP7" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="-5.08" x2="119.38" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="119.38" y="-5.08"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="IC1" gate="PORTC" pin="PC13"/>
+<pinref part="R12" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

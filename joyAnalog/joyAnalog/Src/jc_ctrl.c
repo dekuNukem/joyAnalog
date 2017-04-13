@@ -42,6 +42,11 @@ void button_write(uint16_t value)
 	spi_cs_low();
     HAL_SPI_Transmit(spi1_ptr, spi_buf, 2, 100);
     spi_cs_high();
+    if(value & 0x20)
+      HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_RESET);
+    else
+      HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_SET);
+
 }
 
 

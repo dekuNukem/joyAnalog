@@ -65,26 +65,26 @@ SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-int32_t board_type;
+int32_t board_type, off_time;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
-static void MX_DAC_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+static void MX_DAC_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
 
 void stm32_dac_init(void)
 {
+	MX_DAC_Init();
   HAL_DAC_Start(dac_ptr, DAC_CHANNEL_1);
   HAL_DAC_Start(dac_ptr, DAC_CHANNEL_2);
 }
@@ -113,7 +113,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DAC_Init();
   MX_I2C1_Init();
   MX_SPI1_Init();
   MX_USB_DEVICE_Init();
@@ -122,6 +121,7 @@ int main(void)
   my_usb_init();
   jc_ctrl_init();
   board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
+  stick_release();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,12 +129,17 @@ int main(void)
   
   while (1)
   {
+  	if(HAL_GetTick() > off_time)
+  		HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
   	usb_data = my_usb_readline();
-    if(usb_data != NULL)
-      parse_cmd(usb_data);
+    if(usb_data == NULL)
+    	continue;
+    parse_cmd(usb_data);
+    HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+    off_time = HAL_GetTick() + 100;
   }
   /* USER CODE END 3 */
 
@@ -302,7 +307,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, SPI1_CS_Pin|STICK_BUTTON_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
@@ -313,6 +318,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(SPI1_CS_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : STICK_BUTTON_Pin */
+  GPIO_InitStruct.Pin = STICK_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(STICK_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : USER_LED_Pin */
   GPIO_InitStruct.Pin = USER_LED_Pin;
