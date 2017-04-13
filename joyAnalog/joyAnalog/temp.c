@@ -131,3 +131,6 @@ if(value & 0x40)
       HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_RESET);
     else
       HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_SET);
+
+
+    HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, (value & 0x20 != 0));

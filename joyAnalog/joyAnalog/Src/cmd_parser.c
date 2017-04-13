@@ -234,7 +234,7 @@ void parse_cmd(char* cmd)
   else if(strcmp(cmd, "reset") == 0)
   {
     release_all_button();
-    stick_disengage();
+    stick_release();
     puts("reset OK");
   }
   else
