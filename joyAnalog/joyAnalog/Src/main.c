@@ -69,7 +69,7 @@ SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-int32_t board_type;
+int32_t board_type, next_kick;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,10 +87,18 @@ static void MX_DAC_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+void kick_dog(void)
+{
+  if(HAL_GetTick() > next_kick)
+  {
+    HAL_IWDG_Refresh(&hiwdg);
+    next_kick = HAL_GetTick() + 500;
+  }
+}
 
 void stm32_dac_init(void)
 {
-	MX_DAC_Init();
+  MX_DAC_Init();
   HAL_DAC_Start(dac_ptr, DAC_CHANNEL_1);
   HAL_DAC_Start(dac_ptr, DAC_CHANNEL_2);
 }
@@ -123,13 +131,18 @@ int main(void)
   MX_SPI1_Init();
   MX_USB_DEVICE_Init();
   MX_ADC_Init();
-  // MX_IWDG_Init();
+  MX_IWDG_Init();
 
   /* USER CODE BEGIN 2 */
   my_usb_init();
   board_type = eeprom_read(EEPROM_BOARD_TYPE_ADDR);
   jc_ctrl_init();
   stick_release();
+  for (int i = 0; i < 6; ++i)
+  {
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    HAL_Delay(100);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -137,12 +150,13 @@ int main(void)
   
   while (1)
   {
+    kick_dog();
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-  	usb_data = my_usb_readline();
+    usb_data = my_usb_readline();
     if(usb_data == NULL)
-    	continue;
+      continue;
     parse_cmd(usb_data);
   }
   /* USER CODE END 3 */
