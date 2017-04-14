@@ -134,3 +134,6 @@ if(value & 0x40)
 
 
     HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, (value & 0x20 != 0));
+  printf("%d %f\n", stick_idle_dac_val, dac_modifier);
+    printf("vref: %d\n", get_vref());
+    

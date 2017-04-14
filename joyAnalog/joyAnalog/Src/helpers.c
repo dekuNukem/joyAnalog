@@ -65,3 +65,15 @@ int32_t linear_buf_idle(linear_buf *lb, int32_t timeout)
     return 1;
   return 0;
 }
+
+// 1.2V reading
+uint16_t get_vref(void)
+{
+  uint16_t result;
+  HAL_ADC_Start(adc_ptr);
+  if(HAL_ADC_PollForConversion(adc_ptr, 100) == HAL_OK)
+    result = HAL_ADC_GetValue(adc_ptr);
+  HAL_ADC_Stop(adc_ptr);
+  return result;
+}
+

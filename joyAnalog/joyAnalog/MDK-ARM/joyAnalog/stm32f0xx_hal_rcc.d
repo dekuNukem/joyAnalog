@@ -21,12 +21,15 @@ joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h
+joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h
+joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h
+joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_iwdg.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 joyanalog\stm32f0xx_hal_rcc.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
