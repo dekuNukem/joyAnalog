@@ -10,28 +10,27 @@ float dac_modifier;
 // ? = 4096 * 1.2 / vcc
 void jc_ctrl_init(void)
 {
-	button_status = 0;
-	button_write(button_status);
-	if(get_vref() < 1536) // 3.3v
-		stick_idle_dac_val = 1120;
-	else // 3.0v
-		stick_idle_dac_val = 1230;
-	dac_modifier = (float)stick_idle_dac_val / 127;
+  button_status = 0;
+  button_write(button_status);
+  if(get_vref() < 1536) // 3.3v
+    stick_idle_dac_val = 1120;
+  else // 3.0v
+    stick_idle_dac_val = 1230;
+  dac_modifier = (float)stick_idle_dac_val / 127;
 }
 
 void button_write(uint16_t value)
 {
-	uint8_t spi_buf[2];
-	spi_buf[0] = value & 0xff;
-	spi_buf[1] = (value >> 8);
-	spi_cs_low();
-    HAL_SPI_Transmit(spi1_ptr, spi_buf, 2, 100);
-    spi_cs_high();
-    if(value & 0x20)
-      HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_RESET);
-    else
-      HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_SET);
-
+  uint8_t spi_buf[2];
+  spi_buf[0] = value & 0xff;
+  spi_buf[1] = (value >> 8);
+  spi_cs_low();
+  HAL_SPI_Transmit(spi1_ptr, spi_buf, 2, 100);
+  spi_cs_high();
+  if(value & 0x20)
+    HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_RESET);
+  else
+    HAL_GPIO_WritePin(STICK_BUTTON_GPIO_Port, STICK_BUTTON_Pin, GPIO_PIN_SET);
 }
 
 
@@ -63,6 +62,6 @@ void stick_disengage(void)
 
 void release_all_button(void)
 {
-	button_status = 0;
-	button_write(button_status);
+  button_status = 0;
+  button_write(button_status);
 }

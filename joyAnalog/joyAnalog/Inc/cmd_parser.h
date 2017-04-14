@@ -25,36 +25,3 @@ void parse_cmd(char* cmd);
 #endif
 
 #endif
-
-
-
-/*
-
-joycon button mapping
-
-a
-b
-x
-y
-l
-r
-zl
-zr
-du
-dd
-dl
-dr
-sl
-sr
-syncl
-syncr
-+
--
-h
-cap
-lsb
-rsb
-
-
-
-*/
