@@ -4,7 +4,7 @@ import serial
 JOYCON_BUTTONS_LEFT = ["du", "dd", "dl", "dr", "ls", "zl", "-", "cap", "lsl", "lsr", "syncl", "sbl"]
 JOYCON_BUTTONS_RIGHT = ["a", "b", "x", "y", "rs", "zr", "+", "h", "rsl", "rsr", "syncr", "sbr"]
 
-class ndacmini:
+class joyanalog:
     def __init__(self, serial_port1, serial_port2):
         self.port1 = serial_port1
         self.port2 = serial_port2

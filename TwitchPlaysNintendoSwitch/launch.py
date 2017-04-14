@@ -2,7 +2,7 @@ import sys
 import time
 import serial
 import threading
-import ndacmini
+import joyanalog
 import irc_bot_noblock
 from command_printer import *
 from collections import OrderedDict
@@ -151,7 +151,7 @@ def worker():
 disabled_cmd = get_list("disabled_cmd.txt")
 banned_user = get_list("banned_user.txt")
 
-switch = ndacmini.ndacmini("COM4", "COM8")
+switch = joyanalog.joyanalog("COM4", "COM8")
 switch.connect()
 
 nickname = 'STM32F429ZIT6U'
