@@ -1,3 +1,5 @@
+# read and store button change, push to joyanalog every 5ms
+
 import time
 import joyanalog
 from inputs import get_gamepad
