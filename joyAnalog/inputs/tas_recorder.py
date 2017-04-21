@@ -2,8 +2,6 @@ import time
 import threading
 from inputs import get_gamepad
 
-next_send = 0
-
 joycon_status = {
     "a" : 0,
     "b" : 0,
@@ -37,20 +35,24 @@ joycon_status = {
     "ry" : 127
 }
 
+
 def worker():
     global next_send
     global record_file
     while 1:
         now = time.time()
+        ts = now - record_start
         if now <= next_send:
             continue
         # print(joycon_status)
-        record_file.write(str(now) + "\n")
+        record_file.write(str(ts)[:8] + "," + str(joycon_status) + "\n")
         record_file.flush()
-        print(now)
+        print(ts)
         next_send = now + 0.005
 
+next_send = 0
 record_file = open("a.txt", 'w')
+record_start = time.time()
 t = threading.Thread(target=worker)
 t.start()
 
