@@ -39,14 +39,18 @@ joycon_status = {
 
 def worker():
     global next_send
+    global record_file
     while 1:
         now = time.time()
         if now <= next_send:
             continue
         # print(joycon_status)
+        record_file.write(str(now) + "\n")
+        record_file.flush()
         print(now)
         next_send = now + 0.005
 
+record_file = open("a.txt", 'w')
 t = threading.Thread(target=worker)
 t.start()
 
