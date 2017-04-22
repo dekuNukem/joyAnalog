@@ -116,11 +116,43 @@ int32_t stick_hold(char* cmd)
   return ARG_PARSE_SUCCESS;
 }
 
+int32_t tas_parse(char* cmd)
+{
+  char* arg_ptr = goto_next_arg(cmd);
+  int32_t arg_pos = 0;
+  int32_t xxx = 127;
+  int32_t yyy = 127;
+  while(arg_ptr != NULL)
+  {
+    if(arg_pos == 2)
+      xxx = atoi(arg_ptr);
+    else if(arg_pos == 3)
+      yyy = atoi(arg_ptr);
+    else if(arg_pos >= 4)
+    {
+      if(atoi(arg_ptr))
+        SetBit(button_status, arg_pos);
+      else
+        ClearBit(button_status, arg_pos);
+    }
+    arg_pos++;
+    arg_ptr = goto_next_arg(arg_ptr);
+  }
+  button_write(button_status);
+  dac_write(xxx, yyy);
+  return ARG_PARSE_SUCCESS;
+}
+
 void parse_cmd(char* cmd)
 {
   int32_t result;
   if(strcmp(cmd, "test") == 0)
     puts("test OK");
+  else if(strncmp(cmd, "tas ", 4) == 0)
+  {
+    tas_parse(cmd);
+    puts("tas OK");
+  }
   else if(strcmp(cmd, "eepinit") == 0)
   {
     eeprom_erase();

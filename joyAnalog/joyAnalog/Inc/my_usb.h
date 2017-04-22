@@ -8,7 +8,7 @@
 #include "stm32f0xx_hal.h"
 #include "helpers.h"
 
-#define USB_BUF_SIZE 64
+#define USB_BUF_SIZE 128
 
 extern char* usb_data;
 extern linear_buf usb_recv_buf;

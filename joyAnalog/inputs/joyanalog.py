@@ -66,17 +66,16 @@ class joyanalog:
         except Exception as e:
             print("serial write error:\nport: " + str(ser_port.port) + "\nexception: " + str(e))
             self.connect()
-        print(str(ser_port.port) + " sent: " + message)
+        # print(str(ser_port.port) + " sent: " + message)
 
     def recvln(self, ser_port):
         result = ''
         try:
-            self.sleep_ms(1)
             result = ser_port.readline().decode('utf-8')
         except Exception as e:
             print("serial read error:\nport: " + str(ser_port.port) + "\nexception: " + str(e))
             self.connect()
-        print(str(ser_port.port) + " received: " + result)
+        # print(str(ser_port.port) + " received: " + result)
         return result
 
     def check_error(self, left_message, right_message, left_result, right_result):
@@ -230,3 +229,20 @@ class joyanalog:
     	if right_tuple != None:
     		self.stick_release("r")
     	self.sleep_ms(off_duration_ms)
+
+    def tas_ctrl(self, joydic):
+        joydic_items = list(joydic.items())
+        cmd_left = 'tas '
+        cmd_right = 'tas '
+        for item in joydic_items[:16]:
+            cmd_left += str(item[1]) + " "
+        for item in joydic_items[16:]:
+            cmd_right += str(item[1]) + " "
+        cmd_left = cmd_left.rstrip() + "\n"
+        cmd_right = cmd_right.rstrip() + "\n"
+        
+        self.send(self.ser_left, cmd_left)
+        self.send(self.ser_right, cmd_right)
+        left_result = self.recvln(self.ser_left)
+        right_result = self.recvln(self.ser_right)
+        self.check_error(cmd_left, cmd_right, left_result, right_result)

@@ -15,7 +15,7 @@ ly_value = 127
 rx_value = 127
 ry_value = 127
 
-switch = joyanalog.joyanalog("COM5", "COM7")
+switch = joyanalog.joyanalog("COM5", "COM10")
 switch.connect()
 
 while 1:

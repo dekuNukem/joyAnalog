@@ -48,24 +48,19 @@ def dump_str():
 
 def worker():
     global next_send
-    global record_file
     while 1:
         now = time.time()
         ts = now - record_start
         if now <= next_send:
             continue
         message = str(ts)[:8] + "," + dump_str() + "\n"
-        record_file.write(message)
-        record_file.flush()
         switch.tas_ctrl(joycon_status)
-        # print(message)
         next_send = now + 0.005
 
 switch = joyanalog.joyanalog("COM5", "COM10")
 switch.connect()
 switch.reset()
 next_send = 0
-record_file = open("a.txt", 'w')
 record_start = time.time()
 t = threading.Thread(target=worker)
 t.start()
