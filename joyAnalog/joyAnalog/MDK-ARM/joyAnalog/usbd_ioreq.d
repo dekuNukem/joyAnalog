@@ -26,8 +26,6 @@ joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_e
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h
-joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h
-joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h
 joyanalog\usbd_ioreq.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h

@@ -7,15 +7,11 @@ uint16_t button_status;
 uint16_t stick_idle_dac_val;
 float dac_modifier;
 
-// ? = 4096 * 1.2 / vcc
 void jc_ctrl_init(void)
 {
   button_status = 0;
   button_write(button_status);
-  if(get_vref() < 1536) // 3.3v
-    stick_idle_dac_val = 1120;
-  else // 3.0v
-    stick_idle_dac_val = 1230;
+  stick_idle_dac_val = b_to_uint16t(eeprom_read(EEPROM_ADC_CALIB_MSB_ADDR), eeprom_read(EEPROM_ADC_CALIB_LSB_ADDR));
   dac_modifier = (float)stick_idle_dac_val / 127;
 }
 

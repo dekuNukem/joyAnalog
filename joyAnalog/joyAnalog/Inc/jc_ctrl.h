@@ -8,6 +8,7 @@
 #include "stm32f0xx_hal.h"
 #include "helpers.h"
 #include "shared.h"
+#include "eeprom.h"
 
 extern uint16_t button_status;
 

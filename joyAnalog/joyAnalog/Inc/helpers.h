@@ -24,7 +24,8 @@ int32_t linear_buf_idle(linear_buf *lb, int32_t timeout);
 int32_t linear_buf_line_available(linear_buf *lb);
 int32_t linear_buf_add(linear_buf *lb, uint8_t c);
 int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
-uint16_t get_vref(void);
+uint16_t b_to_uint16t(uint8_t msb, uint8_t lsb);
+void uint16_t_to_2b(uint16_t value, uint8_t* msb, uint8_t* lsb);
 
 #ifdef __cplusplus
 }

@@ -24,8 +24,6 @@ joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_e
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h
-joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h
-joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h
 joyanalog\cmd_parser.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h

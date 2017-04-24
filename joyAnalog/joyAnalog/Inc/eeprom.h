@@ -14,8 +14,8 @@
 #define EEPROM_WRITE_ADDR 0xA0
 
 #define EEPROM_BOARD_TYPE_ADDR 0
-#define EEPROM_BUTTON_RELEASE_DURATION_MS_ADDR 1
-#define EEPROM_STICK_RELEASE_DURATION_MS_ADDR 2
+#define EEPROM_ADC_CALIB_MSB_ADDR 1
+#define EEPROM_ADC_CALIB_LSB_ADDR 2
 
 void eeprom_init(I2C_HandleTypeDef *hi2c);
 void eeprom_write(uint16_t address, uint8_t data);

@@ -66,14 +66,14 @@ int32_t linear_buf_idle(linear_buf *lb, int32_t timeout)
   return 0;
 }
 
-// 1.2V reading
-uint16_t get_vref(void)
+uint16_t b_to_uint16t(uint8_t msb, uint8_t lsb)
 {
-  uint16_t result;
-  HAL_ADC_Start(adc_ptr);
-  if(HAL_ADC_PollForConversion(adc_ptr, 100) == HAL_OK)
-    result = HAL_ADC_GetValue(adc_ptr);
-  HAL_ADC_Stop(adc_ptr);
-  return result;
+  return (msb << 8) | lsb;
+}
+
+void uint16_t_to_2b(uint16_t value, uint8_t* msb, uint8_t* lsb)
+{
+  *msb = (uint8_t)((value >> 8) & 0xFF);
+  *lsb = (uint8_t)(value & 0xFF);
 }
 

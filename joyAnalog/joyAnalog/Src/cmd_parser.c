@@ -90,11 +90,11 @@ int32_t process_multiarg(char* args, uint8_t action)
     int32_t result = arg_to_button_index(arg_ptr);
     if(result >= 4 && result <= 27)
     {
-    	result > 15 ? result -= 12 : result;
-    	if(action == ACTION_HOLD)
-    		SetBit(button_status, result);
-    	else
-    		ClearBit(button_status, result);
+      result > 15 ? result -= 12 : result;
+      if(action == ACTION_HOLD)
+        SetBit(button_status, result);
+      else
+        ClearBit(button_status, result);
     }
     else
       return result;
@@ -158,6 +158,8 @@ void parse_cmd(char* cmd)
     eeprom_erase();
     eeprom_write(EEPROM_BOARD_TYPE_ADDR, BOARD_TYPE_NDAC_MINI_JOYCON_LEFT);
     board_type = BOARD_TYPE_NDAC_MINI_JOYCON_LEFT;
+    eeprom_write(EEPROM_ADC_CALIB_MSB_ADDR, 4);
+    eeprom_write(EEPROM_ADC_CALIB_LSB_ADDR, 60);
     puts("eepinit OK");
   }
   else if(strncmp(cmd, "settype l", 9) == 0)
@@ -189,6 +191,23 @@ void parse_cmd(char* cmd)
       puts("unknown board type, use 'settype l/r' to configure this board");
       break;
     }
+  }
+  else if(strcmp(cmd, "adc") == 0)
+  {
+    printf("ADC calibration value: %d\n", b_to_uint16t(eeprom_read(EEPROM_ADC_CALIB_MSB_ADDR), eeprom_read(EEPROM_ADC_CALIB_LSB_ADDR)));
+  }
+  else if(strncmp(cmd, "adc ", 4) == 0)
+  {
+    uint8_t msb, lsb;
+    uint16_t value = atoi(goto_next_arg(cmd));
+    if(value == 0)
+      return;
+    uint16_t_to_2b(value, &msb, &lsb);
+    eeprom_write(EEPROM_ADC_CALIB_MSB_ADDR, msb);
+    eeprom_write(EEPROM_ADC_CALIB_LSB_ADDR, lsb);
+    printf("ADC calibration value set: %x %x\n", msb, lsb);
+    jc_ctrl_init();
+    stick_release();
   }
   // button hold, multiple args allowed
   else if(strncmp(cmd, "bh ", 3) == 0)
