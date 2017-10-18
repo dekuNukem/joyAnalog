@@ -148,9 +148,6 @@ def worker():
 #     print ('launch.py port1 port2')
 #     sys.exit(0)
 
-disabled_cmd = get_list("disabled_cmd.txt")
-banned_user = get_list("banned_user.txt")
-
 switch = joyanalog.joyanalog("COM4", "COM8")
 switch.connect()
 
