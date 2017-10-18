@@ -14,10 +14,6 @@ joyAnalog presents itself to PC as a virtual USB serial port, so no special driv
 * Automatic power switching
 * User LED and button
 
-## Board resources, communication protocol and Python library
-
-Updating....
-
 ## Twitch Plays Nintendo Switch
 
 I dug up and reused a portion of my old code for TwitchPlaysPokemonX, [see here](./TwitchPlaysNintendoSwitch).
