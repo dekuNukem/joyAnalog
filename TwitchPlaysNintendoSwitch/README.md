@@ -1,12 +1,12 @@
 # Twitch Plays Nintendo Switch
 
-This is actually a simplified version of the code used during TwitchPlaysPokemonX back in 2014. To keep it simple I used  tkinter for the command scroller. 
+This is actually a simplified version of the code used during Twitch Plays Pokemon X back in 2014. To keep it simple I used  tkinter for the command scroller. 
 
 To use it:
 
 * Connect the two correctly configured NintenDAC mini board to the computer.
 
-* Open up `launch.py` and configure the username, oauth, chat channel and serial port name.
+* Open up `launch.py` in an editor and configure the username, oauth, chat channel and serial port name.
 
 * Open up `banned_user.txt` and `disabled_cmd.txt` and fill them in as you wish. These can be updated while main script is running too.
 
