@@ -8246,7 +8246,7 @@ Used as a test point connection for pogo pins or other debugging tools.
 </classes>
 <parts>
 <part name="+3V1" library="backplane" deviceset="+3V3" device=""/>
-<part name="C2" library="backplane" deviceset="C-US" device="C1210" value="47uF"/>
+<part name="C2" library="backplane" deviceset="C-US" device="C1210"/>
 <part name="X1" library="backplane" deviceset="USB" device="-MICROB"/>
 <part name="GND2" library="backplane" deviceset="GND" device=""/>
 <part name="GND3" library="backplane" deviceset="GND" device=""/>
@@ -8254,9 +8254,9 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="+3V3" library="backplane" deviceset="+3V3" device=""/>
 <part name="S1" library="Adafruit Feather M0 Adalogger" deviceset="SWITCH-MOMENTARY-2" device="TURTLE"/>
 <part name="GND10" library="backplane" deviceset="GND" device=""/>
-<part name="C6" library="backplane" deviceset="CAP" device="0805" value="0.1uF"/>
-<part name="C7" library="backplane" deviceset="CAP" device="0805" value="0.1uF"/>
-<part name="C8" library="backplane" deviceset="CAP" device="0805" value="0.1uF"/>
+<part name="C6" library="backplane" deviceset="CAP" device="0805"/>
+<part name="C7" library="backplane" deviceset="CAP" device="0805"/>
+<part name="C8" library="backplane" deviceset="CAP" device="0805"/>
 <part name="+3V11" library="backplane" deviceset="+3V3" device=""/>
 <part name="GND14" library="backplane" deviceset="GND" device=""/>
 <part name="IC1" library="stm32f072c8t6" deviceset="STM32F10XCXT6" device=""/>
@@ -8302,7 +8302,7 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="S2" library="Adafruit Feather M0 Adalogger" deviceset="SWITCH-MOMENTARY-2" device="TURTLE"/>
 <part name="GND16" library="backplane" deviceset="GND" device=""/>
-<part name="C1" library="backplane" deviceset="CAP" device="0805" value="0.1uF"/>
+<part name="C1" library="backplane" deviceset="CAP" device="0805"/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP4" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP5" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -8343,11 +8343,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <sheets>
 <sheet>
 <plain>
-<text x="-175.26" y="20.32" size="1.778" layer="94">ADG714</text>
-<text x="-172.72" y="-73.66" size="1.778" layer="94">ADG714</text>
-<text x="-53.34" y="58.42" size="1.778" layer="94">AT24C08D</text>
-<text x="129.54" y="-27.94" size="1.778" layer="94">SPX3819-3.3 or 3.0</text>
-<text x="-43.18" y="0" size="1.778" layer="94">STM32F072C8T6</text>
 </plain>
 <instances>
 <instance part="+3V1" gate="G$1" x="-93.98" y="162.56"/>

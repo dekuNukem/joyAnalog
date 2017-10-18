@@ -8346,8 +8346,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <text x="-175.26" y="20.32" size="1.778" layer="94">ADG714</text>
 <text x="-172.72" y="-73.66" size="1.778" layer="94">ADG714</text>
 <text x="-53.34" y="58.42" size="1.778" layer="94">AT24C08D</text>
-<text x="129.54" y="-27.94" size="1.778" layer="94">SPX3819-3.3 or 3.0</text>
-<text x="-43.18" y="0" size="1.778" layer="94">STM32F072C8T6</text>
 </plain>
 <instances>
 <instance part="+3V1" gate="G$1" x="-93.98" y="162.56"/>
