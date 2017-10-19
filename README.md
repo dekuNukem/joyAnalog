@@ -14,6 +14,10 @@ joyAnalog presents itself to PC as a virtual USB serial port, so no special driv
 * Automatic power switching
 * User LED and button
 
+## Header mappings
+
+See [this PDF](datasheets/header_mapping.pdf).
+
 ## Twitch Plays Nintendo Switch
 
 I dug up and reused a portion of my old code for TwitchPlaysPokemonX, [see here](./TwitchPlaysNintendoSwitch).
